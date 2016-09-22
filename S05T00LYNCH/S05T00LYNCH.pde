@@ -27,6 +27,7 @@ void draw() {
       rect(i, j, 5, 5); // Este forLoop genera una grilla en degrade a modo de background
     }
   }
+  
   int fil = width/12;  // Generar columnas
   int col = height/9;  // Generar filas
 
@@ -51,12 +52,14 @@ void circulo(int x, int y) {  // función 1, ellipse modificada por posX del mou
   elli = map(mouseX, 0, width, 0, 50);
   ellipse(x, y, elli, elli);
 }
+
 void cuadrado(int x, int y) { // Función 2, rect modificado por posY del mouse
   noStroke();
   fill(255, 0, 255);
   cuad = map(mouseY, 0, height, 0, 50);
   rect(x, y, cuad, cuad);
 }
+
 void linea(int x, int y) {  // Función 3, línea modificada por posX y posY del mouse
   stroke(0);
   strokeWeight(2);
@@ -68,6 +71,7 @@ void linea(int x, int y) {  // Función 3, línea modificada por posX y posY del
 void mousePressed() {  // Evento mouse, cambia el valor del boolean click
   click = !click;
 }
+
 void keyPressed() {  // Eventos teclado 
   if (key == 'm') {  // Evento tecla 'm', cambia el valor del boolean eme
     eme = !eme;
