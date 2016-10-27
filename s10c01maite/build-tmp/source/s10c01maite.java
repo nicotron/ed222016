@@ -149,9 +149,9 @@ class Hola {
   public void flor() {
     pushMatrix();                                                                          
     translate(x, y);     
-    noStroke(10); 
+    noStroke(); 
     fill(carmesi);
-    point(x - 5, y - 5);
+    point(x - 5, y - 5); // para qu\u00e9? cual es el proposito de la vida? ah?
     ellipse(x, y, 6, 6);
     ellipse(x + 10, y + 10, 6, 6);
     ellipse(x, y + 10, 6, 6);
