@@ -50,16 +50,16 @@ void setup() {
 }
 
 void draw() {
-  background(5);
+  background(255);
   noStroke();
 
-  for (int i = 0; i < p.length; i++) {  // Creación de objetos de clase Plan.
-    p[i].displayPlan();
-    p[i].movePlan();
-    if (sett) {  // Esta línea permite congelar la orbita de los Plan.
-      p[i].spir();
-    }
-  }
+  // for (int i = 0; i < p.length; i++) {  // Creación de objetos de clase Plan.
+  //   p[i].displayPlan();
+  //   p[i].movePlan();
+  //   if (sett) {  // Esta línea permite congelar la orbita de los Plan.
+  //     p[i].spir();
+  //   }
+  // }
   translate(width * .15, height * .15); // Grilla desde el centro para Dot.
 
   for (int i = 0; i < d.length; i++) { // Creación de objetos de clase Dot.
