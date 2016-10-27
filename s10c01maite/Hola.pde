@@ -42,7 +42,7 @@ class Hola {
     translate(x, y);     
     noStroke(); 
     fill(carmesi);
-    point(x - 5, y - 5);
+    point(x - 5, y - 5); // para qué? cual es el proposito de la vida? ah?
     ellipse(x, y, 6, 6);
     ellipse(x + 10, y + 10, 6, 6);
     ellipse(x, y + 10, 6, 6);

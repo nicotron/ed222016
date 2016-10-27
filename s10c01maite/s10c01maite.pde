@@ -1,11 +1,11 @@
-//Expresión Digital II - UDD - 2016.
+//Expresión Digital II - Diseño Digital - Facultad de Diseño - UDD - 2016.
 //Maite Iturriaga Batlle.
 //s10c01
 
 /* Este código se verán distintos movimientos y formas gracias a dos boolean, 
 la primera función, "flor" está compuesta de 4 elipses que en su conjento tienen un movimiento de random 
 el que cambia los valores de x, y dentro de una pequeña grilla.
-La seunda función "margarita" está compuesta de cuadrados y puntos (formando una flor),
+La segunda función "margarita" está compuesta de cuadrados y puntos (formando una flor),
 que se mueven a través del eje y (de arriba hacia abajo) también de forma random, dentro de un espacio limitado, 
 por otra parte, la función "linea" compuesta por una serie de líneas que rotan en base a uno de sus propios puntos sumando cada vez + 0.02,
 todo esto en una grilla cuadrada delimitada.
@@ -53,7 +53,7 @@ void draw() {
       c = !c;
     }
   }
-
+  // qué sucede?
   if (c == true) {
     pushMatrix();
     background(255, 255, 0);
@@ -66,6 +66,7 @@ void draw() {
     popMatrix();
   }
 
+  // qué sucede?
   if (c == false) {
     translate(width / 5, height / 5);
     background(51);
