@@ -3,7 +3,7 @@
 //s10c01anamaria
 
 /* En primer lugar aparecerán flechas que van cambiando de color entre amarillo y gris mientras se 
- mueven en su dirección, al llegar a la esquina, se cambiará la imagen y se verán rombombos en constante
+ mueven en su dirección, al llegar a la esquina, se cambiará la imagen y se verán rombos en constante
  movimiento con una línea en su interior que gira, al volver nuevamente a las flechas, ellas estarán 
  nuevamente en el centro.*/
 
