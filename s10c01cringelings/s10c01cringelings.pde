@@ -5,9 +5,10 @@
 /* Al correr el Programa, se verán figuras que rotan en cierto ángulo (círculos y líneas), otras 
  figuras que rotan y van cambiando de forma (rectángulos) y todas las figuras se van moviendo en el canvas.
  Se crea un fondo blanco donde se dibujan dos círculos que giran con una linea cada uno y van girando en su 
- propio ángulo y se van moviendo con respecto al eje x e y. A igual que un rectángulo que se dibuja que va 
- cambiando de forma y tamaño mediante va girando en su propio ángulo mientras se mueve en el eje x e y.
+ propio eje y se van moviendo con respecto al eje x e y. A igual que un rectángulo que se dibuja que va 
+ cambiando de forma y tamaño mediante va girando en su propio eje mientras se mueve en el eje x e y.
  */
+ // La descripción de la rotación de los objetos no es en sus ángulos, sino que en su eje inferior, los ángulos permiten rotación, no la generan.
 
 int a;              //Se crea una variable entera para usar en uno de los objetos.
 color c1, c2, c3;   //Se señalan las Variables a usar en los colores

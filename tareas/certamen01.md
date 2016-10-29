@@ -14,7 +14,7 @@ Se deberá escribir un programa que contenga la acumulación de todo el contenid
 - Ubicación
 - Movimientos
 - Condicionales
-- Aleatoriedad controlada (@Margaux it's "controlled randomness")
+- Aleatoriedad controlada (**@Margaux** it's "controlled randomness")
 - Multiples Objetos
 
 ### **Para describir un comporamiento de diferentes elecciones de movimiento, figura* y color.**
