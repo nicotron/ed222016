@@ -19,7 +19,7 @@ public class s10c01anamaria extends PApplet {
 //s10c01anamaria
 
 /* En primer lugar aparecer\u00e1n flechas que van cambiando de color entre amarillo y gris mientras se 
- mueven en su direcci\u00f3n, al llegar a la esquina, se cambiar\u00e1 la imagen y se ver\u00e1n rombombos en constante
+ mueven en su direcci\u00f3n, al llegar a la esquina, se cambiar\u00e1 la imagen y se ver\u00e1n rombos en constante
  movimiento con una l\u00ednea en su interior que gira, al volver nuevamente a las flechas, ellas estar\u00e1n 
  nuevamente en el centro.*/
 
@@ -138,7 +138,7 @@ class Objeto {      //se crea la clase
   public void dibujarFlecha() {
     pushMatrix();      //cambiar el estado de las coordenadas   
     if (a >= frameCount % 30) {      //velocidad de cambio de color
-      a = 1;
+      // a = 1;
     }
     a++;
     t = c1 [(int) random(2)];      //array para cambio de color

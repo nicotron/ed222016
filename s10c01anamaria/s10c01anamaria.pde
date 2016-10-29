@@ -40,14 +40,13 @@ void draw() {
   background(314, 1, 94);      //color background
   translate(width / 15, height / 15);      //posición de la composición
   if (frameCount % 30 == 0) {      //tiempo
-
     b = !b;      //boolean
   }
 
   //Se dibuja la primera función
   if (b == true) {
     pushMatrix();      //cambiar el estado de las coordenadas  
-    translate(width /1000, height / 1000);      //posición de los objetos
+    translate(width / 1000, height / 1000);      //posición de los objetos
     for (int i = 0; i < e.length; i++) {      //si i es menor que el ancho, se suma 1 y se dibujan las funciones 
       e[i].dibujarRombo();      //se dibuja el rombo
       e[i].dibujarLinea();      //se dibuja la línea

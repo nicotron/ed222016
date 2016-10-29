@@ -39,7 +39,7 @@ class Objeto {      //se crea la clase
     angulo += 0.04;      //rotación
     rotate(angulo);      //rotación
     strokeWeight(3);      //grosor de la línea
-    stroke (ao);      //color línea amarillo oscuro
+    stroke(ao);      //color línea amarillo oscuro
 
     line(-3, 3, 3, -3);      //se dibuja la línea
     popMatrix();      //volver al estado original de las coordenadas
@@ -57,14 +57,14 @@ class Objeto {      //se crea la clase
       a = 1;
     }
     a++;
-    t = c1 [(int) random(2)];      //array para cambio de color
+    t = c1[(int) random(2)];      //array para cambio de color
     frameRate(10);      //tiempo para cambio de color
     strokeWeight(2);      //ancho de la línea
-    stroke (t);       //color de la línea
+    stroke(t);       //color de la línea
 
-    line (x - 10 + a, y - 10 + a, x + 5 + a, y + 5 + a);      //se dibuja la línea
+    line(x - 10 + a, y - 10 + a, x + 5 + a, y + 5 + a);      //se dibuja la línea
     fill(t);      //color relleno triángulo
-    triangle (x + 10 + a, y + a, x + 10 + a, y + 10 + a, x + a, y + 10 + a);      //se dibuja el triángulo
+    triangle(x + 10 + a, y + a, x + 10 + a, y + 10 + a, x + a, y + 10 + a);      //se dibuja el triángulo
     popMatrix();      //volver al estado original de las coordenadas
   }
 
