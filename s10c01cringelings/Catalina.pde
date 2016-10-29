@@ -1,8 +1,10 @@
 class Catalina {  //Se establece la clase Catalina
   //variables as things // esto es una copia literal de los ejercicios, queda claro que el alumno no sabe del todo lo que escribe
+  // Las variables son de los ejercicios y no los necesarios para el certemen, son 4 los que no están en uso
   float x, y, tx, ty, vx, vy, angulo; //Variables en decimal a usar.
   int velx, vely; //Variables enteras a usar.
   
+  // El constructor tiene los parámetros de los ejercicios y no los necesarios para el certemen, son 4 los que no están en uso
   Catalina (float x, float y, float tx, float ty, float velx, float vely, float angulo) { /*Se escriben los valores de cada variable. 
   Se utiliza this. para referirse a variables de la otra ventana.*/
     //Inicialize the things // esto es una copia literal de los ejercicios, queda claro que el alumno no sabe del todo lo que escribe
