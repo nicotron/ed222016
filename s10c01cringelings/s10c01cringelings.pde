@@ -10,9 +10,12 @@
  */
  // La descripción de la rotación de los objetos no es en sus ángulos, sino que en su eje inferior, los ángulos permiten rotación, no la generan.
 
+//Estas variables son globales en la clase, deben estar escritas en ella. 
 int a;              //Se crea una variable entera para usar en uno de los objetos.
 color c1, c2, c3;   //Se señalan las Variables a usar en los colores
 float amt;          //Se señala un valor decimal a usar en los colores
+//Estas variables son globales en la clase, deben estar escritas en ella. 
+
 boolean cambio;     //Se crea un boolean llamado cambio.
 
 Catalina[] c = new Catalina[25];  // Se crea la clase Catalina
