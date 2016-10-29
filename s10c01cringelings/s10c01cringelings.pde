@@ -30,7 +30,7 @@ void setup() {                            //Se ejecuta al iniciar el programa.
       float jy = j * 25;
       c[total] = new Catalina(ix, jy, ix + 5, jy + 5, (int)random(0), (int)random(0), random(0));  //se mencionan las variables j, i, ix y ji
       // ¿qué significa el comentario anterio?
-      println(total); // arrastre de ejercicios en clase, se enseño para debuggin, con proposito específico no necesario para certamen
+      println(total); // arrastre de ejercicios en clase, se enseño para debuggin, con proposito específico no necesario para certamen  
     }
   }
 }
@@ -53,7 +53,7 @@ En el caso que sea falso, se hacen rectángulos.*/
     }
   }   
   if (cambio == false) {
-    for (int i = 0; i < c.length; i++) {
+    for (int i = 0; i < c.length; i++) { // cuando la boolean cambia de estado, no es necesario escribir un for loop para cada estado, todo debe pasar dentro de el primer for loop si es que los objetos son los de la lista a usar.
       c[i].rectangulo();
       c[i].mover1();
     }
