@@ -69,7 +69,7 @@ class Catalina {  //Se establece la clase Catalina
   }
 
 ////Se señala el movimiento para x e y que se utiliza con los rectángulos.
-  void mover1() {
+  void mover1() { // el nombre de la función debe representar el movmiento hacia le objeto moverRectangulo()
     x += .09;
     y += .09;
     angulo += .02;
