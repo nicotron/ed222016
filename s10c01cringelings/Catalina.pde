@@ -8,10 +8,12 @@ class Catalina {  //Se establece la clase Catalina
     //Inicialize the things // esto es una copia literal de los ejercicios, queda claro que el alumno no sabe del todo lo que escribe
     this.x = x;
     this.y = y;
+// variables de ejercicios que no se usan
     this.tx = tx;
     this.ty = ty;
     this.velx = 2;
     this.vely = 2;
+// variables de ejercicios que no se usan    
     this.angulo = angulo;
     c1 = color(#CB4040); //Rojo
     c2 = color(#406FCB); //Azul
