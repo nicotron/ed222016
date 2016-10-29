@@ -25,7 +25,7 @@ class Catalina {  //Se establece la clase Catalina
 //Se crea los círculos más grandes junto a una línea. Giran en torno a un eje y se mueven entre x e y.
   void lineaCirculo2() {
     pushMatrix();                    //Comienza una acción - Todo lo que suceda dentro de este pushMatrix(); no afectará a otro objeto
-    translate(x * 1, y * 1);
+    translate(x * 5, y * 5);
     rotate(angulo);
     amt = map(x, 0, width, 0, 8);
     c3 = lerpColor(c1, c2, amt);
@@ -38,7 +38,7 @@ class Catalina {  //Se establece la clase Catalina
 //Se crea los círculos más pequeños junto a una línea. Giran en torno a un angulo y se mueven entre x e y.
   void lineaCirculo1() {
     pushMatrix();                  //Comienza una acción - Todo lo que suceda dentro de este pushMatrix(); no afectará a otro objeto
-    translate(x * 1, y * 1);
+    translate(x * 5, y * 5);
     rotate(-angulo);
     stroke(51);
     line(4, 4, 18, 18);
@@ -52,12 +52,12 @@ class Catalina {  //Se establece la clase Catalina
 // Se crean unos rectángulos que se mueven entre x e y y van cambiando de forma.
   void rectangulo() {
     pushMatrix();                  //Comienza una acción - Todo lo que suceda dentro de este pushMatrix(); no afectará a otro objeto
-    translate(x * 1, y * 1);
+    translate(x * 8, y * 8);
     rotate(-angulo);
     amt = map(x, 0, width, 0, 8); // amt en lerpColor va solo de 0 a 1, si se una en map este funciona pero le ejecución del map no es eficiente
     c3 = lerpColor(c1, c2, amt);
     fill(c3);
-    rect(20, 20, 10*sin(a/12)+50, 10*sin(a/15)+50);
+    rect(20, 20, 10 * sin(a/12) + 50, 10 * sin(a/15) + 50);
     popMatrix();              //Termina una acción
   }
 
