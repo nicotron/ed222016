@@ -26,7 +26,7 @@ class Catalina {  //Se establece la clase Catalina
   void lineaCirculo2() {
     pushMatrix();                    //Comienza una acción - Todo lo que suceda dentro de este pushMatrix(); no afectará a otro objeto
     translate(x * 5, y * 5);
-    rotate (angulo);
+    rotate(angulo);
     amt = map(x, 0, width, 0, 8);
     c3 = lerpColor(c1, c2, amt);
     fill(c3);
@@ -39,7 +39,7 @@ class Catalina {  //Se establece la clase Catalina
   void lineaCirculo1() {
     pushMatrix();                  //Comienza una acción - Todo lo que suceda dentro de este pushMatrix(); no afectará a otro objeto
     translate(x * 5, y * 5);
-    rotate (-angulo);
+    rotate(-angulo);
     stroke(51);
     line(4, 4, 18, 18);
     amt = map(x, 0, width, 0, 2);
@@ -53,7 +53,7 @@ class Catalina {  //Se establece la clase Catalina
   void rectangulo() {
     pushMatrix();                  //Comienza una acción - Todo lo que suceda dentro de este pushMatrix(); no afectará a otro objeto
     translate(x * 8, y * 8);
-    rotate (-angulo);
+    rotate(-angulo);
     amt = map(x, 0, width, 0, 8);
     c3 = lerpColor(c1, c2, amt);
     fill(c3);
