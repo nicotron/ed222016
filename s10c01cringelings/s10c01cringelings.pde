@@ -22,14 +22,15 @@ Catalina[] c = new Catalina[25];  // Se crea la clase Catalina
 
 void setup() {                            //Se ejecuta al iniciar el programa.
   size(600, 600);                         //Tamaño del Canvas
-  cambio =  true;                         //Se indica si el boolean es verdadero o falso para cuando se inicie el programa.
+  cambio = true;                         //Se indica si el boolean es verdadero o falso para cuando se inicie el programa.
   for (int i = 0; i < 5; i++) {
     for (int j = 0; j < 5; j++) {
       int total = j + i * 5;
       float ix = i * 25;
       float jy = j * 25;
       c[total] = new Catalina(ix, jy, ix + 5, jy + 5, (int)random(0), (int)random(0), random(0));  //se mencionan las variables j, i, ix y ji
-      println(total);
+      // ¿qué significa el comentario anterio?
+      println(total); // arrastre de ejercicios en clase, se enseño para debuggin, con proposito específico no necesario para certamen
     }
   }
 }
