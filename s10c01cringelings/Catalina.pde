@@ -22,7 +22,7 @@ class Catalina {  //Se establece la clase Catalina
 
   }
 
-//Se crea los círculos más grandes junto a una línea. Giran en torno a un angulo y se mueven entre x e y.
+//Se crea los círculos más grandes junto a una línea. Giran en torno a un ángulo y se mueven entre x e y.
   void lineaCirculo2() {
     pushMatrix();                    //Comienza una acción - Todo lo que suceda dentro de este pushMatrix(); no afectará a otro objeto
     translate(x * 5, y * 5);
