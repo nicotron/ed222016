@@ -1,4 +1,4 @@
-// Expresión Digital II - Diseño Digital - Facultad de Diseño- Universidad del Desarrollo - 2016
+// Expresión Digital II - Diseño Digital - Facultad de Diseño - Universidad del Desarrollo - 2016
 // Catalina Ringeling Selman
 // s10c01cringelings
 
