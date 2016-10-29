@@ -1,5 +1,5 @@
 class Catalina {  //Se establece la clase Catalina
-  //variables as things
+  //variables as things // esto es una copia literal de los ejercicios, queda claro que el alumno no sabe del todo lo que escribe
   float x, y, tx, ty, vx, vy, angulo; //Variables en decimal a usar.
   int velx, vely; //Variables enteras a usar.
   
