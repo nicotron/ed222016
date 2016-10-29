@@ -63,8 +63,8 @@ class Catalina {  //Se establece la clase Catalina
 
 //Se señala el movimiento para x e y que se utiliza con las ellipses y líneas
   void mover() {
-    x += -.01;
-    y += -.01;
+    x -= .01;
+    y -= .01;
     angulo += .05;
   }
 
