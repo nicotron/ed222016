@@ -23,7 +23,7 @@ class Catalina {  //Se establece la clase Catalina
   }
 
 //Se crea los círculos más grandes junto a una línea. Giran en torno a un eje y se mueven entre x e y.
-  void lineaCirculo2() {
+  void lineaCirculo2() { // el nombre de la función debe representar el movmiento hacia le objeto lineaCirculoChico()
     pushMatrix();                    //Comienza una acción - Todo lo que suceda dentro de este pushMatrix(); no afectará a otro objeto
     translate(x * 5, y * 5);
     rotate(angulo);
@@ -36,7 +36,7 @@ class Catalina {  //Se establece la clase Catalina
     popMatrix();
   }
 //Se crea los círculos más pequeños junto a una línea. Giran en torno a un angulo y se mueven entre x e y.
-  void lineaCirculo1() {
+  void lineaCirculo1() { // el nombre de la función debe representar el movmiento hacia le objeto lineaCirculoGrande
     pushMatrix();                  //Comienza una acción - Todo lo que suceda dentro de este pushMatrix(); no afectará a otro objeto
     translate(x * 5, y * 5);
     rotate(-angulo);
