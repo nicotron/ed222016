@@ -1,7 +1,7 @@
 //Expresión Digital II - Diseño Digital - UDD - 2016
 // Ana María Ortiz
 //s10c01anamaria
-
+// NIVEL 1
 /* En primer lugar aparecerán flechas que van cambiando de color entre amarillo y gris mientras se 
  mueven en su dirección, al llegar a la esquina, se cambiará la imagen y se verán rombos en constante
  movimiento con una línea en su interior que gira, al volver nuevamente a las flechas, ellas estarán 
