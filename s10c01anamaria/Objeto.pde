@@ -13,20 +13,20 @@ class Objeto {      //se crea la clase
     this.velx = velx * 0.2; //velocidad para que se muevan
     this.vely = vely * 1;
     this.angulo = angulo;
-    this.ao = color(57, 98, 83);      //amarillo oscuro
+    // this.ao = color(57, 98, 83);      //amarillo oscuro
     this.gc = color(314, 1, 94);      //gris claro
-    this.go = color(49, 4, 54);      //gris oscuro
+    // this.go = color(49, 4, 54);      //gris oscuro
+    c1[0] = color(57, 98, 83); // igual al ao
+    c1[1] = color(49, 4, 54); // igual al go
     xr = 32;      //x del rombo
     yr = 32;      //y del rombo
-    c1[0] = color(57, 98, 83);
-    c1[1] = color(49, 4, 54);
   }
 
   void dibujarRombo() {
     pushMatrix();      //cambiar el estado de las coordenadas
     noFill();      //sin relleno
     strokeWeight(3);      //grosor de la línea 
-    stroke(go);      //color gris oscuro
+    stroke(c1[1]);      //color gris oscuro
 
     quad(x + xr / 2, y, x + xr, y + yr / 2, x + xr / 2, y + yr, x, y + yr / 2);      //se dibuja el rombo
     popMatrix();      //volver al estado original de las coordenadas
@@ -38,7 +38,7 @@ class Objeto {      //se crea la clase
     angulo += 0.04;      //rotación
     rotate(angulo);      //rotación
     strokeWeight(3);      //grosor de la línea
-    stroke(ao);      //color línea amarillo oscuro
+    stroke(c1[0]);      //color línea amarillo oscuro
 
     line(-3, 3, 3, -3);      //se dibuja la línea
     popMatrix();      //volver al estado original de las coordenadas
