@@ -9,7 +9,7 @@
  cambiando de forma y tamaño mediante va girando en su propio eje mientras se mueve en el eje x e y.
  */
  // La descripción de la rotación de los objetos no es en sus ángulos, sino que en su eje inferior, los ángulos permiten rotación, no la generan.
-
+ // NIVEL 1
 //Estas variables son globales en la clase, deben estar escritas en ella. 
 int a;              //Se crea una variable entera para usar en uno de los objetos.
 color c1, c2, c3;   //Se señalan las Variables a usar en los colores

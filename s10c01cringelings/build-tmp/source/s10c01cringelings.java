@@ -14,7 +14,7 @@ import java.io.IOException;
 
 public class s10c01cringelings extends PApplet {
 
-// Expresi\u00f3n Digital II - Dise\u00f1o Digital - Facultad de Dise\u00f1o- Universidad del Desarrollo - 2016
+// Expresi\u00f3n Digital II - Dise\u00f1o Digital - Facultad de Dise\u00f1o - Universidad del Desarrollo - 2016
 // Catalina Ringeling Selman
 // s10c01cringelings
 
@@ -82,7 +82,7 @@ class Catalina {  //Se establece la clase Catalina
   int velx, vely; //Variables enteras a usar.
   
   // El constructor tiene los par\u00e1metros de los ejercicios y no los necesarios para el certemen, son 4 los que no est\u00e1n en uso
-  Catalina (float x, float y, float tx, float ty, float velx, float vely, float angulo) { /*Se escriben los valores de cada variable. 
+  Catalina(float x, float y, float tx, float ty, float velx, float vely, float angulo) { /*Se escriben los valores de cada variable. 
   Se utiliza this. para referirse a variables de la otra ventana.*/
     //Inicialize the things // esto es una copia literal de los ejercicios, queda claro que el alumno no sabe del todo lo que escribe
     this.x = x;
@@ -100,9 +100,9 @@ class Catalina {  //Se establece la clase Catalina
   }
 
 //Se crea los c\u00edrculos m\u00e1s grandes junto a una l\u00ednea. Giran en torno a un eje y se mueven entre x e y.
-  public void lineaCirculo2() {
+  public void lineaCirculo2() { // el nombre de la funci\u00f3n debe representar el movmiento hacia le objeto lineaCirculoChico()
     pushMatrix();                    //Comienza una acci\u00f3n - Todo lo que suceda dentro de este pushMatrix(); no afectar\u00e1 a otro objeto
-    translate(x * 1, y * 1);
+    translate(x * 5, y * 5);
     rotate(angulo);
     amt = map(x, 0, width, 0, 8);
     c3 = lerpColor(c1, c2, amt);
@@ -110,50 +110,43 @@ class Catalina {  //Se establece la clase Catalina
     ellipse(20, 20, 7, 7);
     stroke(51);
     line(4, 4, 18, 18);
-    rotate(-angulo*3);
-    stroke(51);
-    line(4, 4, 18, 18);
-    amt = map(x, 0, width, 0, 2);
-    c3 = lerpColor(c1, c2, amt);
-    fill(c3);
-    ellipse(20, 20, 5, 5);
     popMatrix();
   }
 //Se crea los c\u00edrculos m\u00e1s peque\u00f1os junto a una l\u00ednea. Giran en torno a un angulo y se mueven entre x e y.
-  public void lineaCirculo1() {
+  public void lineaCirculo1() { // el nombre de la funci\u00f3n debe representar el movmiento hacia le objeto lineaCirculoGrande
     pushMatrix();                  //Comienza una acci\u00f3n - Todo lo que suceda dentro de este pushMatrix(); no afectar\u00e1 a otro objeto
-    translate(x * 1, y * 1);
-    // rotate(-angulo);
-    // stroke(51);
-    // line(4, 4, 18, 18);
-    // amt = map(x, 0, width, 0, 2);
-    // c3 = lerpColor(c1, c2, amt);
-    // fill(c3);
-    // ellipse(20, 20, 5, 5);
+    translate(x * 5, y * 5);
+    rotate(-angulo);
+    stroke(51);
+    line(4, 4, 18, 18);
+    amt = map(x, 0, width, 0, 2); // amt en lerpColor va solo de 0 a 1, si se una en map este funciona pero le ejecuci\u00f3n del map no es eficiente
+    c3 = lerpColor(c1, c2, amt);
+    fill(c3);
+    ellipse(20, 20, 5, 5);
     popMatrix();              //Termina una acci\u00f3n
   }
   
 // Se crean unos rect\u00e1ngulos que se mueven entre x e y y van cambiando de forma.
   public void rectangulo() {
     pushMatrix();                  //Comienza una acci\u00f3n - Todo lo que suceda dentro de este pushMatrix(); no afectar\u00e1 a otro objeto
-    translate(x * 1, y * 1);
+    translate(x * 8, y * 8);
     rotate(-angulo);
-    amt = map(x, 0, width, 0, 8);
+    amt = map(x, 0, width, 0, 8); // amt en lerpColor va solo de 0 a 1, si se una en map este funciona pero le ejecuci\u00f3n del map no es eficiente
     c3 = lerpColor(c1, c2, amt);
     fill(c3);
-    rect(20, 20, 10*sin(a/12)+50, 10*sin(a/15)+50);
+    rect(20, 20, 10 * sin(a/12) + 50, 10 * sin(a/15) + 50);
     popMatrix();              //Termina una acci\u00f3n
   }
 
 //Se se\u00f1ala el movimiento para x e y que se utiliza con las ellipses y l\u00edneas
   public void mover() {
-    x += -.01f;
-    y += -.01f;
+    x -= .01f;
+    y -= .01f;
     angulo += .05f;
   }
 
 ////Se se\u00f1ala el movimiento para x e y que se utiliza con los rect\u00e1ngulos.
-  public void mover1() {
+  public void mover1() { // el nombre de la funci\u00f3n debe representar el movmiento hacia le objeto moverRectangulo()
     x += .09f;
     y += .09f;
     angulo += .02f;
