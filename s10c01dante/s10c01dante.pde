@@ -21,8 +21,8 @@ void setup() {  // Función que se ejecuta al principio una sola vez
   fin2 = height / 4;  // La variable fin 2 es igual a el alto dividido en 4
   for (int i = 0; i < 7; i++) {  // Mientras la nueva variable i sea menor que 30, i va sumando 1 cada vez.
     float ix = i * width / 10; // Se crea la variable decimal ix que es igual a la multiplicación de i por 30.
-    int total = i;  // Se crea la variable entera total que es igual a la variable i
-    objetos[total] = new Objects(i, ix, inicio, inicio2, fin, fin2);  // Se ingresan las variables i, ix, inicio, inicio2, fin, fin2 a la clase
+    // int total = i;  // Se crea la variable entera total que es igual a la variable i
+    objetos[i] = new Objects(i, ix, inicio, inicio2, fin, fin2);  // Se ingresan las variables i, ix, inicio, inicio2, fin, fin2 a la clase
   }
 }
 
