@@ -37,8 +37,8 @@ public void setup() {  // Funci\u00f3n que se ejecuta al principio una sola vez
   fin2 = height / 4;  // La variable fin 2 es igual a el alto dividido en 4
   for (int i = 0; i < 7; i++) {  // Mientras la nueva variable i sea menor que 30, i va sumando 1 cada vez.
     float ix = i * width / 10; // Se crea la variable decimal ix que es igual a la multiplicaci\u00f3n de i por 30.
-    int total = i;  // Se crea la variable entera total que es igual a la variable i
-    objetos[total] = new Objects(i, ix, inicio, inicio2, fin, fin2);  // Se ingresan las variables i, ix, inicio, inicio2, fin, fin2 a la clase
+    // int total = i;  // Se crea la variable entera total que es igual a la variable i
+    objetos[i] = new Objects(i, ix, inicio, inicio2, fin, fin2);  // Se ingresan las variables i, ix, inicio, inicio2, fin, fin2 a la clase
   }
 }
 
@@ -162,7 +162,7 @@ class Objects {  // Se crea la clase Objetos
     int termino = color(0xff4B674B);
     amt = map(inicioM, height / 4, 3 * height / 4, 0, 1); 
     partida = lerpColor(partida, termino, amt);
-    fill(partida);
+    // fill(partida);
   }
   
   // Var\u00eda el valor de inicio M con un movimiento lineal para los desplazamientos en el eje Y
@@ -205,14 +205,14 @@ class Objects {  // Se crea la clase Objetos
 
 
   public void dibujarcirculos() {
-
+    
     ellipse(ix, inicioM, 8, 8);
   }
 
 // Se dibujan tri\u00e1ngulos desde la mitad del alto hasta el valor de inicioM modificado en la configuraci\u00f3n
 
   public void dibujartriangulos() {
-
+    fill(partida);
     triangle(ix, inicioM, ix + width / 20, height / 2, ix - width / 20, height / 2);
   }
 }

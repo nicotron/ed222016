@@ -29,7 +29,7 @@ void setup() {  // Función que se ejecuta al principio una sola vez
 void draw() {  // Función que se ejecuta cada vez
   background(#DDFAB3);  // El color de fondo es verde
   noStroke();  // Las figuras no tienen borde
-  objetos[1].fondo();  // Se dibuja el contenido del void fondo
+  objetos[0].fondo();  // Se dibuja el contenido del void fondo
   stroke(3);  // el grosor de línea de los bordes de las figuras es de 3px
   translate(width / 2 - width / 3, 0);  // Se traslada el origen a las cordenadas ancho dividido en 2 menos el ancho dividido en 3, 0
 
