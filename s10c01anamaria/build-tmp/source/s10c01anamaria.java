@@ -56,14 +56,13 @@ public void draw() {
   background(314, 1, 94);      //color background
   translate(width / 15, height / 15);      //posici\u00f3n de la composici\u00f3n
   if (frameCount % 30 == 0) {      //tiempo
-
     b = !b;      //boolean
   }
 
   //Se dibuja la primera funci\u00f3n
   if (b == true) {
     pushMatrix();      //cambiar el estado de las coordenadas  
-    translate(width /1000, height / 1000);      //posici\u00f3n de los objetos
+    translate(width / 1000, height / 1000);      //posici\u00f3n de los objetos
     for (int i = 0; i < e.length; i++) {      //si i es menor que el ancho, se suma 1 y se dibujan las funciones 
       e[i].dibujarRombo();      //se dibuja el rombo
       e[i].dibujarLinea();      //se dibuja la l\u00ednea
@@ -85,10 +84,7 @@ public void draw() {
 class Objeto {      //se crea la clase
   int a;      //se crean las variables enteras
   float x, y, i, tx, ty, velx, vely, angulo, xr, yr;      //se crean las variables
-  int[] c1 = {      //se crea un array de color
-    color(57, 98, 83), //array para color amarillo oscuro
-    color(49, 4, 54)      //array para color gris oscuro
-  };
+  int[] c1 = new int [2];
   int ao, gc, go, t;      //declaraci\u00f3n de colores
 
   //inicializar las variables
@@ -105,6 +101,8 @@ class Objeto {      //se crea la clase
     this.go = color(49, 4, 54);      //gris oscuro
     xr = 32;      //x del rombo
     yr = 32;      //y del rombo
+    c1[0] = color(57, 98, 83);
+    c1[1] = color(49, 4, 54);
   }
 
   public void dibujarRombo() {
@@ -123,7 +121,7 @@ class Objeto {      //se crea la clase
     angulo += 0.04f;      //rotaci\u00f3n
     rotate(angulo);      //rotaci\u00f3n
     strokeWeight(3);      //grosor de la l\u00ednea
-    stroke (ao);      //color l\u00ednea amarillo oscuro
+    stroke(ao);      //color l\u00ednea amarillo oscuro
 
     line(-3, 3, 3, -3);      //se dibuja la l\u00ednea
     popMatrix();      //volver al estado original de las coordenadas
@@ -138,17 +136,17 @@ class Objeto {      //se crea la clase
   public void dibujarFlecha() {
     pushMatrix();      //cambiar el estado de las coordenadas   
     if (a >= frameCount % 30) {      //velocidad de cambio de color
-      // a = 1;
+      a = 1;
     }
     a++;
-    t = c1 [(int) random(2)];      //array para cambio de color
+    t = c1[(int) random(2)];      //array para cambio de color
     frameRate(10);      //tiempo para cambio de color
     strokeWeight(2);      //ancho de la l\u00ednea
-    stroke (t);       //color de la l\u00ednea
+    stroke(t);       //color de la l\u00ednea
 
-    line (x - 10 + a, y - 10 + a, x + 5 + a, y + 5 + a);      //se dibuja la l\u00ednea
+    line(x - 10 + a, y - 10 + a, x + 5 + a, y + 5 + a);      //se dibuja la l\u00ednea
     fill(t);      //color relleno tri\u00e1ngulo
-    triangle (x + 10 + a, y + a, x + 10 + a, y + 10 + a, x + a, y + 10 + a);      //se dibuja el tri\u00e1ngulo
+    triangle(x + 10 + a, y + a, x + 10 + a, y + 10 + a, x + a, y + 10 + a);      //se dibuja el tri\u00e1ngulo
     popMatrix();      //volver al estado original de las coordenadas
   }
 

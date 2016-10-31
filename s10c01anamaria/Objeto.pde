@@ -1,10 +1,7 @@
 class Objeto {      //se crea la clase
   int a;      //se crean las variables enteras
   float x, y, i, tx, ty, velx, vely, angulo, xr, yr;      //se crean las variables
-  color[] c1 = {      //se crea un array de color
-    color(57, 98, 83), //array para color amarillo oscuro
-    color(49, 4, 54)      //array para color gris oscuro
-  };
+  color[] c1 = new int [2];
   color ao, gc, go, t;      //declaración de colores
 
   //inicializar las variables
@@ -21,6 +18,8 @@ class Objeto {      //se crea la clase
     this.go = color(49, 4, 54);      //gris oscuro
     xr = 32;      //x del rombo
     yr = 32;      //y del rombo
+    c1[0] = color(57, 98, 83);
+    c1[1] = color(49, 4, 54);
   }
 
   void dibujarRombo() {
