@@ -152,10 +152,10 @@ class Objeto {      //se crea la clase
 
   //funci\u00f3n velocidad de movimiento
   public void mover() {
-    pushMatrix();      //cambiar el estado de las coordenadas   
+    // pushMatrix();      //cambiar el estado de las coordenadas   
     x += velx;
     y += vely;
-    popMatrix();      //volver al estado original de las coordenadas
+    // popMatrix();      //volver al estado original de las coordenadas
   }
 
   //funci\u00f3n grilla de movimiento

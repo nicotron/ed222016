@@ -69,21 +69,21 @@ class Objeto {      //se crea la clase
 
   //función velocidad de movimiento
   void mover() {
-    pushMatrix();      //cambiar el estado de las coordenadas   
+    // pushMatrix();      //cambiar el estado de las coordenadas   
     x += velx;
     y += vely;
-    popMatrix();      //volver al estado original de las coordenadas
+    // popMatrix();      //volver al estado original de las coordenadas
   }
 
   //función grilla de movimiento
   void bordes() {
-    pushMatrix();      //cambiar el estado de las coordenadas   
+    // pushMatrix();      //cambiar el estado de las coordenadas   
     if (x > tx || x < ty - 2) {
       velx *= -1;
     }
     if (y > ty || y < ty - 1) {
       vely *= -1;
     }
-    popMatrix();      //volver al estado original de las coordenadas
+    // popMatrix();      //volver al estado original de las coordenadas
   }
 }
