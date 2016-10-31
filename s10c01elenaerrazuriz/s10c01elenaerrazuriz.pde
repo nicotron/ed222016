@@ -31,9 +31,9 @@ void setup() {
   for (int i = 0; i < 6; i++) {
     for (int j = 0; j < 6; j++) {
       int total = j + i * 6;
-      float dx = i * 0; //distancia entre los elementos, separación de 0px entre cada uno
-      float dy = j * 0; //distancia entre los elementos, separación de 0px entre cada uno
-      na[total] = new Elena(dx, dy, dx, dy, random(-4, 4), random(-4, 4), total * 2);
+      // float dx = i * 0; //distancia entre los elementos, separación de 0px entre cada uno
+      // float dy = j * 0; //distancia entre los elementos, separación de 0px entre cada uno
+      na[total] = new Elena(dx, dy, i, j, random(-4, 4), random(-4, 4), total * 2);
     }
   }
 

@@ -100,7 +100,7 @@ public void draw() {
 
     for (int i = 0; i < e.length; i++) {
       e[i].dibujar((int)random(2, 14));
-      e[i].mover();
+      // e[i].mover();
       e[i].rotar();
     }
 
