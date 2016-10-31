@@ -99,7 +99,7 @@ public void draw() {
     translate(width / 2.26f, height / 2.1f);
 
     for (int i = 0; i < e.length; i++) {
-      e[i].dibujar((int)random(2, 14));
+      e[i].dibujar((int)random(2, 54));
       e[i].mover();
       e[i].rotar();
     }

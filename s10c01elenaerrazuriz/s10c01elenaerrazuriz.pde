@@ -2,6 +2,7 @@
 // M. Elena Errázuriz
 //s10c01elenaerrazuriz
 // No es autonomono al no generar un ciclo infinito
+// NIVEL 2.3
 /*
 Este código muestra tres elementos distintos (líneas, cuadrados y círculos), que se trasladan desde sus respectivas grillas
  a las aristas de la composición, transformándolas en el centro. Cada una tiene un movimiento diferente gracias a la traslación o 
