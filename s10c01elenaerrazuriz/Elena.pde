@@ -11,7 +11,7 @@ class Elena {
 Espacio determinado como 'constructor' del código. En él se inicializan las variables, se construyen las funciones y es de donde la pestaña
    principal del código llama a los elementos a ser usados.
    */
-  Elena (float x, float y, float tx, float ty, float velx, float vely, float angulo) {
+  Elena(float x, float y, float tx, float ty, float velx, float vely, float angulo) {
     this.x = x;
     this.y = y;
     this.tx = tx;

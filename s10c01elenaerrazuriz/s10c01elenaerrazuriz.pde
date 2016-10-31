@@ -51,7 +51,7 @@ void setup() {
       int total = f + e * 10;
       float dx = e * 3; //distancia entre los elementos, separación de 3px entre cada uno
       float dy = f * 3; //distancia entre los elementos, separación de 3px entre cada uno
-      li[total] = new Elena(dx, dy, dx + 2, dy +2, random(-2, 2), random(-2, 2), (int)random(-1, 1));
+      li[total] = new Elena(dx, dy, dx + 2, dy + 2, random(-2, 2), random(-2, 2), (int)random(-1, 1));
     }
   }
 }
