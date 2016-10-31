@@ -45,7 +45,7 @@ void draw() {
 
   //Se dibuja la primera función
   if (b == true) {
-    pushMatrix();      //cambiar el estado de las coordenadas  
+    // pushMatrix();      //cambiar el estado de las coordenadas  
     translate(width / 1000, height / 1000);      //posición de los objetos
     for (int i = 0; i < e.length; i++) {      //si i es menor que el ancho, se suma 1 y se dibujan las funciones 
       e[i].dibujarRombo();      //se dibuja el rombo
@@ -53,15 +53,15 @@ void draw() {
       e[i].mover();      //se cumple la función mover
       e[i].bordes();      //se cumple la función bordes
     }
-    popMatrix();      //volver al estado original de las coordenadas
+    // popMatrix();      //volver al estado original de las coordenadas
   }
 
   //Se dibuja la segunda función
   if (b == false) {
-    pushMatrix();      //cambiar el estado de las coordenadas   
+    // pushMatrix();      //cambiar el estado de las coordenadas   
     for (int i = 0; i < ob.length; i++) {      //si i es menor que el ancho, se suma 1 y se dibujan las funciones 
       ob[i].dibujarFlecha();      //se dibuja la flecha
     }
-    popMatrix();      //volver al estado original de las coordenadas
+    // popMatrix();      //volver al estado original de las coordenadas
   }
 }

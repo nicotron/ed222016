@@ -61,7 +61,7 @@ public void draw() {
 
   //Se dibuja la primera funci\u00f3n
   if (b == true) {
-    pushMatrix();      //cambiar el estado de las coordenadas  
+    // pushMatrix();      //cambiar el estado de las coordenadas  
     translate(width / 1000, height / 1000);      //posici\u00f3n de los objetos
     for (int i = 0; i < e.length; i++) {      //si i es menor que el ancho, se suma 1 y se dibujan las funciones 
       e[i].dibujarRombo();      //se dibuja el rombo
@@ -69,16 +69,16 @@ public void draw() {
       e[i].mover();      //se cumple la funci\u00f3n mover
       e[i].bordes();      //se cumple la funci\u00f3n bordes
     }
-    popMatrix();      //volver al estado original de las coordenadas
+    // popMatrix();      //volver al estado original de las coordenadas
   }
 
   //Se dibuja la segunda funci\u00f3n
   if (b == false) {
-    pushMatrix();      //cambiar el estado de las coordenadas   
+    // pushMatrix();      //cambiar el estado de las coordenadas   
     for (int i = 0; i < ob.length; i++) {      //si i es menor que el ancho, se suma 1 y se dibujan las funciones 
       ob[i].dibujarFlecha();      //se dibuja la flecha
     }
-    popMatrix();      //volver al estado original de las coordenadas
+    // popMatrix();      //volver al estado original de las coordenadas
   }
 }
 class Objeto {      //se crea la clase
@@ -140,7 +140,7 @@ class Objeto {      //se crea la clase
     }
     a++;
     t = c1[(int) random(2)];      //array para cambio de color
-    frameRate(10);      //tiempo para cambio de color
+    // frameRate(10);      //tiempo para cambio de color - el uso de esta funci\u00f3n modifica todo el programa, debe ir en setup o no ir
     strokeWeight(2);      //ancho de la l\u00ednea
     stroke(t);       //color de la l\u00ednea
 
@@ -160,14 +160,14 @@ class Objeto {      //se crea la clase
 
   //funci\u00f3n grilla de movimiento
   public void bordes() {
-    pushMatrix();      //cambiar el estado de las coordenadas   
-    if (x > tx || x < ty - 2) {
+    // pushMatrix();      //cambiar el estado de las coordenadas   
+    if (x > tx || x < tx - 20) {
       velx *= -1;
     }
     if (y > ty || y < ty - 1) {
       vely *= -1;
     }
-    popMatrix();      //volver al estado original de las coordenadas
+    // popMatrix();      //volver al estado original de las coordenadas
   }
 }
   public void settings() {  size(600, 600); }
