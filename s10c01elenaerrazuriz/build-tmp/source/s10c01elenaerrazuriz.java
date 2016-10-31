@@ -44,11 +44,11 @@ public void setup() {
    //tama\u00f1o del canvas
   bo = true;
 
-  for (int c = 0; c < 6; c++) {
-    for (int d = 0; d < 6; d++) {
-      int total = d + c * 6;
-      float dx = c * 0; //distancia entre los elementos, separaci\u00f3n de 0px entre cada uno
-      float dy = d * 0; //distancia entre los elementos, separaci\u00f3n de 0px entre cada uno
+  for (int i = 0; i < 6; i++) {
+    for (int j = 0; j < 6; j++) {
+      int total = j + i * 6;
+      float dx = i * 0; //distancia entre los elementos, separaci\u00f3n de 0px entre cada uno
+      float dy = j * 0; //distancia entre los elementos, separaci\u00f3n de 0px entre cada uno
       na[total] = new Elena(dx, dy, dx, dy, random(-4, 4), random(-4, 4), total * 2);
     }
   }
@@ -62,12 +62,12 @@ public void setup() {
     }
   }
 
-  for (int e = 0; e < 10; e++) {
-    for (int f = 0; f < 10; f++) {
-      int total = f + e * 10;
-      float dx = e * 3; //distancia entre los elementos, separaci\u00f3n de 3px entre cada uno
-      float dy = f * 3; //distancia entre los elementos, separaci\u00f3n de 3px entre cada uno
-      li[total] = new Elena(dx, dy, dx + 2, dy +2, random(-2, 2), random(-2, 2), (int)random(-1, 1));
+  for (int i = 0; i < 10; i++) {
+    for (int j = 0; j < 10; j++) {
+      int total = j + i * 10;
+      float dx = i * 3; //distancia entre los elementos, separaci\u00f3n de 3px entre cada uno
+      float dy = j * 3; //distancia entre los elementos, separaci\u00f3n de 3px entre cada uno
+      li[total] = new Elena(dx, dy, dx + 2, dy + 2, random(-2, 2), random(-2, 2), (int)random(-1, 1));
     }
   }
 }
@@ -141,7 +141,7 @@ class Elena {
 Espacio determinado como 'constructor' del c\u00f3digo. En \u00e9l se inicializan las variables, se construyen las funciones y es de donde la pesta\u00f1a
    principal del c\u00f3digo llama a los elementos a ser usados.
    */
-  Elena (float x, float y, float tx, float ty, float velx, float vely, float angulo) {
+  Elena(float x, float y, float tx, float ty, float velx, float vely, float angulo) {
     this.x = x;
     this.y = y;
     this.tx = tx;
