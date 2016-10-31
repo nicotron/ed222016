@@ -78,7 +78,7 @@ class Objeto {      //se crea la clase
   //función grilla de movimiento
   void bordes() {
     // pushMatrix();      //cambiar el estado de las coordenadas   
-    if (x > tx || x < ty - 2) {
+    if (x > tx || x < tx - 2) {
       velx *= -1;
     }
     if (y > ty || y < ty - 1) {
