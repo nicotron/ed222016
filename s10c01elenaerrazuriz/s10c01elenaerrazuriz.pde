@@ -64,7 +64,6 @@ Función que, como dice su nombre, dibuja todo lo que esté dentro de ella, es l
  */
 
 void draw() {
-
   if (frameCount % 60 == 0) { //determinar el tiempo entre cada estado.
     bo = !bo; //cuando 'bo' es verdadero, pasa a ser falso una vez que el tiempo determinado previamente se cumple. Crea la intercalación.
   }
