@@ -17,7 +17,7 @@ public class s10c01elenaerrazuriz extends PApplet {
 //Expresi\u00f3n Digital II - Dise\u00f1o Digital - UDD - 2016
 // M. Elena Err\u00e1zuriz
 //s10c01elenaerrazuriz
-
+// No es autonomono al no generar un ciclo infinito
 /*
 Este c\u00f3digo muestra tres elementos distintos (l\u00edneas, cuadrados y c\u00edrculos), que se trasladan desde sus respectivas grillas
  a las aristas de la composici\u00f3n, transform\u00e1ndolas en el centro. Cada una tiene un movimiento diferente gracias a la traslaci\u00f3n o 
@@ -47,9 +47,9 @@ public void setup() {
   for (int i = 0; i < 6; i++) {
     for (int j = 0; j < 6; j++) {
       int total = j + i * 6;
-      float dx = i * 0; //distancia entre los elementos, separaci\u00f3n de 0px entre cada uno
-      float dy = j * 0; //distancia entre los elementos, separaci\u00f3n de 0px entre cada uno
-      na[total] = new Elena(dx, dy, dx, dy, random(-4, 4), random(-4, 4), total * 2);
+      // float dx = i * 0; //distancia entre los elementos, separaci\u00f3n de 0px entre cada uno
+      // float dy = j * 0; //distancia entre los elementos, separaci\u00f3n de 0px entre cada uno
+      na[total] = new Elena(i, j, i, j, random(-4, 4), random(-4, 4), total * 2);
     }
   }
 
@@ -75,7 +75,7 @@ public void setup() {
 /*
 Funci\u00f3n que, como dice su nombre, dibuja todo lo que est\u00e9 dentro de ella, es la representaci\u00f3n visual. Se llama a las funciones que est\u00e1n
  dentro del class Elena, con su prefijo adecuado para cada grilla. Estas funciones se encuentran dentro del boolean, que dependiendo si es 
- true o false dibuja algo diferente. A su vez, el boolean es activado por un frameCount, esto quiere decir que cada 3 seg se activa un estado
+ true o false dibuja algo diferente. A su vez, el boolean es activado por un frameCount, esto quiere decir que cada 1 seg se activa un estado
  del boolean. El resultado final es la intercalaci\u00f3n entre dos composiciones diferentes.
  */
 
@@ -100,7 +100,7 @@ public void draw() {
 
     for (int i = 0; i < e.length; i++) {
       e[i].dibujar((int)random(2, 14));
-      // e[i].mover();
+      e[i].mover();
       e[i].rotar();
     }
 
@@ -117,7 +117,7 @@ public void draw() {
 
     popMatrix(); 
     
-    pushMatrix();
+    // pushMatrix();
     translate(width / 2.1f, height / 2.1f);
 
     for (int i = 0; i < li.length; i++) {
@@ -125,7 +125,7 @@ public void draw() {
       li[i].mover();
     }
 
-    popMatrix();
+    // popMatrix();
   }
 }
 /*

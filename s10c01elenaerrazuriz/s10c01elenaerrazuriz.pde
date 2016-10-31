@@ -1,7 +1,7 @@
 //Expresión Digital II - Diseño Digital - UDD - 2016
 // M. Elena Errázuriz
 //s10c01elenaerrazuriz
-
+// No es autonomono al no generar un ciclo infinito
 /*
 Este código muestra tres elementos distintos (líneas, cuadrados y círculos), que se trasladan desde sus respectivas grillas
  a las aristas de la composición, transformándolas en el centro. Cada una tiene un movimiento diferente gracias a la traslación o 
@@ -33,7 +33,7 @@ void setup() {
       int total = j + i * 6;
       // float dx = i * 0; //distancia entre los elementos, separación de 0px entre cada uno
       // float dy = j * 0; //distancia entre los elementos, separación de 0px entre cada uno
-      na[total] = new Elena(dx, dy, i, j, random(-4, 4), random(-4, 4), total * 2);
+      na[total] = new Elena(i, j, i, j, random(-4, 4), random(-4, 4), total * 2);
     }
   }
 
@@ -59,7 +59,7 @@ void setup() {
 /*
 Función que, como dice su nombre, dibuja todo lo que esté dentro de ella, es la representación visual. Se llama a las funciones que están
  dentro del class Elena, con su prefijo adecuado para cada grilla. Estas funciones se encuentran dentro del boolean, que dependiendo si es 
- true o false dibuja algo diferente. A su vez, el boolean es activado por un frameCount, esto quiere decir que cada 0.5 seg se activa un estado
+ true o false dibuja algo diferente. A su vez, el boolean es activado por un frameCount, esto quiere decir que cada 1 seg se activa un estado
  del boolean. El resultado final es la intercalación entre dos composiciones diferentes.
  */
 
@@ -101,7 +101,7 @@ void draw() {
 
     popMatrix(); 
     
-    pushMatrix();
+    // pushMatrix();
     translate(width / 2.1, height / 2.1);
 
     for (int i = 0; i < li.length; i++) {
@@ -109,6 +109,6 @@ void draw() {
       li[i].mover();
     }
 
-    popMatrix();
+    // popMatrix();
   }
 }
