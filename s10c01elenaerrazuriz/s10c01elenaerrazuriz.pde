@@ -59,7 +59,7 @@ void setup() {
 /*
 Función que, como dice su nombre, dibuja todo lo que esté dentro de ella, es la representación visual. Se llama a las funciones que están
  dentro del class Elena, con su prefijo adecuado para cada grilla. Estas funciones se encuentran dentro del boolean, que dependiendo si es 
- true o false dibuja algo diferente. A su vez, el boolean es activado por un frameCount, esto quiere decir que cada 3 seg se activa un estado
+ true o false dibuja algo diferente. A su vez, el boolean es activado por un frameCount, esto quiere decir que cada 0.5 seg se activa un estado
  del boolean. El resultado final es la intercalación entre dos composiciones diferentes.
  */
 
