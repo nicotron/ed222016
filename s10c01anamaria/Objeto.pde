@@ -57,7 +57,7 @@ class Objeto {      //se crea la clase
     }
     a++;
     t = c1[(int) random(2)];      //array para cambio de color
-    frameRate(10);      //tiempo para cambio de color
+    frameRate(10);      //tiempo para cambio de color - el uso de esta función modifica todo el programa, debe ir en setup o no ir
     strokeWeight(2);      //ancho de la línea
     stroke(t);       //color de la línea
 
