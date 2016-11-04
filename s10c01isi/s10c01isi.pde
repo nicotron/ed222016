@@ -30,7 +30,7 @@ void setup() {
 
   size (600, 600);
   for (int i = 0; i < o.length; i ++) {                
-    o[i] = new Objeto();                                                               // Inicializo "Objeto".
+    o[i] = new Objeto(); // no hay parámetros en el constructor hacia la clase                                                               // Inicializo "Objeto".
   }
   
   evalDivision = true;  
@@ -42,7 +42,7 @@ void draw() {
   background(0);                                                   
   translate(height / 2, width / 2);                                                   //Posiciona composición en el centro del canvas. 
   
-  for (int i = 0; i < o.length; i ++) {
+  for (int i = 0; i < o.length; i++) {
     
 // Cambiar estados de el boolean:
     if (frameCount % 200 == 0) {

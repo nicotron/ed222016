@@ -41,8 +41,10 @@ class Objeto {
   void movimiento (String tipoMovimiento) {
 
  // Posición de figuras:
-    for (int o = 0; o < 360; o += 36) {                                
-      for (int q = 0; q < 140; q += 10) {                              
+    // for (int o = 0; o < 360; o += 36) {                                
+      // for (int q = 0; q < 140; q += 10) {                              
+        int o = 10;
+        int q = 4;
           //posición inicial * amplitud + ubicación en el eje * rotación
         x = sin(radians(o)) * amp + sin(radians (o + q - frameCount)) * xe;                   // Fórmula que me da posición de cada figura y amplitud y posición del módulo total en el eje x.      
         y = cos(radians(o)) * amp + cos(radians (o + q - frameCount)) * ye;                   // Fórmula que me da posición de cada figura y amplitud y posición del módulo total en el eje y.   
@@ -58,22 +60,23 @@ class Objeto {
         if (tipoMovimiento == "cuadrado"){                                                      // Si escribo "elipse" entre paréntesis luego de "tipoMovimiento" me dibuja lo siguiente:
           rect(x, y, tam, tam);
         }
-      }
-    }
+      // }
+    // }
   }
 
 // Void que crea una secuencia de triángulos que giran sobre un eje central y su propio eje:
   void display() {
     
-    for (int i = 0; i < 360; i+=30) {  
+    // for (int i = 0; i < 360; i+=30) {  
+      int i = 10;
       pushMatrix();                                                             
 
-      translate(sin(radians ( i + frameCount)) * 100, cos(radians ( i + frameCount)) * 100); // Figura rota. 
+      translate(sin(radians( i + frameCount)) * 100, cos(radians( i + frameCount)) * 100); // Figura rota. 
       rotate(radians(-i));                                                                    // Cada triángulo gira sobre su eje.                                                       
 
       fill(map(i, 0, 140, 255, 0), 200, 255);                                      
       triangle(x1, y1, x2, y2, x3, y3);                                          
       popMatrix();
-    }
+    // }
   }
 }

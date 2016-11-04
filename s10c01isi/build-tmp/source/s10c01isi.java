@@ -46,7 +46,7 @@ public void setup() {
 
   
   for (int i = 0; i < o.length; i ++) {                
-    o[i] = new Objeto();                                                               // Inicializo "Objeto".
+    o[i] = new Objeto(); // no hay par\u00e1metros en el constructor hacia la clase                                                               // Inicializo "Objeto".
   }
   
   evalDivision = true;  
@@ -58,7 +58,7 @@ public void draw() {
   background(0);                                                   
   translate(height / 2, width / 2);                                                   //Posiciona composici\u00f3n en el centro del canvas. 
   
-  for (int i = 0; i < o.length; i ++) {
+  for (int i = 0; i < o.length; i++) {
     
 // Cambiar estados de el boolean:
     if (frameCount % 200 == 0) {
@@ -108,11 +108,11 @@ class Objeto {
     println(xe);
 
     if (xe >= 200) {
-    incremento = -1;
+      incremento = -1;
     }                                                             // Al llegar a 200 xe comienza a restar.
     if (xe <= 0) {
       incremento = 1;                                                              // Al llegar a 0 xe comienza a sumar.
-}
+    }
     xe += incremento;
   }
 
@@ -120,11 +120,13 @@ class Objeto {
   public void movimiento (String tipoMovimiento) {
 
  // Posici\u00f3n de figuras:
-    for (int o = 0; o < 360; o += 36) {                                
-      for (int q = 0; q < 140; q += 10) {                              
+    // for (int o = 0; o < 360; o += 36) {                                
+      // for (int q = 0; q < 140; q += 10) {                              
+        int o = 10;
+        int q = 4;
           //posici\u00f3n inicial * amplitud + ubicaci\u00f3n en el eje * rotaci\u00f3n
-        x = sin (radians(o)) * amp + sin (radians (o + q - frameCount)) * xe;                   // F\u00f3rmula que me da posici\u00f3n de cada figura y amplitud y posici\u00f3n del m\u00f3dulo total en el eje x.      
-        y = cos (radians(o)) * amp + cos (radians (o + q - frameCount)) * ye;                   // F\u00f3rmula que me da posici\u00f3n de cada figura y amplitud y posici\u00f3n del m\u00f3dulo total en el eje y.   
+        x = sin(radians(o)) * amp + sin(radians (o + q - frameCount)) * xe;                   // F\u00f3rmula que me da posici\u00f3n de cada figura y amplitud y posici\u00f3n del m\u00f3dulo total en el eje x.      
+        y = cos(radians(o)) * amp + cos(radians (o + q - frameCount)) * ye;                   // F\u00f3rmula que me da posici\u00f3n de cada figura y amplitud y posici\u00f3n del m\u00f3dulo total en el eje y.   
         
  // Caracter\u00edsticas de las figuras:        
         noStroke();                                                  
@@ -137,23 +139,24 @@ class Objeto {
         if (tipoMovimiento == "cuadrado"){                                                      // Si escribo "elipse" entre par\u00e9ntesis luego de "tipoMovimiento" me dibuja lo siguiente:
           rect(x, y, tam, tam);
         }
-      }
-    }
+      // }
+    // }
   }
 
 // Void que crea una secuencia de tri\u00e1ngulos que giran sobre un eje central y su propio eje:
   public void display() {
     
-    for (int i = 0; i < 360; i+=30) {  
+    // for (int i = 0; i < 360; i+=30) {  
+      int i = 10;
       pushMatrix();                                                             
 
-      translate (sin (radians ( i + frameCount)) * 100, cos (radians ( i + frameCount)) * 100); // Figura rota. 
-      rotate (radians(- i));                                                                    // Cada tri\u00e1ngulo gira sobre su eje.                                                       
+      translate(sin(radians ( i + frameCount)) * 100, cos(radians ( i + frameCount)) * 100); // Figura rota. 
+      rotate(radians(-i));                                                                    // Cada tri\u00e1ngulo gira sobre su eje.                                                       
 
-      fill (map (i, 0, 140, 255, 0), 200, 255);                                      
-      triangle (x1, y1, x2, y2, x3, y3);                                          
+      fill(map(i, 0, 140, 255, 0), 200, 255);                                      
+      triangle(x1, y1, x2, y2, x3, y3);                                          
       popMatrix();
-    }
+    // }
   }
 }
   public void settings() {  size (600, 600); }
