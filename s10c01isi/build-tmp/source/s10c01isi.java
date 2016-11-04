@@ -36,7 +36,8 @@ gracias a translate cambiando el punto 0,0 del canvas lo que hace que giren y a 
 se alejen y acerquen.
  */
 
-
+// NIVEL 2: Pero no hay grilla, s\u00ed hay 3 movimivientos del nivel y 3 figuras del nivel 3
+// NIVEL 2:
 
 Objeto [] o = new Objeto [1]; //es solo un objeto.                                                         // Creo "Objeto".
 boolean evalDivision;
@@ -150,7 +151,7 @@ class Objeto {
       int i = 10;
       pushMatrix();                                                             
 
-      translate(sin(radians ( i + frameCount)) * 100, cos(radians ( i + frameCount)) * 100); // Figura rota. 
+      translate(sin(radians( i + frameCount)) * 100, cos(radians( i + frameCount)) * 100); // Figura rota. 
       rotate(radians(-i));                                                                    // Cada tri\u00e1ngulo gira sobre su eje.                                                       
 
       fill(map(i, 0, 140, 255, 0), 200, 255);                                      
