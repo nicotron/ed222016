@@ -18,6 +18,7 @@ public class s10c01elenaerrazuriz extends PApplet {
 // M. Elena Err\u00e1zuriz
 //s10c01elenaerrazuriz
 // No es autonomono al no generar un ciclo infinito
+// NIVEL 2.3
 /*
 Este c\u00f3digo muestra tres elementos distintos (l\u00edneas, cuadrados y c\u00edrculos), que se trasladan desde sus respectivas grillas
  a las aristas de la composici\u00f3n, transform\u00e1ndolas en el centro. Cada una tiene un movimiento diferente gracias a la traslaci\u00f3n o 
@@ -31,7 +32,7 @@ Declaraci\u00f3n de elementos y creaci\u00f3n de los arrays y la cantidad de ele
 Elena[] na = new Elena [36];
 Elena[] e = new Elena [100];
 Elena[] li = new Elena [100]; 
-
+int wtotal;
 boolean bo;
 
 /*
@@ -88,45 +89,50 @@ public void draw() {
     pushMatrix(); //determina el inicio de un espacio de acci\u00f3n en el cual los elementos no son afectados por modificaciones previas y ajenas a las que est\u00e1n dentro 
     translate(width / 2.1f, height / 2.1f); //traslaci\u00f3n de la grilla en su totalidad, con el primer elemento (0, 0) como ancla
 
-    for (int i = 0; i < na.length; i++) { // se ordena a usar todos los elementos disponibles en los arrays creados
+    for (int i = 0; i < wtotal; i++) { // se ordena a usar todos los elementos disponibles en los arrays creados
       na[i].circulos(na[i].am); //determinar la variable de color que sa va a usar del class
       na[i].espiralRotar(.3f); //determinar la direcci\u00f3n de rotaci\u00f3n anti-horario
     }
 
     popMatrix(); //cierre del espacio de acci\u00f3n
 
-    pushMatrix();
-    translate(width / 2.26f, height / 2.1f);
-
-    for (int i = 0; i < e.length; i++) {
-      e[i].dibujar((int)random(2, 54));
-      e[i].mover();
-      e[i].rotar();
-    }
-
-    popMatrix();
-  } else {
-
-    pushMatrix(); 
-    translate(width / 2.1f, height / 2.1f); //traslaci\u00f3n de la grilla en su totalidad, con el primer elemento como ancla, no es afectado por la traslaci\u00f3n anterior gracias al push y popMatrix
-
-    for (int i = 0; i < na.length; i++) { // se ordena a usar todos los elementos disponibles en los arrays creados
-      na[i].circulos(na[i].tu); //determinar la variable de color que sa va a usar del class
-      na[i].espiralRotar(-.3f);//determinar la direcci\u00f3n de rotaci\u00f3n horario
-    }
-
-    popMatrix(); 
-    
     // pushMatrix();
-    translate(width / 2.1f, height / 2.1f);
+    // translate(width / 2.26, height / 2.1);
 
-    for (int i = 0; i < li.length; i++) {
-      li[i].linea((int)random(1, 8));
-      li[i].mover();
-    }
+  //   for (int i = 0; i < e.length; i++) {
+  //     e[i].dibujar((int)random(2, 14));
+  //     e[i].mover();
+  //     e[i].rotar();
+  //   }
+
+  //   popMatrix();
+  // } else {
+
+  //   pushMatrix(); 
+  //   translate(width / 2.1, height / 2.1); //traslaci\u00f3n de la grilla en su totalidad, con el primer elemento como ancla, no es afectado por la traslaci\u00f3n anterior gracias al push y popMatrix
+
+  //   for (int i = 0; i < na.length; i++) { // se ordena a usar todos los elementos disponibles en los arrays creados
+  //     na[i].circulos(na[i].tu); //determinar la variable de color que sa va a usar del class
+  //     na[i].espiralRotar(-.3);//determinar la direcci\u00f3n de rotaci\u00f3n horario
+  //   }
+
+  //   popMatrix(); 
+    
+  //   // pushMatrix();
+  //   translate(width / 2.1, height / 2.1);
+
+  //   for (int i = 0; i < li.length; i++) {
+  //     li[i].linea((int)random(1, 8));
+  //     li[i].mover();
+  //   }
 
     // popMatrix();
   }
+}
+
+
+public void keyPressed(){
+  wtotal ++;
 }
 /*
 Creaci\u00f3n del class 'Elena', en el cual se escribir\u00e1n todos los elementos necesarios para usar en el void draw y pesta\u00f1a principal del documento, ya sean

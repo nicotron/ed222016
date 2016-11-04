@@ -1,8 +1,7 @@
 //Expresión Digital II - Diseño Digital - UDD - 2016
 // M. Elena Errázuriz
 //s10c01elenaerrazuriz
-// No es autonomono al no generar un ciclo infinito
-// NIVEL 2.3
+
 /*
 Este código muestra tres elementos distintos (líneas, cuadrados y círculos), que se trasladan desde sus respectivas grillas
  a las aristas de la composición, transformándolas en el centro. Cada una tiene un movimiento diferente gracias a la traslación o 
@@ -29,12 +28,12 @@ void setup() {
   size(600, 600); //tamaño del canvas
   bo = true;
 
-  for (int i = 0; i < 6; i++) {
-    for (int j = 0; j < 6; j++) {
-      int total = j + i * 6;
-      // float dx = i * 0; //distancia entre los elementos, separación de 0px entre cada uno
-      // float dy = j * 0; //distancia entre los elementos, separación de 0px entre cada uno
-      na[total] = new Elena(i, j, i, j, random(-4, 4), random(-4, 4), total * 2);
+  for (int c = 0; c < 6; c++) {
+    for (int d = 0; d < 6; d++) {
+      int total = d + c * 6;
+      float dx = c * 0; //distancia entre los elementos, separación de 0px entre cada uno
+      float dy = d * 0; //distancia entre los elementos, separación de 0px entre cada uno
+      na[total] = new Elena(dx, dy, dx, dy, random(-4, 4), random(-4, 4), total * 2);
     }
   }
 
@@ -47,12 +46,12 @@ void setup() {
     }
   }
 
-  for (int i = 0; i < 10; i++) {
-    for (int j = 0; j < 10; j++) {
-      int total = j + i * 10;
-      float dx = i * 3; //distancia entre los elementos, separación de 3px entre cada uno
-      float dy = j * 3; //distancia entre los elementos, separación de 3px entre cada uno
-      li[total] = new Elena(dx, dy, dx + 2, dy + 2, random(-2, 2), random(-2, 2), (int)random(-1, 1));
+  for (int e = 0; e < 10; e++) {
+    for (int f = 0; f < 10; f++) {
+      int total = f + e * 10;
+      float dx = e * 3; //distancia entre los elementos, separación de 3px entre cada uno
+      float dy = f * 3; //distancia entre los elementos, separación de 3px entre cada uno
+      li[total] = new Elena(dx, dy, dx + 2, dy +2, random(-2, 2), random(-2, 2), (int)random(-1, 1));
     }
   }
 }
@@ -60,11 +59,12 @@ void setup() {
 /*
 Función que, como dice su nombre, dibuja todo lo que esté dentro de ella, es la representación visual. Se llama a las funciones que están
  dentro del class Elena, con su prefijo adecuado para cada grilla. Estas funciones se encuentran dentro del boolean, que dependiendo si es 
- true o false dibuja algo diferente. A su vez, el boolean es activado por un frameCount, esto quiere decir que cada 1 seg se activa un estado
+ true o false dibuja algo diferente. A su vez, el boolean es activado por un frameCount, esto quiere decir que cada 3 seg se activa un estado
  del boolean. El resultado final es la intercalación entre dos composiciones diferentes.
  */
 
 void draw() {
+
   if (frameCount % 60 == 0) { //determinar el tiempo entre cada estado.
     bo = !bo; //cuando 'bo' es verdadero, pasa a ser falso una vez que el tiempo determinado previamente se cumple. Crea la intercalación.
   }
@@ -102,7 +102,7 @@ void draw() {
 
     popMatrix(); 
     
-    // pushMatrix();
+    pushMatrix();
     translate(width / 2.1, height / 2.1);
 
     for (int i = 0; i < li.length; i++) {
@@ -110,6 +110,6 @@ void draw() {
       li[i].mover();
     }
 
-    // popMatrix();
+    popMatrix();
   }
 }
