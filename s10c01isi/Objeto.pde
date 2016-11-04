@@ -17,7 +17,7 @@ class Objeto {
     tam = 10;
     amp = 90;
     
-    xe  = 200 ; 
+    xe  = 200; 
     ye  = 200;
     incremento = 1;
     
@@ -28,9 +28,12 @@ class Objeto {
     
     println(xe);
 
-    if (xe >= 200) incremento = -1;                                                             // Al llegar a 200 xe comienza a restar.
-    if (xe <= 0)   incremento = 1;                                                              // Al llegar a 0 xe comienza a sumar.
-
+    if (xe >= 200) {
+      incremento = -1;
+    }                                                             // Al llegar a 200 xe comienza a restar.
+    if (xe <= 0) {
+      incremento = 1;                                                              // Al llegar a 0 xe comienza a sumar.
+    }
     xe += incremento;
   }
 
@@ -41,8 +44,8 @@ class Objeto {
     for (int o = 0; o < 360; o += 36) {                                
       for (int q = 0; q < 140; q += 10) {                              
           //posición inicial * amplitud + ubicación en el eje * rotación
-        x = sin (radians(o)) * amp + sin (radians (o + q - frameCount)) * xe;                   // Fórmula que me da posición de cada figura y amplitud y posición del módulo total en el eje x.      
-        y = cos (radians(o)) * amp + cos (radians (o + q - frameCount)) * ye;                   // Fórmula que me da posición de cada figura y amplitud y posición del módulo total en el eje y.   
+        x = sin(radians(o)) * amp + sin(radians (o + q - frameCount)) * xe;                   // Fórmula que me da posición de cada figura y amplitud y posición del módulo total en el eje x.      
+        y = cos(radians(o)) * amp + cos(radians (o + q - frameCount)) * ye;                   // Fórmula que me da posición de cada figura y amplitud y posición del módulo total en el eje y.   
         
  // Características de las figuras:        
         noStroke();                                                  
@@ -65,11 +68,11 @@ class Objeto {
     for (int i = 0; i < 360; i+=30) {  
       pushMatrix();                                                             
 
-      translate (sin (radians ( i + frameCount)) * 100, cos (radians ( i + frameCount)) * 100); // Figura rota. 
-      rotate (radians(- i));                                                                    // Cada triángulo gira sobre su eje.                                                       
+      translate(sin(radians ( i + frameCount)) * 100, cos(radians ( i + frameCount)) * 100); // Figura rota. 
+      rotate(radians(-i));                                                                    // Cada triángulo gira sobre su eje.                                                       
 
-      fill (map (i, 0, 140, 255, 0), 200, 255);                                      
-      triangle (x1, y1, x2, y2, x3, y3);                                          
+      fill(map(i, 0, 140, 255, 0), 200, 255);                                      
+      triangle(x1, y1, x2, y2, x3, y3);                                          
       popMatrix();
     }
   }

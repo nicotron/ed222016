@@ -22,7 +22,7 @@ se alejen y acerquen.
 
 
 
-Objeto [] o = new Objeto [1];                                                          // Creo "Objeto".
+Objeto [] o = new Objeto [1]; //es solo un objeto.                                                         // Creo "Objeto".
 boolean evalDivision;
 
 // Inicialización:
@@ -39,8 +39,8 @@ void setup() {
 // Corre programa:
 void draw() {
   
-  background (0);                                                   
-  translate (height / 2, width / 2);                                                   //Posiciona composición en el centro del canvas. 
+  background(0);                                                   
+  translate(height / 2, width / 2);                                                   //Posiciona composición en el centro del canvas. 
   
   for (int i = 0; i < o.length; i ++) {
     
