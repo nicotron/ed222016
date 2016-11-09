@@ -10,6 +10,9 @@ que se mueven a través del eje y (de arriba hacia abajo) también de forma rand
 por otra parte, la función "linea" compuesta por una serie de líneas que rotan en base a uno de sus propios puntos sumando cada vez + 0.02,
 todo esto en una grilla cuadrada delimitada.
 */
+
+// NIVEL 2.3 al tener una grilla, tres movimientos y tres figuras(NIVEL 3)
+
 Hola[] h = new Hola[100];
 Hola[] k = new Hola[100];
 
@@ -53,7 +56,7 @@ void draw() {
       c = !c;
     }
   }
-  // títulos explicativos de lo que pasa en el parrafo de código
+  // títulos explicativos de lo que pasa en el párrafo de código
   if (c == true) {
     pushMatrix();
     background(255, 255, 0);
@@ -66,7 +69,7 @@ void draw() {
     popMatrix();
   }
 
-  // títulos explicativos de lo que pasa en el parrafo de código
+  // títulos explicativos de lo que pasa en el párrafo de código
   if (c == false) {
     translate(width / 5, height / 5);
     background(51);
@@ -77,7 +80,7 @@ void draw() {
   }
 
 
-  // títulos explicativos de lo que pasa en el parrafo de código
+  // títulos explicativos de lo que pasa en el párrafo de código
   if ( b == false) {
     pushMatrix();
     translate(width / 8, height / 8);

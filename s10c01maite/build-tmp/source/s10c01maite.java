@@ -71,7 +71,7 @@ public void draw() {
   }
   // t\u00edtulos explicativos de lo que pasa en el parrafo de c\u00f3digo
   if (c == true) {
-    // pushMatrix();
+    pushMatrix();
     background(255, 255, 0);
     translate(width * .19f, height * .19f);
     for (int i = 0; i < h.length; i++) {
@@ -79,15 +79,15 @@ public void draw() {
       h[i].mover();
       h[i].borde();
     }
-    // popMatrix();
+    popMatrix();
   }
 
   // t\u00edtulos explicativos de lo que pasa en el parrafo de c\u00f3digo
   if (c == false) {
     translate(width / 5, height / 5);
     background(51);
-    for (int i = 0; i < h.length; i++) {
-      h[i].margarita();
+    for (int i = 0; i < k.length; i++) {
+      k[i].margarita();
       k[i].borde();
     }
   }
