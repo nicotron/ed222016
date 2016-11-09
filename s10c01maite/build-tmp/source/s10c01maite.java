@@ -19,7 +19,7 @@ public class s10c01maite extends PApplet {
 //s10c01
 
 /* Este c\u00f3digo se ver\u00e1n distintos movimientos y formas gracias a dos boolean, 
-la primera funci\u00f3n, "flor" est\u00e1 compuesta de 4 elipses que en su conjento tienen un movimiento de random 
+la primera funci\u00f3n, "flor" est\u00e1 compuesta de 4 elipses que en su conjunto tienen un movimiento de random 
 el que cambia los valores de x, y dentro de una peque\u00f1a grilla.
 La segunda funci\u00f3n "margarita" est\u00e1 compuesta de cuadrados y puntos (formando una flor),
 que se mueven a trav\u00e9s del eje y (de arriba hacia abajo) tambi\u00e9n de forma random, dentro de un espacio limitado, 

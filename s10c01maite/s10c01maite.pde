@@ -3,7 +3,7 @@
 //s10c01
 
 /* Este código se verán distintos movimientos y formas gracias a dos boolean, 
-la primera función, "flor" está compuesta de 4 elipses que en su conjento tienen un movimiento de random 
+la primera función, "flor" está compuesta de 4 elipses que en su conjunto tienen un movimiento de random 
 el que cambia los valores de x, y dentro de una pequeña grilla.
 La segunda función "margarita" está compuesta de cuadrados y puntos (formando una flor),
 que se mueven a través del eje y (de arriba hacia abajo) también de forma random, dentro de un espacio limitado, 
@@ -53,7 +53,7 @@ void draw() {
       c = !c;
     }
   }
-  // qué sucede?
+  // títulos explicativos de lo que pasa en el parrafo de código
   if (c == true) {
     pushMatrix();
     background(255, 255, 0);
@@ -66,7 +66,7 @@ void draw() {
     popMatrix();
   }
 
-  // qué sucede?
+  // títulos explicativos de lo que pasa en el parrafo de código
   if (c == false) {
     translate(width / 5, height / 5);
     background(51);
@@ -77,7 +77,7 @@ void draw() {
   }
 
 
-
+  // títulos explicativos de lo que pasa en el parrafo de código
   if ( b == false) {
     pushMatrix();
     translate(width / 8, height / 8);

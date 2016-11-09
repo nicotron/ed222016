@@ -20,6 +20,7 @@ class Hola {
    popMatrix(); para devolver el estado actual de las coordenadas,
    encerrando todas las funciones que están dentro de ellos*/
 
+  // títulos explicativos de lo que pasa en el parrafo de código
   void margarita() {
     pushMatrix();               
     translate(x, y); 
@@ -63,7 +64,7 @@ class Hola {
     angulo += 0.02;
   }
 
-
+  // títulos explicativos de lo que pasa en el parrafo de código
   void linea() {
     pushMatrix();
     translate(x, y);
@@ -74,6 +75,8 @@ class Hola {
     popMatrix();
   }
 
+  // títulos explicativos de lo que pasa en el parrafo de código
+  // el nombre de la función debe ser más descriptivo, dibujar es genérico si hay más formas por dibujar
   void dibujar() {
     pushMatrix();
     translate(width * .15, height * .15);
@@ -82,6 +85,7 @@ class Hola {
     popMatrix();
   }
 
+  // títulos explicativos de lo que pasa en el parrafo de código
   void borde() {
     if (x > tx || x < tx - 10) {
       vx *= -1;
