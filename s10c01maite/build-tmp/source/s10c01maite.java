@@ -71,7 +71,7 @@ public void draw() {
   }
   // t\u00edtulos explicativos de lo que pasa en el parrafo de c\u00f3digo
   if (c == true) {
-    pushMatrix();
+    // pushMatrix();
     background(255, 255, 0);
     translate(width * .19f, height * .19f);
     for (int i = 0; i < h.length; i++) {
@@ -79,7 +79,7 @@ public void draw() {
       h[i].mover();
       h[i].borde();
     }
-    popMatrix();
+    // popMatrix();
   }
 
   // t\u00edtulos explicativos de lo que pasa en el parrafo de c\u00f3digo
@@ -152,7 +152,7 @@ class Hola {
     translate(x, y);     
     noStroke(); 
     fill(carmesi);
-    point(x - 5, y - 5); // para qu\u00e9? cual es el proposito de la vida? ah?
+    point(x - 5, y - 5); // al estar noStroke() los puntos no se dibujar\u00e1n NUNCA
     ellipse(x, y, 6, 6);
     ellipse(x + 10, y + 10, 6, 6);
     ellipse(x, y + 10, 6, 6);
@@ -166,7 +166,7 @@ class Hola {
     y += vy;
   }
 
-/*Movimiento l\u00edneas en base a cada punto (x, y)*/
+/*Movimiento y rotaci\u00f3n de l\u00edneas en base a cada punto (x, y)*/
   public void moverlo() {
     x += vx;
     y += vy;

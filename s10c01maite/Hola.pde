@@ -57,7 +57,7 @@ class Hola {
     y += vy;
   }
 
-/*Movimiento líneas en base a cada punto (x, y)*/
+/*Movimiento y rotación de líneas en base a cada punto (x, y)*/
   void moverlo() {
     x += vx;
     y += vy;
