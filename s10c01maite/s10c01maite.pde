@@ -70,8 +70,8 @@ void draw() {
   if (c == false) {
     translate(width / 5, height / 5);
     background(51);
-    for (int i = 0; i < h.length; i++) {
-      h[i].margarita();
+    for (int i = 0; i < k.length; i++) {
+      k[i].margarita();
       k[i].borde();
     }
   }
