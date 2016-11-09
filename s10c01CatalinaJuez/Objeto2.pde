@@ -10,7 +10,7 @@ class Cata2 {
   // Mencionamos nuestros float o int que usaremos en este class, además de  definir el color a usar.
   Cata2 (float x) {
     this.x = x;
-    color4= color(r, g, b + r, 7);
+    color4 = color(r, g, b + r, 7);
   }
 
   // Creamos un void específicos para nuestros círculos.

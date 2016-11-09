@@ -17,9 +17,9 @@ class Cata {
     this.y = y;
     this.angulo = angulo;
 
-    color1= color(r + g, g, b + g, 70); 
-    color3= color(r, g, b + r, 45);
-    color4= color(r, g, b + r, 45);
+    color1 = color(r + g, g, b + g, 70); 
+    color3 = color(r, g, b + r, 45);
+    color4 = color(r, g, b + r, 45);
   }
 
 // Creamos un void específicos para nuestra línea.

@@ -3,8 +3,8 @@
 //s10c01CatalinaJuez
 
 /*
-En este código se puede apreciar triángulos que giran en un sentido,mientras que una linea gira de manera mas lenta y a sentido contrario 
-(desde el mismo punto de origen del triángulo). Y sobre esto se puede notar unas líneas de círculos  las cuales se encuentran mas separadas 
+En este código se puede apreciar triángulos que giran en un sentido, mientras que una línea gira de manera más lenta y a sentido contrario 
+(desde el mismo punto de origen del triángulo). Y sobre esto se puede notar unas líneas de círculos las cuales se encuentran más separadas 
 entre ellas y los mismos círculos, a medida que se empieza a acercar al final de la composición. Además de que estas líneas se encuentran 
 en constante movimiento hacia el lado derecho y vuelven a aparecer nuevamente por el lado izquierdo.*/
 
@@ -43,8 +43,8 @@ void draw() {
     e[i].dibujarTriangulo();
     e[i].mover();
 
-    d[i].dibujarCirculo();
-    d[i].mover();
-    d[i].borde();
+    // d[i].dibujarCirculo();
+    // d[i].mover();
+    // d[i].borde();
   }
 }
