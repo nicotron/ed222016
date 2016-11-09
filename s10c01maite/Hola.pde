@@ -6,7 +6,7 @@ class Hola {
   Hola (float x, float y, float tx, float ty, float vx, float vy, float angulo) {
     this.x = x;
     this.y = y;
-    this.r = 10;
+    this.r = 10; // variable sin uso
     this.tx = tx;
     this.ty = ty;
     this.angulo = angulo;

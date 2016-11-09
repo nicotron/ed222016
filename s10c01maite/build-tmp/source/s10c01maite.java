@@ -69,7 +69,7 @@ public void draw() {
       c = !c;
     }
   }
-  // qu\u00e9 sucede?
+  // t\u00edtulos explicativos de lo que pasa en el parrafo de c\u00f3digo
   if (c == true) {
     pushMatrix();
     background(255, 255, 0);
@@ -82,7 +82,7 @@ public void draw() {
     popMatrix();
   }
 
-  // qu\u00e9 sucede?
+  // t\u00edtulos explicativos de lo que pasa en el parrafo de c\u00f3digo
   if (c == false) {
     translate(width / 5, height / 5);
     background(51);
@@ -93,7 +93,7 @@ public void draw() {
   }
 
 
-
+  // t\u00edtulos explicativos de lo que pasa en el parrafo de c\u00f3digo
   if ( b == false) {
     pushMatrix();
     translate(width / 8, height / 8);
@@ -115,7 +115,7 @@ class Hola {
   Hola (float x, float y, float tx, float ty, float vx, float vy, float angulo) {
     this.x = x;
     this.y = y;
-    this.r = 10;
+    this.r = 10; // variable sin uso
     this.tx = tx;
     this.ty = ty;
     this.angulo = angulo;
@@ -129,6 +129,7 @@ class Hola {
    popMatrix(); para devolver el estado actual de las coordenadas,
    encerrando todas las funciones que est\u00e1n dentro de ellos*/
 
+  // t\u00edtulos explicativos de lo que pasa en el parrafo de c\u00f3digo
   public void margarita() {
     pushMatrix();               
     translate(x, y); 
@@ -172,7 +173,7 @@ class Hola {
     angulo += 0.02f;
   }
 
-
+  // t\u00edtulos explicativos de lo que pasa en el parrafo de c\u00f3digo
   public void linea() {
     pushMatrix();
     translate(x, y);
@@ -183,6 +184,8 @@ class Hola {
     popMatrix();
   }
 
+  // t\u00edtulos explicativos de lo que pasa en el parrafo de c\u00f3digo
+  // el nombre de la funci\u00f3n debe ser m\u00e1s descriptivo, dibujar es gen\u00e9rico si hay m\u00e1s formas por dibujar
   public void dibujar() {
     pushMatrix();
     translate(width * .15f, height * .15f);
@@ -191,6 +194,7 @@ class Hola {
     popMatrix();
   }
 
+  // t\u00edtulos explicativos de lo que pasa en el parrafo de c\u00f3digo
   public void borde() {
     if (x > tx || x < tx - 10) {
       vx *= -1;
