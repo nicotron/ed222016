@@ -9,6 +9,7 @@ entre ellas y los mismos círculos, a medida que se empieza a acercar al final d
 en constante movimiento hacia el lado derecho y vuelven a aparecer nuevamente por el lado izquierdo.*/
 
 // NIVEL 2.3: Al tener una grilla, 3 movimientos y 3 figuras (nivel 3)
+// Pregunta: 1.0 no supo responder el porqué las líneas de elipses se iban separando a lo largo del canvas
 
 // LLamamos a nuestros class
 Cata[] e = new Cata [625];

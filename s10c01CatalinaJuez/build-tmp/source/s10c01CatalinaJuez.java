@@ -24,6 +24,9 @@ En este c\u00f3digo se puede apreciar tri\u00e1ngulos que giran en un sentido, m
 entre ellas y los mismos c\u00edrculos, a medida que se empieza a acercar al final de la composici\u00f3n. Adem\u00e1s de que estas l\u00edneas se encuentran 
 en constante movimiento hacia el lado derecho y vuelven a aparecer nuevamente por el lado izquierdo.*/
 
+// NIVEL 2.3: Al tener una grilla, 3 movimientos y 3 figuras (nivel 3)
+// Pregunta: 1.0 no supo responder el porqu\u00e9 las l\u00edneas de elipses se iban separando a lo largo del canvas
+
 // LLamamos a nuestros class
 Cata[] e = new Cata [625];
 Cata2[] d = new Cata2 [625];
@@ -34,15 +37,15 @@ public void setup() {
   for (int i = 0; i < 25; i++) {
     for (int j = 0; j < 25; j++) {
       int total = j + i * 25;
-      float ix = i * 25; //separac\u00f3n entre los elementos, separaci\u00f3n de 25px entre cada uno
-      float jy = j * 25; //separac\u00f3n entre los elementos, separaci\u00f3n de 25px entre cada uno
+      float ix = i * 25; //separaci\u00f3n entre los elementos, separaci\u00f3n de 25px entre cada uno
+      float jy = j * 25; //separaci\u00f3n entre los elementos, separaci\u00f3n de 25px entre cada uno
       e[total] = new Cata(ix, jy, total);
     }
 
     for (int z = 0; z < 25; z++) {
       for (int w = 0; w < 25; w++) {
         int total = w + z * 25;
-        float zx = z * 5; //separac\u00f3n entre los elementos, separaci\u00f3n de 5px entre cada uno
+        float zx = z * 5; //separaci\u00f3n entre los elementos, separaci\u00f3n de 5px entre cada uno
         d[total] = new Cata2(zx);
       }
     }
@@ -59,9 +62,9 @@ public void draw() {
     e[i].dibujarTriangulo();
     e[i].mover();
 
-    // d[i].dibujarCirculo();
-    // d[i].mover();
-    // d[i].borde();
+    d[i].dibujarCirculo();
+    d[i].mover();
+    d[i].borde();
   }
 }
 class Cata {
@@ -121,7 +124,8 @@ class Cata2 {
 
   // Creamos nuestros float y int que usaremos en nuestro c\u00f3digo
   float y, x;
-  float r = random(5, 30);
+  // float r = random(5, 30);
+  float r = 10 * (int)random(1,5);
   float g = random(50, 100);
   float b = random(100, 200);
   int color4;
