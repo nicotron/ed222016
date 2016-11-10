@@ -68,7 +68,7 @@ class Objeto {
       translate (sin (radians ( i + frameCount)) * 100, cos (radians ( i + frameCount)) * 100); // Figura rota. 
       rotate (radians(- i));                                                                    // Cada triángulo gira sobre su eje.                                                       
 
-      fill (map (i, 0, 140, 255, 0), 200, 255);                                      
+      fill (map (i, 0, 360, 255, 0), 200, 255);                                      
       triangle (x1, y1, x2, y2, x3, y3);                                          
       popMatrix();
     }

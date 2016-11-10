@@ -22,7 +22,7 @@ se alejen y acerquen.
 
 
 
-Objeto [] o = new Objeto [2];                                                          // Creo "Objeto".
+Objeto [] o = new Objeto [4];  //Por que solo con numeros impares se cumple el boolean?                                                         // Creo "Objeto".
 boolean evalDivision;
 
 // Inicialización:
@@ -30,7 +30,7 @@ void setup() {
 
   size (600, 600);
   for (int i = 0; i < o.length; i ++) {                
-    o[i] = new Objeto(random(0,100), random(0,20));                                                               // Inicializo "Objeto".
+    o[i] = new Objeto(random (80,100), random(10,20));                                                               // Inicializo "Objeto".
   }
   
   evalDivision = true;  
