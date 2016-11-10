@@ -45,7 +45,7 @@ public void setup() {  // Funci\u00f3n que se ejecuta al principio una sola vez
 public void draw() {  // Funci\u00f3n que se ejecuta cada vez
   background(0xffDDFAB3);  // El color de fondo es verde
   noStroke();  // Las figuras no tienen borde
-  objetos[1].fondo();  // Se dibuja el contenido del void fondo
+  objetos[0].fondo();  // Se dibuja el contenido del void fondo
   stroke(3);  // el grosor de l\u00ednea de los bordes de las figuras es de 3px
   translate(width / 2 - width / 3, 0);  // Se traslada el origen a las cordenadas ancho dividido en 2 menos el ancho dividido en 3, 0
 
@@ -162,7 +162,7 @@ class Objects {  // Se crea la clase Objetos
     int termino = color(0xff4B674B);
     amt = map(inicioM, height / 4, 3 * height / 4, 0, 1); 
     partida = lerpColor(partida, termino, amt);
-    // fill(partida);
+    fill(partida);
   }
   
   // Var\u00eda el valor de inicio M con un movimiento lineal para los desplazamientos en el eje Y
@@ -205,14 +205,14 @@ class Objects {  // Se crea la clase Objetos
 
 
   public void dibujarcirculos() {
-    
+
     ellipse(ix, inicioM, 8, 8);
   }
 
 // Se dibujan tri\u00e1ngulos desde la mitad del alto hasta el valor de inicioM modificado en la configuraci\u00f3n
 
   public void dibujartriangulos() {
-    fill(partida);
+
     triangle(ix, inicioM, ix + width / 20, height / 2, ix - width / 20, height / 2);
   }
 }
