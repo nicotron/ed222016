@@ -4,9 +4,9 @@
 
 /* En este código se llamarán las diferentes clases, esto se logrará mediante un boolean. Las clases serán 
  movimientos y figuras. Esto permite lograr diferentes composiciones con los movimientos descritos en el código.
- Lo que se muestra primero son los cuadrados, que estan posicionadas en la grilla de tal manera que genera
- un módulo de 25 * 25 cuadrados de color tuqueza con un stroke de 1.5 y de color 120 (gris). luego este cambia y se compone de
- de líneas, este tambien consta de un módulo de 25 * 25, la diferencia está en que este crea solamente la mitad
+ Lo que se muestra primero son los cuadrados, que estan posicionados en la grilla de tal manera que genera
+ un módulo de 25 * 25 cuadrados de color tuqueza con un stroke de 1.5 y de color 120 (gris). Luego este cambia y se compone de
+ de líneas, este también consta de un módulo de 25 * 25, la diferencia está en que este crea solamente la mitad
  del cuadrado, generando así que se forme y desforme el cuadrado descrito. 
  */
 
@@ -22,7 +22,7 @@ void setup() {
       float hx = h * 15;
       float dy = d * 15;
       g[total] = new Gabi(hx, dy, hx +  5, dy + 5, (int) random(-2, 2), (int) random(-2, 2), total);
-      println(total);
+      println(total); //vestigio de ejercicios en clase
     }
   }
 }
