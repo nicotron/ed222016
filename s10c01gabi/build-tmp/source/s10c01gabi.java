@@ -26,14 +26,14 @@ public class s10c01gabi extends PApplet {
  del cuadrado, generando as\u00ed que se forme y desforme el cuadrado descrito. 
  */
 
-Gabi [] g = new Gabi[625];                                                                                //Creo "Gabi"            
+Gabi[] g = new Gabi[625];                                                                                //Creo "Gabi"            
 float x, y, angulo;
 
 //Inicializaci\u00f3n
 public void setup() {
                                                                                           //Tama\u00f1o canvas
   for (int h = 0; h < 25; h++) {                                                                          
-    for (int d =0; d < 25; d++) {
+    for (int d = 0; d < 25; d++) {
       int total = h + d * 25;
       float hx = h * 15;
       float dy = d * 15;
@@ -82,7 +82,7 @@ class Gabi {
   }
 
 //Crean las figuras 
-  public void linea(float angulo) {
+  public void linea(float anguloq) {
     pushMatrix();
     translate(x, y);
     rotate(ang);
