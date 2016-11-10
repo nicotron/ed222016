@@ -1,7 +1,7 @@
 class Javi { // Se crea la clase
   float x, y, tx, ty, velx, vely, angulo;
 
-  Javi (float x, float y, float tx, float ty, float velx, float vely, float angulo) {
+  Javi(float x, float y, float tx, float ty, float velx, float vely, float angulo) {
     /*Se conectan las variables del código principal con las de la clase*/
     this.x = x;
     this.y = y;
@@ -34,7 +34,7 @@ class Javi { // Se crea la clase
   void mover() { // Se genera el movimiento
     x += velx;
     y += vely;
- // angulo += 0.09;
+ // angulo += 0.09; // las líneas de código que no se dibujen, no deben ir
     angulo -= 0.09; // Se determina la velocidad con la que giran los objetos y el sentido (cambia según si el número es positivo o nogativo)
   }
 
