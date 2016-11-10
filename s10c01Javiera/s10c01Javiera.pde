@@ -8,10 +8,10 @@ Al igual que el radio de giro, el grosor de la figura también va cambiando, aum
 que la grilla realiza diferentes movimientos*/
 
 // Declaración de variables
-float  f, g, amt;
+float  f, g, amt; //amt no está en uso de forma global debe ser declarados en el Constructor
 boolean b;
-int nuevovalor, i;
-color c1, c2, c3;
+// int nuevovalor, i; //nuevovalor, i no está en uso de forma global
+color c1, c2, c3; // no están en uso de forma global deben ser declarados en el Constructor
 float radioGiro = 0.01;
 float grosor    = 0.001;  
 
