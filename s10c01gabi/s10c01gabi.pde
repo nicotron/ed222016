@@ -11,7 +11,7 @@
  */
 
 Gabi[] g = new Gabi[625];                                                                                //Creo "Gabi"            
-float x, y, angulo;
+float x, y, angulo; // variables que no se usan
 
 //Inicialización
 void setup() {
