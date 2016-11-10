@@ -9,7 +9,7 @@
  de líneas, este también consta de un módulo de 25 * 25, la diferencia está en que este crea solamente la mitad
  del cuadrado, generando así que se forme y desforme el cuadrado descrito. 
  */
-
+// NIVEL 1: Una grilla, dos movimientos, dos figuras
 Gabi[] g = new Gabi[625];                                                                                //Creo "Gabi"            
 float x, y, angulo; // variables que no se usan
 
