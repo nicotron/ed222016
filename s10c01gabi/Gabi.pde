@@ -12,7 +12,8 @@ class Gabi {
     //Velocidad con la que se moverán
     this.velx = velx * 2;
     this.vely = vely * 2;
-    this.angulo = angulo;
+    // this.angulo = angulo;
+    angulo = 0.08;
   }
 
   void dibujo() {
@@ -69,7 +70,7 @@ class Gabi {
   void mover() {
     x += velx;
     y += vely;
-    angulo = 0.08;
+    // angulo = 0.08; // esta variable si es estática para todo el programa, debe ser inicializada en el Constructor
   }
 
 // Grilla en el canvas

@@ -48,7 +48,7 @@ public void draw() {
   background(255);
   translate(width * .15f, height * .15f);
   for (int j = 0; j < g.length; j++) {
-    // g[j].dibujo();
+    // g[j].dibujo(); //toda esta funci\u00f3n no existe en el canvas
     g[j].linea(angulo); // par\u00e1metro que no se usa
     g[j].contra();
     g[j].mover();
@@ -69,7 +69,8 @@ class Gabi {
     //Velocidad con la que se mover\u00e1n
     this.velx = velx * 2;
     this.vely = vely * 2;
-    this.angulo = angulo;
+    // this.angulo = angulo;
+    angulo = 0.08f;
   }
 
   public void dibujo() {
@@ -126,7 +127,7 @@ class Gabi {
   public void mover() {
     x += velx;
     y += vely;
-    angulo = 0.08f;
+    // angulo = 0.08; // esta variable si es est\u00e1tica para todo el programa, debe ser inicializada en el Constructor
   }
 
 // Grilla en el canvas
