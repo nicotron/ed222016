@@ -23,6 +23,8 @@ Se crea un fondo color verde claro y sobre este se dibuja una grilla en el fondo
 En el centro del cambas se dibuja una grilla en el eje X con 7 figuras que van a ir cambiando entre tri\u00e1ngulos, c\u00edrculos y rect\u00e1ngulos altern\u00e1ndose y combin\u00e1ndose entre s\u00ed
  */
 
+ // NIVEL 
+
 float inicio, inicio2, fin, fin2, amt;  // Se crean las variables decimales inicio, inicio2, fin, fin2, amt
 boolean b, z, r, t;  // Se crean los boolean b, z, r, t
 int q, w, a, e;  //Se crean las variables enteras q, w, a, e
@@ -44,9 +46,11 @@ public void setup() {  // Funci\u00f3n que se ejecuta al principio una sola vez
 
 public void draw() {  // Funci\u00f3n que se ejecuta cada vez
   background(0xffDDFAB3);  // El color de fondo es verde
+  //esto es espec\u00edfico para la funci\u00f3n `fondo` por lo que debe ser declarado en esa funci\u00f3n
   noStroke();  // Las figuras no tienen borde
   objetos[0].fondo();  // La funci\u00f3n `fondo` puede ser escrita fuera de la clase y no afecta. Al igual que puede ser asignada a cualquier objeto.
-  stroke(10);  // el grosor de l\u00ednea de los bordes de las figuras es de 3px
+  //al igual que este stroke es para toda la clase, si se trabaja con m\u00e1s de una clase, esta funci\u00f3n entra en conflicto con las clases
+  stroke(3);  // el color de l\u00ednea de los bordes de las figuras es de 3 entre 0 y 255
   translate(width / 2 - width / 3, 0);  // Se traslada el origen a las cordenadas ancho dividido en 2 menos el ancho dividido en 3, 0
 
   for (int i = 0; i < objetos.length; i++) {  // Mientras la nueva variable i sea menor que el total de valores dentro del objeto, i va sumando 1 cada vez.

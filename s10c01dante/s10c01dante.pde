@@ -7,6 +7,8 @@ Se crea un fondo color verde claro y sobre este se dibuja una grilla en el fondo
 En el centro del cambas se dibuja una grilla en el eje X con 7 figuras que van a ir cambiando entre triángulos, círculos y rectángulos alternándose y combinándose entre sí
  */
 
+ // NIVEL 1.5 = Una grilla, 2 movimientos, 3 figuras (nivel 3)
+
 float inicio, inicio2, fin, fin2, amt;  // Se crean las variables decimales inicio, inicio2, fin, fin2, amt
 boolean b, z, r, t;  // Se crean los boolean b, z, r, t
 int q, w, a, e;  //Se crean las variables enteras q, w, a, e
