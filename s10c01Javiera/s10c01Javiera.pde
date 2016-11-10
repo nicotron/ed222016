@@ -7,6 +7,8 @@ fijo (individual para cada objeto). La distancia a la que rotan con respecto al 
 Al igual que el radio de giro, el grosor de la figura también va cambiando, aumentando y disminuyendo constantemente, pero a un ritmo distinto, lo que crea la ilusión de
 que la grilla realiza diferentes movimientos*/
 
+//  NIVEL 0.3: Una grilla, un movimiento, dos figuras (nivel 1)
+
 // Declaración de variables
 float  f, g, amt; //amt no está en uso de forma global debe ser declarados en el Constructor
 boolean b;
