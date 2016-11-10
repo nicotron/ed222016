@@ -20,12 +20,12 @@ class Gabi {
     noStroke();
     //Color Turqueza
     fill(97, 209, 206);  
-    // ellipse(x, y, 4, 4);
+    // ellipse(x, y, 4, 4); // si no se va a mostrar, no se escribe
     popMatrix();
   }
 
 //Crean las figuras 
-  void linea(float anguloq) {
+  void linea(float angulo) { // este argumento no se usa nunca
     pushMatrix();
     translate(x, y);
     rotate(ang);

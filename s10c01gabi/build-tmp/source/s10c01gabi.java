@@ -49,7 +49,7 @@ public void draw() {
   translate(width * .15f, height * .15f);
   for (int j = 0; j < g.length; j++) {
     g[j].dibujo();
-    g[j].linea(angulo);
+    g[j].linea(angulo); // par\u00e1metro que no se usa
     g[j].contra();
     g[j].mover();
     g[j].bordes();
@@ -82,7 +82,7 @@ class Gabi {
   }
 
 //Crean las figuras 
-  public void linea(float anguloq) {
+  public void linea(float angulo) { // este argumento no se usa nunca
     pushMatrix();
     translate(x, y);
     rotate(ang);
@@ -126,7 +126,7 @@ class Gabi {
   public void mover() {
     x += velx;
     y += vely;
-    angulo = 0.08f;
+    angulo = 3.08f;
   }
 
 // Grilla en el canvas

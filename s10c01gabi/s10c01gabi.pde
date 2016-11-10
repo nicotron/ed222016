@@ -21,7 +21,7 @@ void setup() {
       int total = h + d * 25;
       float hx = h * 15;
       float dy = d * 15;
-      g[total] = new Gabi(hx, dy, hx +  5, dy + 5, (int) random(-2, 2), (int) random(-2, 2), total);
+      g[total] = new Gabi(hx, dy, hx + 5, dy + 5, (int) random(-2, 2), (int) random(-2, 2), total);
       println(total); //vestigio de ejercicios en clase
     }
   }
