@@ -30,7 +30,7 @@ void draw() {  // Función que se ejecuta cada vez
   background(#DDFAB3);  // El color de fondo es verde
   noStroke();  // Las figuras no tienen borde
   objetos[0].fondo();  // La función `fondo` puede ser escrita fuera de la clase y no afecta. Al igual que puede ser asignada a cualquier objeto.
-  stroke(3);  // el grosor de línea de los bordes de las figuras es de 3px
+  stroke(3);  // el color de línea de los bordes de las figuras es de 3 entre 0 y 255
   translate(width / 2 - width / 3, 0);  // Se traslada el origen a las cordenadas ancho dividido en 2 menos el ancho dividido en 3, 0
 
   for (int i = 0; i < objetos.length; i++) {  // Mientras la nueva variable i sea menor que el total de valores dentro del objeto, i va sumando 1 cada vez.

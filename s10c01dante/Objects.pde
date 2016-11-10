@@ -32,7 +32,7 @@ class Objects {  // Se crea la clase Objetos
         for (int i = 0; i < NUM_C; i++) {
 
 // Se modifica el tamaño de la elipse variando según el valor de NUM_C e i
-          float sizeX = ( 100 - (i * (100 / NUM_C)));
+          float sizeX = (100 - (i * (100 / NUM_C)));
           float sizeY = (100 - (i * (100 / NUM_C)));
 
           fill(160, 190, 110, 60);

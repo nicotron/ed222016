@@ -37,7 +37,7 @@ public void setup() {  // Funci\u00f3n que se ejecuta al principio una sola vez
   fin2 = height / 4;  // La variable fin 2 es igual a el alto dividido en 4
   for (int i = 0; i < 7; i++) {  // Mientras la nueva variable i sea menor que 30, i va sumando 1 cada vez.
     float ix = i * width / 10; // Se crea la variable decimal ix que es igual a la multiplicaci\u00f3n de i por 30.
-    // int total = i;  // Se crea la variable entera total que es igual a la variable i
+    // int total = i;  // total es una equivalencia directa a i por lo que no es necesario que exista.
     objetos[i] = new Objects(i, ix, inicio, inicio2, fin, fin2);  // Se ingresan las variables i, ix, inicio, inicio2, fin, fin2 a la clase
   }
 }
@@ -45,8 +45,8 @@ public void setup() {  // Funci\u00f3n que se ejecuta al principio una sola vez
 public void draw() {  // Funci\u00f3n que se ejecuta cada vez
   background(0xffDDFAB3);  // El color de fondo es verde
   noStroke();  // Las figuras no tienen borde
-  objetos[0].fondo();  // Se dibuja el contenido del void fondo
-  stroke(3);  // el grosor de l\u00ednea de los bordes de las figuras es de 3px
+  objetos[0].fondo();  // La funci\u00f3n `fondo` puede ser escrita fuera de la clase y no afecta. Al igual que puede ser asignada a cualquier objeto.
+  stroke(10);  // el grosor de l\u00ednea de los bordes de las figuras es de 3px
   translate(width / 2 - width / 3, 0);  // Se traslada el origen a las cordenadas ancho dividido en 2 menos el ancho dividido en 3, 0
 
   for (int i = 0; i < objetos.length; i++) {  // Mientras la nueva variable i sea menor que el total de valores dentro del objeto, i va sumando 1 cada vez.
@@ -123,7 +123,7 @@ class Objects {  // Se crea la clase Objetos
         for (int i = 0; i < NUM_C; i++) {
 
 // Se modifica el tama\u00f1o de la elipse variando seg\u00fan el valor de NUM_C e i
-          float sizeX = ( 100 - (i * (100 / NUM_C)));
+          float sizeX = (100 - (i * (100 / NUM_C)));
           float sizeY = (100 - (i * (100 / NUM_C)));
 
           fill(160, 190, 110, 60);
