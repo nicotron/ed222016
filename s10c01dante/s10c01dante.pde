@@ -28,8 +28,10 @@ void setup() {  // Función que se ejecuta al principio una sola vez
 
 void draw() {  // Función que se ejecuta cada vez
   background(#DDFAB3);  // El color de fondo es verde
+  //esto es específico para la función `fondo` por lo que debe ser declarado en esa función
   noStroke();  // Las figuras no tienen borde
   objetos[0].fondo();  // La función `fondo` puede ser escrita fuera de la clase y no afecta. Al igual que puede ser asignada a cualquier objeto.
+  //al igual que este stroke es para toda la clase, si se trabaja con más de una clase, esta función entra en conflicto con las clases
   stroke(3);  // el color de línea de los bordes de las figuras es de 3 entre 0 y 255
   translate(width / 2 - width / 3, 0);  // Se traslada el origen a las cordenadas ancho dividido en 2 menos el ancho dividido en 3, 0
 
