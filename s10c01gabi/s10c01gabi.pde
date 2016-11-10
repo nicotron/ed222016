@@ -32,7 +32,7 @@ void draw() {
   background(255);
   translate(width * .15, height * .15);
   for (int j = 0; j < g.length; j++) {
-    g[j].dibujo();
+    // g[j].dibujo(); //toda esta función no existe en el canvas
     g[j].linea(angulo); // parámetro que no se usa
     g[j].contra();
     g[j].mover();

@@ -27,7 +27,7 @@ public class s10c01gabi extends PApplet {
  */
 
 Gabi[] g = new Gabi[625];                                                                                //Creo "Gabi"            
-float x, y, angulo;
+float x, y, angulo; // variables que no se usan
 
 //Inicializaci\u00f3n
 public void setup() {
@@ -37,7 +37,7 @@ public void setup() {
       int total = h + d * 25;
       float hx = h * 15;
       float dy = d * 15;
-      g[total] = new Gabi(hx, dy, hx +  5, dy + 5, (int) random(-2, 2), (int) random(-2, 2), total);
+      g[total] = new Gabi(hx, dy, hx + 5, dy + 5, (int) random(-2, 2), (int) random(-2, 2), total);
       println(total); //vestigio de ejercicios en clase
     }
   }
@@ -48,7 +48,7 @@ public void draw() {
   background(255);
   translate(width * .15f, height * .15f);
   for (int j = 0; j < g.length; j++) {
-    g[j].dibujo();
+    // g[j].dibujo();
     g[j].linea(angulo); // par\u00e1metro que no se usa
     g[j].contra();
     g[j].mover();
@@ -77,7 +77,7 @@ class Gabi {
     noStroke();
     //Color Turqueza
     fill(97, 209, 206);  
-    // ellipse(x, y, 4, 4);
+    // ellipse(x, y, 4, 4); // si no se va a mostrar, no se escribe
     popMatrix();
   }
 
@@ -126,7 +126,7 @@ class Gabi {
   public void mover() {
     x += velx;
     y += vely;
-    angulo = 3.08f;
+    angulo = 0.08f;
   }
 
 // Grilla en el canvas
