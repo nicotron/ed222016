@@ -51,9 +51,7 @@ class Gabi {
       fill(97, 209, 206);
 
       popMatrix();
-    } else {
-
-      if (on == false) {
+    } else if (on == false) {
         pushMatrix();
         translate(x - 15, y - 15);
         rotate(angulo);
@@ -62,8 +60,7 @@ class Gabi {
         fill(97, 209, 206);
         rect(10, 10, 20, 20);
         popMatrix();
-      }
-    }
+    } 
   }
   
   // Genera movimiento
