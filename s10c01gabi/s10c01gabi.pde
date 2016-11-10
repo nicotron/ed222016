@@ -10,14 +10,14 @@
  del cuadrado, generando así que se forme y desforme el cuadrado descrito. 
  */
 
-Gabi [] g = new Gabi[625];                                                                                //Creo "Gabi"            
+Gabi[] g = new Gabi[625];                                                                                //Creo "Gabi"            
 float x, y, angulo;
 
 //Inicialización
 void setup() {
   size(600, 600);                                                                                        //Tamaño canvas
   for (int h = 0; h < 25; h++) {                                                                          
-    for (int d =0; d < 25; d++) {
+    for (int d = 0; d < 25; d++) {
       int total = h + d * 25;
       float hx = h * 15;
       float dy = d * 15;
@@ -33,7 +33,7 @@ void draw() {
   translate(width * .15, height * .15);
   for (int j = 0; j < g.length; j++) {
     g[j].dibujo();
-    g[j].linea(angulo);
+    g[j].linea(angulo); // parámetro que no se usa
     g[j].contra();
     g[j].mover();
     g[j].bordes();

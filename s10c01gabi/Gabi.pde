@@ -25,7 +25,7 @@ class Gabi {
   }
 
 //Crean las figuras 
-  void linea(float angulo) {
+  void linea(float anguloq) {
     pushMatrix();
     translate(x, y);
     rotate(ang);
