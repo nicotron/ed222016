@@ -38,7 +38,7 @@ class Javi { // Se crea la clase
     angulo -= 0.09; // Se determina la velocidad con la que giran los objetos y el sentido (cambia según si el número es positivo o nogativo)
   }
 
- void bordes() { // instala la grilla en el canvas
+ void bordes() { // cada elemento tiene un espacio por donde rebotar
     if (x > tx || x < tx) {
       velx *= -1;
     }
