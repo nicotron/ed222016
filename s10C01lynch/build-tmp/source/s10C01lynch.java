@@ -77,10 +77,10 @@ public void draw() {
   }
   translate(width * .15f, height * .15f); // Grilla desde el centro para Dot.
 
-  for (int i = 0; i < d.length; i++) { // Creaci\u00f3n de objetos de clase Dot.
-    d[i].displayRect();
-    d[i].move();
-  }
+  // for (int i = 0; i < d.length; i++) { // Creaci\u00f3n de objetos de clase Dot.
+  //   d[i].displayRect();
+  //   d[i].move();
+  // }
 }
 
 public void keyPressed() { // Eventos teclado.
@@ -119,20 +119,20 @@ adem\u00e1s de girar en torno a la grilla.
 
   public void displayRect() {  // Mostrar figuras, estas son elipses que giran en su
     pushMatrix();  
-      translate(width/3, height/3);
-      rotate(3);
+      translate(width / 3, height / 3);
+      rotate(dir);
       dir = dir + .02f;  
       pushMatrix();
         translate(x, y);
         rotate(rot);
-        rot = (rot+.2f);
+        rot = (rot + .2f);
         noStroke();
-        fill(y/2, 0, y/2);
-        ellipse(0, 0, angulo*.75f, angulo);
+        fill(y / 2, 0, y / 2);
+        ellipse(0, 0, angulo * .75f, angulo);
         pushMatrix();
           translate(10, 10);
-          fill(70+(y/1.1f), 0, 70+(y/1.1f));
-          ellipse(0, 0, angulo, angulo*.75f);
+          fill(70 + (y / 1.1f), 0, 70 + (y / 1.1f));
+          ellipse(0, 0, angulo, angulo * .75f);
         popMatrix();
       popMatrix();
     popMatrix();
@@ -177,9 +177,9 @@ class Plan {
     fill(cc, cc, 100);
     ellipse(px, py, 8, 8);
     fill(100, cc, cc);
-    ellipse(px*2, py*1.5f, 6, 6);
+    ellipse(px * 2, py * 1.5f, 6, 6);
     fill(cc, 100, cc);
-    ellipse(px2*1.5f, py2*2, 10, 10);
+    ellipse(px2 * 1.5f, py2 * 2, 10, 10);
     fill(22, 0, 22);
     ellipse(posX, posY, 22, 22);
   }

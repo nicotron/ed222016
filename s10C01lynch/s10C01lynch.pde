@@ -50,6 +50,10 @@ void setup() {
 
 void draw() {
   background(5);
+  // Esta condición debe estar dentro de las funciones específicas para ello
+  // es el objetivo principal de la Programación Orientada a Objetos, ya que
+  // al usar más de una clase, o varias funciones de dibujo diferentes, 
+  // podríamos querer unas que no tengan esta condición.
   noStroke();
 
   for (int i = 0; i < p.length; i++) {  // Creación de objetos de clase Plan.
@@ -61,10 +65,10 @@ void draw() {
   }
   translate(width * .15, height * .15); // Grilla desde el centro para Dot.
 
-  for (int i = 0; i < d.length; i++) { // Creación de objetos de clase Dot.
-    d[i].displayRect();
-    d[i].move();
-  }
+  // for (int i = 0; i < d.length; i++) { // Creación de objetos de clase Dot.
+  //   d[i].displayRect();
+  //   d[i].move();
+  // }
 }
 
 void keyPressed() { // Eventos teclado.
