@@ -2,7 +2,7 @@
 //Benjamin Gutierrez 
 //s10c01benja
 
-
+// NIVEL 0.6: una grilla (nivel 1), un movimiento (nivel 1), dos figuras (nivel 1)
 /* declaramos la clase, dandole nombre y creando un array con el numero total de objetos*/
 Body[] b = new Body[400];
 
