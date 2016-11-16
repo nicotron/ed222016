@@ -1,4 +1,4 @@
-//Expresión digital II - Diseño Digital - UDD- 2016.
+//Expresión digital II - Diseño Digital - UDD - 2016.
 //Ricardo Vidal.
 //s10c01lynch.
 
@@ -6,8 +6,7 @@
 /*
 Este código genera una grilla en el fondo con "planetas" que tienen otros elementos
 o "satélites" que los orbitan, la amplitud de esta orbita puede manejarse para que
-aumente o disminuya con la tecla 's', y se puede congelar en una amplitud a gusto 
-con la tecla 'd'.
+vaya hacia al centro y luego siga alejándose con las teclas 's' y 'd'.
 El código genera tambien una "nube" de ellipses que rotan alrededor del centro
 del canvas, ademas de rotar sobre su propio eje. Hay ellipses de tonos distintos
 y en degradé para genera el efecto de sombra. Las ellipses tienden a desordenarse

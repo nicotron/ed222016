@@ -14,7 +14,7 @@ import java.io.IOException;
 
 public class s10C01lynch extends PApplet {
 
-//Expresi\u00f3n digital II - Dise\u00f1o Digital - UDD- 2016.
+//Expresi\u00f3n digital II - Dise\u00f1o Digital - UDD - 2016.
 //Ricardo Vidal.
 //s10c01lynch.
 
@@ -66,16 +66,16 @@ public void setup() {
 }
 
 public void draw() {
-  background(255);
+  background(5);
   noStroke();
 
-  // for (int i = 0; i < p.length; i++) {  // Creaci\u00f3n de objetos de clase Plan.
-  //   p[i].displayPlan();
-  //   p[i].movePlan();
-  //   if (sett) {  // Esta l\u00ednea permite congelar la orbita de los Plan.
-  //     p[i].spir();
-  //   }
-  // }
+  for (int i = 0; i < p.length; i++) {  // Creaci\u00f3n de objetos de clase Plan.
+    p[i].displayPlan();
+    p[i].movePlan();
+    if (sett) {  // Esta l\u00ednea permite congelar la orbita de los Plan.
+      p[i].spir();
+    }
+  }
   translate(width * .15f, height * .15f); // Grilla desde el centro para Dot.
 
   for (int i = 0; i < d.length; i++) { // Creaci\u00f3n de objetos de clase Dot.
@@ -195,10 +195,10 @@ class Plan {
   public void spir() { // Esta funci\u00f3n permite controlar la amplitud de la \u00f3rbita.
     if (spire == true) {
       r += velY;
-      // println(r);
+      println(r);
     } else if (spire == false) {
       r -= velY;
-      // println(r);
+      println(r);
     }
   }
 }
