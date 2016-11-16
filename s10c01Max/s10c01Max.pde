@@ -7,6 +7,8 @@ no mayor a dos veces su propio tamaño. La idea de esta instancia es poder orden
 Cuando pasa una cantidad determinada de tiempo, estos elementos cambian de elipses a cuadrados y se empiezan a mover con mayor rapidez en forma elíptica
 y en líneas curvas con velicidad independiente*/
 
+// NIVEL 2(3): 2 grillas (nivel 3), -.6 2 movimientos (nivel 1), -.3 2 figuras (nivel 2)
+
 //nombrar clase y llammar 400 elementos (0 a 399)
 Dot[] d = new Dot [400];
 boolean b;
