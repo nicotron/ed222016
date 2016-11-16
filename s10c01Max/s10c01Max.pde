@@ -30,7 +30,7 @@ void setup() {
 //definir dos instancias para poder hacer las transiciones entre estados. Em primero con framecount entre 0 y 300 y el segundo entre 300 y 600)
 void draw() {
   background(0);
-  // println(frameCount); //no es necesario que estas funciones esten en constante uso, específicamente println() ya que su principal uso es para debugging al ser usado con la consola
+  println(frameCount); //no es necesario que estas funciones esten en constante uso, específicamente println() ya que su principal uso es para debugging al ser usado con la consola
   for (int i = 0; i < d.length; i++) {
     if (frameCount > 600) {
       frameCount = frameCount % 600; // esto es igual a frameCount = 0;
