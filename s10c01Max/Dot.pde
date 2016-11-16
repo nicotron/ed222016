@@ -1,4 +1,3 @@
-
 class Dot {
   //Llamar variables.
   float x, x2, y, y2, tx, ty, vx, vy, vx2, vy2;
