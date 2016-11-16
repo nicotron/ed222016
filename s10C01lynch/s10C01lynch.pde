@@ -13,6 +13,9 @@ y en degradé para genera el efecto de sombra. Las ellipses tienden a desordenar
 (entropía) siempre, pero este desorden se puede controlar y revertir presionando
 la tecla 'a'.
 */
+
+//NIVEL 1.3: Una grilla (dos veces), 2 movimientos, 2 figuras (nivel 2)
+
 Dot[] d = new Dot[225];  // Clase Dot, nubes rosadas.
 Plan[] p = new Plan[81]; // Clase Plan, ellipse orbitando el fondo.
 float chng = 0.5;
