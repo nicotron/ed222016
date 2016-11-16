@@ -35,7 +35,7 @@ class Dot {
       fill(c);
       ellipse(grillax, grillay, 20, 20);
       popMatrix();
-    } else if (f ==1) {
+    } else if (f == 1) {
       pushMatrix();
       translate(width * .02, height * .02);
       noStroke();
@@ -63,14 +63,14 @@ class Dot {
   void move() {
     x += vx;
     y += vy;
-    x2 = width/2;
+    x2 = width / 2;
     y2 = y2;
   }
   
 //Movimiento instancia 2
   void move2() {
-   rotAngle ++;
-   rotate(radians(rotAngle/50));
+   rotAngle++;
+   rotate(radians(rotAngle / 50));
     x2 += vx / 10;
     y2 += vy / 20;
     x -= vx;
