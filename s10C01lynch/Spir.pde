@@ -39,10 +39,10 @@ class Plan {
   void spir() { // Esta función permite controlar la amplitud de la órbita.
     if (spire == true) {
       r += velY;
-      // println(r);
+      println(r);
     } else if (spire == false) {
       r -= velY;
-      // println(r);
+      println(r);
     }
   }
 }

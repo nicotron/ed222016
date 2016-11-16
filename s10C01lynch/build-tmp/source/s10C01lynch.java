@@ -32,7 +32,7 @@ la tecla 'a'.
 */
 Dot[] d = new Dot[225];  // Clase Dot, nubes rosadas.
 Plan[] p = new Plan[81]; // Clase Plan, ellipse orbitando el fondo.
-
+float chng = 0.5f;
 boolean spire = false;
 boolean sett = false; // Booleans para control de eventos.
 
@@ -46,34 +46,36 @@ public void setup() {
       int total = j + i * 15;
       float x = i * 20;
       float y = j * 20;
-      d[total] = new Dot(x, y, (int)random(-30, 30), (int)random(-30, 10), (int)random(1, 11), (int)random(-1, 1));
+      d[total] = new Dot(x, y, 
+        (int)random(-30, 30), (int)random(-30, 10), 
+        (int)random(1, 11), (int)random(-1, 1));
     }
   }
 
   for (int i = 0; i < 9; i++) {  // Inicializadores de objetos de clases.
     for (int j = 0; j < 9; j++) {
       int total = j + i * 9;
-      float px = i * 30;
-      float py = j * 30;
-      float cc = i * 22;
-      float posX = width / 8 * i;
-      float posY = height / 8 * j;
+      float px = i*30;
+      float py = j*30;
+      float cc = i*22;
+      float posX = width/8*i;
+      float posY = height/8*j;
       p[total] = new Plan(px, py, cc, posX, posY);
     }
   }
 }
 
 public void draw() {
-  background(225);
+  background(255);
   noStroke();
 
-  for (int i = 0; i < p.length; i++) {  // Creaci\u00f3n de objetos de clase Plan.
-    p[i].displayPlan();
-    p[i].movePlan();
-    if (sett) {  // Esta l\u00ednea permite congelar la orbita de los Plan.
-      p[i].spir();
-    }
-  }
+  // for (int i = 0; i < p.length; i++) {  // Creaci\u00f3n de objetos de clase Plan.
+  //   p[i].displayPlan();
+  //   p[i].movePlan();
+  //   if (sett) {  // Esta l\u00ednea permite congelar la orbita de los Plan.
+  //     p[i].spir();
+  //   }
+  // }
   translate(width * .15f, height * .15f); // Grilla desde el centro para Dot.
 
   for (int i = 0; i < d.length; i++) { // Creaci\u00f3n de objetos de clase Dot.
@@ -98,7 +100,6 @@ public void keyPressed() { // Eventos teclado.
 class Dot {
 
   float x, y, tx, ty, vx, vy, angulo, rot, dir;
-  float chng = 0.5f;
 
   Dot (float x, float y, float vx, float vy, float angulo, int dir) {  // Constructor de Dot.
     this.x = x;
@@ -114,9 +115,8 @@ adem\u00e1s de girar en torno a la grilla.
 */
 
   public void displayRect() {  // Mostrar figuras, estas son elipses que giran en su
-    //debe tener relaci\u00f3n a lo que se dibuja
     pushMatrix();  
-      translate(width / 3, height / 3);
+      translate(width/3, height/3);
       rotate(dir);
       dir = dir + .02f;  
       pushMatrix();
@@ -128,8 +128,8 @@ adem\u00e1s de girar en torno a la grilla.
         ellipse(0, 0, angulo*.75f, angulo);
         pushMatrix();
           translate(10, 10);
-          fill(70 + (y / 1.1f), 0, 70 + ( y / 1.1f));
-          ellipse(0, 0, angulo, angulo * .75f);
+          fill(70+(y/1.1f), 0, 70+(y/1.1f));
+          ellipse(0, 0, angulo, angulo*.75f);
         popMatrix();
       popMatrix();
     popMatrix();
@@ -174,9 +174,9 @@ class Plan {
     fill(cc, cc, 100);
     ellipse(px, py, 8, 8);
     fill(100, cc, cc);
-    ellipse(px * 2, py * 1.5f, 6, 6);
+    ellipse(px*2, py*1.5f, 6, 6);
     fill(cc, 100, cc);
-    ellipse(px2 * 1.5f, py2 * 2, 10, 10);
+    ellipse(px2*1.5f, py2*2, 10, 10);
     fill(22, 0, 22);
     ellipse(posX, posY, 22, 22);
   }
