@@ -1,4 +1,4 @@
-// Expresión Digital - Diseño Digital - UDD - 2016
+// Expresión Digital II - Diseño Digital - UDD - 2016
 //Benjamin Gutierrez 
 //s10c01benja
 
@@ -15,8 +15,8 @@ void setup () {
     for (int j = 0; j < 20; j++) {
       int total = j + i * 20;
       float ix = i * 20;
-      float jy = j* 20;
-      b[total] = new Body(ix, jy, ix +5, jy +5, (int)random(-2, 2), (int)random(-2, 2), total * .001);
+      float jy = j * 20;
+      b[total] = new Body(ix, jy, ix + 5, jy + 5, (int)random(-2, 2), (int)random(-2, 2), total * .001);
       println(total);
     }
   }
