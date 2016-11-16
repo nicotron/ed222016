@@ -66,6 +66,10 @@ public void setup() {
 
 public void draw() {
   background(5);
+  // Esta condici\u00f3n debe estar dentro de las funciones espec\u00edficas para ello
+  // es el objetivo principal de la Programaci\u00f3n Orientada a Objetos, ya que
+  // al usar m\u00e1s de una clase, o varias funciones de dibujo diferentes, 
+  // podr\u00edamos querer unas que no tengan esta condici\u00f3n.
   noStroke();
 
   for (int i = 0; i < p.length; i++) {  // Creaci\u00f3n de objetos de clase Plan.
@@ -121,11 +125,11 @@ adem\u00e1s de girar en torno a la grilla.
     pushMatrix();  
       translate(width / 3, height / 3);
       rotate(dir);
-      dir = dir + .02f;  
+      dir +=.02f;  
       pushMatrix();
         translate(x, y);
         rotate(rot);
-        rot = (rot + .2f);
+        rot += .2f;
         noStroke();
         fill(y / 2, 0, y / 2);
         ellipse(0, 0, angulo * .75f, angulo);

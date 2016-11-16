@@ -19,11 +19,11 @@ además de girar en torno a la grilla.
     pushMatrix();  
       translate(width / 3, height / 3);
       rotate(dir);
-      dir = dir + .02;  
+      dir += .02;  
       pushMatrix();
         translate(x, y);
         rotate(rot);
-        rot = (rot + .2);
+        rot += .2;
         noStroke();
         fill(y / 2, 0, y / 2);
         ellipse(0, 0, angulo * .75, angulo);
@@ -50,7 +50,7 @@ además de girar en torno a la grilla.
   }
 
   void entropy() { // Con esta función se puede controlar el nivel de desorden de los ellipses.
-    vx = -vx;
+    vx = -vx; //también puede ser *= -1
     vy = -vy;
   }
   
