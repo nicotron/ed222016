@@ -21,9 +21,8 @@ public class s10C01lynch extends PApplet {
 
 /*
 Este c\u00f3digo genera una grilla en el fondo con "planetas" que tienen otros elementos
-o "sat\u00e9lites" que los orbitan, la amplitud de esta orbita puede manejarse para que
-aumente o disminuya con la tecla 's', y se puede congelar en una amplitud a gusto 
-con la tecla 'd'.
+o "sat\u00e9lites" que los orbitan, la amplitud de esta \u00f3rbita puede manejarse para que
+vaya hacia al centro y luego siga alej\u00e1ndose con las teclas 's' y 'd'.\u00f3rbita sino que cambiar el radio
 El c\u00f3digo genera tambien una "nube" de ellipses que rotan alrededor del centro
 del canvas, ademas de rotar sobre su propio eje. Hay ellipses de tonos distintos
 y en degrad\u00e9 para genera el efecto de sombra. Las ellipses tienden a desordenarse
@@ -55,11 +54,11 @@ public void setup() {
   for (int i = 0; i < 9; i++) {  // Inicializadores de objetos de clases.
     for (int j = 0; j < 9; j++) {
       int total = j + i * 9;
-      float px = i*30;
-      float py = j*30;
-      float cc = i*22;
-      float posX = width/8*i;
-      float posY = height/8*j;
+      float px = i * 30;
+      float py = j * 30;
+      float cc = i * 22;
+      float posX = width / 8 * i;
+      float posY = height / 8 * j;
       p[total] = new Plan(px, py, cc, posX, posY);
     }
   }
@@ -72,8 +71,8 @@ public void draw() {
   for (int i = 0; i < p.length; i++) {  // Creaci\u00f3n de objetos de clase Plan.
     p[i].displayPlan();
     p[i].movePlan();
-    if (sett) {  // Esta l\u00ednea permite congelar la orbita de los Plan.
-      p[i].spir();
+    if (sett) {  // Esta l\u00ednea permite congelar la \u00f3rbita de los Plan.
+      p[i].spir(); // Ya sabemos que no se puede congelar la \u00f3rbita sino que cambiar el radio
     }
   }
   translate(width * .15f, height * .15f); // Grilla desde el centro para Dot.
@@ -86,10 +85,14 @@ public void draw() {
 
 public void keyPressed() { // Eventos teclado.
   if (key == 'a') {
+    // Esto es mejor que sea escrito dentro de draw, y que 'a' modifique un boolean, as\u00ed la lectura
+    // de los comportamientos ser\u00e1 siempre dentro de draw, la estructura principal del programa
     for (int i = 0; i < d.length; i++) {
       d[i].entropy();
     }
   }
+  // Estas dos condicionales hacen lo mismo, al restar velY y llegar a 0, sigue hacia el negativo
+  // que es lo mismo que sumar velY estando negativo, pasar\u00e1 a 0 y luego a positivo. 
   if (key == 's') {
     spire = !spire;
   }
@@ -117,7 +120,7 @@ adem\u00e1s de girar en torno a la grilla.
   public void displayRect() {  // Mostrar figuras, estas son elipses que giran en su
     pushMatrix();  
       translate(width/3, height/3);
-      rotate(dir);
+      rotate(3);
       dir = dir + .02f;  
       pushMatrix();
         translate(x, y);

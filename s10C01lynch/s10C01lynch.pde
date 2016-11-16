@@ -5,8 +5,8 @@
 
 /*
 Este código genera una grilla en el fondo con "planetas" que tienen otros elementos
-o "satélites" que los orbitan, la amplitud de esta orbita puede manejarse para que
-vaya hacia al centro y luego siga alejándose con las teclas 's' y 'd'.
+o "satélites" que los orbitan, la amplitud de esta órbita puede manejarse para que
+vaya hacia al centro y luego siga alejándose con las teclas 's' y 'd'.órbita sino que cambiar el radio
 El código genera tambien una "nube" de ellipses que rotan alrededor del centro
 del canvas, ademas de rotar sobre su propio eje. Hay ellipses de tonos distintos
 y en degradé para genera el efecto de sombra. Las ellipses tienden a desordenarse
@@ -38,11 +38,11 @@ void setup() {
   for (int i = 0; i < 9; i++) {  // Inicializadores de objetos de clases.
     for (int j = 0; j < 9; j++) {
       int total = j + i * 9;
-      float px = i*30;
-      float py = j*30;
-      float cc = i*22;
-      float posX = width/8*i;
-      float posY = height/8*j;
+      float px = i * 30;
+      float py = j * 30;
+      float cc = i * 22;
+      float posX = width / 8 * i;
+      float posY = height / 8 * j;
       p[total] = new Plan(px, py, cc, posX, posY);
     }
   }
@@ -55,8 +55,8 @@ void draw() {
   for (int i = 0; i < p.length; i++) {  // Creación de objetos de clase Plan.
     p[i].displayPlan();
     p[i].movePlan();
-    if (sett) {  // Esta línea permite congelar la orbita de los Plan.
-      p[i].spir();
+    if (sett) {  // Esta línea permite congelar la órbita de los Plan.
+      p[i].spir(); // Ya sabemos que no se puede congelar la órbita sino que cambiar el radio
     }
   }
   translate(width * .15, height * .15); // Grilla desde el centro para Dot.
@@ -69,10 +69,14 @@ void draw() {
 
 void keyPressed() { // Eventos teclado.
   if (key == 'a') {
+    // Esto es mejor que sea escrito dentro de draw, y que 'a' modifique un boolean, así la lectura
+    // de los comportamientos será siempre dentro de draw, la estructura principal del programa
     for (int i = 0; i < d.length; i++) {
       d[i].entropy();
     }
   }
+  // Estas dos condicionales hacen lo mismo, al restar velY y llegar a 0, sigue hacia el negativo
+  // que es lo mismo que sumar velY estando negativo, pasará a 0 y luego a positivo. 
   if (key == 's') {
     spire = !spire;
   }

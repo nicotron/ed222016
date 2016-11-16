@@ -18,9 +18,9 @@ class Plan {
     fill(cc, cc, 100);
     ellipse(px, py, 8, 8);
     fill(100, cc, cc);
-    ellipse(px*2, py*1.5, 6, 6);
+    ellipse(px * 2, py * 1.5, 6, 6);
     fill(cc, 100, cc);
-    ellipse(px2*1.5, py2*2, 10, 10);
+    ellipse(px2 * 1.5, py2 * 2, 10, 10);
     fill(22, 0, 22);
     ellipse(posX, posY, 22, 22);
   }
