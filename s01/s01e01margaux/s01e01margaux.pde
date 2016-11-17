@@ -1,4 +1,4 @@
-//Expresion Digital - Diseno Digital - UDD - 2016
+//Expresión Digital - Diseño Digital - UDD - 2016
 //Margaux Leroy
 //s01e01margaux
 

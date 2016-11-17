@@ -1,4 +1,4 @@
-//Exprecion digital - Diseño Digital - UDD- 2016
+//Expresión digital - Diseño Digital - UDD- 2016
 //Isidora Ordoñez
 //s04t00isi. 9 7
 
@@ -10,10 +10,10 @@
 
 
 void setup() {
-  size(500, 500);                        //Tamaño canvas.
-  background(255);                         //Color canvas.
+  size (1000, 1000);                        //Tamaño canvas.
+  background (255);                         //Color canvas.
 
-  ellipseMode(CENTER);                     //Que las ellipses se dibujen desde su centro.
+  ellipseMode (CENTER);                     //Que las ellipses se dibujen desde su centro.
 }
 
 
@@ -30,7 +30,7 @@ void draw() {
   if (width >= height) {                  // si el alto es mayor que el ancho.
     ellipse= height / 10;                 //mi variable es igual al ancho / 10.
   } else {
-    ellipse = width / 10;                 //si no, es igual al alto / 10
+     ellipse = width / 10;                 //si no, es igual al alto / 10
   }
 
   //Doble for loop:
@@ -38,10 +38,10 @@ void draw() {
     for (int y = 0; y <= height; y += b) {    //for loop para eje y.
 
       //Ellipse:
-      stroke(amarillo);
-      //strokeWeight();                      //línea de contorno.                        
-      fill(verde);                            //relleno.
-      ellipse(x, y, ellipse, ellipse);        //posición y tamaño elipse.
+      stroke (amarillo);
+      //strokeWeight ();                      //línea de contorno.                        
+      fill (verde);                            //relleno.
+      ellipse( x, y, ellipse, ellipse);        //posición y tamaño elipse.
     }
   }
 }

@@ -67,7 +67,7 @@ void draw() {
   }
 
   //Random de color eje x:
-  if (x > width - d /2 || x < d/2) {       // Si x es mayor que el ancho menos la mitad de 'd' ó menor que la ma mitad de 'd'.
+  if (x > width - d /2 || x < d/2) {       // Si x es mayor que el ancho menos la mitad de 'd' ó menor que la mitad de 'd'.
     vx *= -1;                              // Multiplica "vx" por menos 1.
 
    amt = map(x , 0, width, 0, 1);          // "amt" es igual a la función map.
@@ -132,42 +132,42 @@ void draw() {
   } 
 
   //Random de color eje y:
-  if ( y > height - d / 2 || y < d/2) {
-    vy *= -1;
+  if ( y > height - d / 2 || y < d/2) {    // Si y es mayor que el alto menos la mitad de 'd' ó menor que la mitad de 'd'.
+    vy *= -1;                              // Multiplica "vy" por menos 1.
 
-    amt = map(x, 0, width, 0, 1);
+    amt = map(x, 0, width, 0, 1);          // "amt" es igual a la función map.
 
-    int ry1 = (int)random(4);
-    if ( ry1 == 0) {
-      c1 = lerpColor(b, n, amt);
+    int ry1 = (int)random(4);              // Creo variable "ry1" y le asigno un valor random de 4 valores.
+    if ( ry1 == 0) {                       // Si "ry1" es igual a 0.              
+      c1 = lerpColor(b, n, amt);           // Asigno función lerpColor a "c1" entre 'b' y 'n'.
     }
-    if ( ry1 == 1) {
-      c1 = lerpColor(n, a, amt);
+    if ( ry1 == 1) {                       // Si "ry1" es igual a 1.
+      c1 = lerpColor(n, a, amt);           // Asigno función lerpColor a "c1" entre 'n' y 'a'.
     }
-    if ( ry1 == 2) {
-      c1 = lerpColor(v, b, amt);
+    if ( ry1 == 2) {                       // Si "ry1" es igual a 2.                     
+      c1 = lerpColor(v, b, amt);           // Asigno función lerpColor a "c1" entre 'v' y 'b'.
     }
-    if ( ry1 == 3) {
-      c1 = lerpColor(a, v, amt);
-    }
-
-
-    int ry2 = (int)random(4);
-    if ( ry2 == 0) {
-      c2 = lerpColor(b, n, amt);
-    }
-    if ( ry2 == 1) {
-      c2 = lerpColor(n, a, amt);
-    }
-    if ( ry2 == 2) {
-      c2 = lerpColor(v, b, amt);
-    }
-    if ( ry2 == 3) {
-      c2 = lerpColor(a, v, amt);
+    if ( ry1 == 3) {                       // Si "ry1" es igual a 3.                 
+      c1 = lerpColor(a, v, amt);           // Asigno función lerpColor a "c1" entre 'a' y 'v'.
     }
 
 
-    int ry3 = (int)random(4);
+    int ry2 = (int)random(4);              // Creo variable "ry2" y le asigno un valor random de 4 valores.
+    if ( ry2 == 0) {                       // Si "ry2" es igual a 0. 
+      c2 = lerpColor(b, n, amt);           // Asigno función lerpColor a "c2" entre 'b' y 'n'.
+    }
+    if ( ry2 == 1) {                       // Si "ry2" es igual a . 
+      c2 = lerpColor(n, a, amt);           // Asigno función lerpColor a "c2" entre 'n' y 'a'.
+    }
+    if ( ry2 == 2) {                       // Si "ry2" es igual a 3. 
+      c2 = lerpColor(v, b, amt);           // Asigno función lerpColor a "c2" entre 'v' y 'b'.
+    }
+    if ( ry2 == 3) {                       // Si "ry2" es igual a 3. 
+      c2 = lerpColor(a, v, amt);           // Asigno función lerpColor a "c2" entre 'a' y 'v'.
+    }
+
+
+    int ry3 = (int)random(4);              // Creo variable "ry3" y le asigno un valor random de 4 valores.
     if ( ry3 == 0) {
       c3 = lerpColor(b, n, amt);
     }
@@ -181,7 +181,7 @@ void draw() {
       c3 = lerpColor(a, v, amt);
     }
 
-    int ry4 = (int)random(4);
+    int ry4 = (int)random(4);              // Creo variable "ry4" y le asigno un valor random de 4 valores.
     if ( ry4 == 0) {
       c4 = lerpColor(b, n, amt);
     }

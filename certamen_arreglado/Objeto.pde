@@ -5,7 +5,7 @@ class Objeto {
   int xe, ye, incremento;                                                                       // Variables de cambio.
 
 //Inicializo variables:
-  Objeto(float amp, float tam) {
+  Objeto(float x, float y) {
     
     x1 = 40;
     x2 = 40;
@@ -14,8 +14,9 @@ class Objeto {
     y2 = 120;
     y3 = 0;
     
-    this.tam = tam;
-    this.amp = amp;
+    tam = 4;
+    this.x = x;
+    this.y = y;
     
     xe  = 200 ; 
     ye  = 200;
@@ -25,38 +26,33 @@ class Objeto {
 
 //Void que se usará para hacer girar un void sobre el eje x:
   void transicion() {
-    
-    println(xe);
+    //x++;
+    rotate(frameCount * .002);
+    //println(xe);
 
-    if (xe >= 200) incremento = -1;                                                             // Al llegar a 200 xe comienza a restar.
-    if (xe <= 0)   incremento = 1;                                                              // Al llegar a 0 xe comienza a sumar.
+    //if (xe >= 200) incremento = -1;                                                             // Al llegar a 200 xe comienza a restar.
+    //if (xe <= 0)   incremento = 1;                                                              // Al llegar a 0 xe comienza a sumar.
 
-    xe += incremento;
+    //xe += incremento;
   }
 
 // Void que creará las figuras y les dará posición:
   void movimiento (String tipoMovimiento) {
 
- // Posición de figuras:
-    for (int o = 0; o < 360; o += 36) {                                
-      for (int q = 0; q < 140; q += 10) {                              
-          //posición inicial * amplitud + ubicación en el eje * rotación
-        x = sin (radians(o)) * amp + sin (radians (o + q - frameCount)) * xe;                   // Fórmula que me da posición de cada figura y amplitud y posición del módulo total en el eje x.      
-        y = cos (radians(o)) * amp + cos (radians (o + q - frameCount)) * ye;                   // Fórmula que me da posición de cada figura y amplitud y posición del módulo total en el eje y.   
-        
- // Características de las figuras:        
+ // Posición de figuras:        
         noStroke();                                                  
-        fill(map(q, 0, 140, 255, 0), 255, 255);                      
+        fill(255);                      
 
  // Tipos de figuras:
-        if (tipoMovimiento == "elipse"){                                                        // Si escribo "elipse" entre paréntesis luego de "tipoMovimiento" me dibuja lo siguiente:
+        if (tipoMovimiento == "elipse"){ 
+          pushMatrix();
+          //translate(width / 2, height / 2);// Si escribo "elipse" entre paréntesis luego de "tipoMovimiento" me dibuja lo siguiente:
           ellipse(x, y, tam, tam);
+          popMatrix();
         }
         if (tipoMovimiento == "cuadrado"){                                                      // Si escribo "elipse" entre paréntesis luego de "tipoMovimiento" me dibuja lo siguiente:
           rect(x, y, tam, tam);
         }
-      }
-    }
   }
 
 // Void que crea una secuencia de triángulos que giran sobre un eje central y su propio eje:
