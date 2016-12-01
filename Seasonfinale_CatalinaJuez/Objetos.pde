@@ -1,7 +1,6 @@
-
 class objeto {
   int i, index, paso, mint, maxt;
-  float x, y;
+  float x, y, meanv, maxv, angulo, angulodos, ty, radius;
   String titulo;
   boolean Speed;
 
@@ -9,29 +8,52 @@ class objeto {
 
     x = 0;
     y = 0;
+    this.angulo = angulo;    
+    this.angulodos = angulodos;
     rectMode(CENTER);
-    mint= t_mint;
-    maxt= t_maxt;
+   mint = t_mint;
+    maxt = t_maxt;
     i=t_i;
-    index= t_index;
+    index = t_index;
   }
 
   void cuadrado() {
-    float cuadrado = map(mint, -5, 23, 0, 5 );
+    float cuadrado = map(mint, -5, 23, 0, 10 );
     noStroke();
     fill (105, 150, 207);
-    rect(x, y, cuadrado, cuadrado);
+    pushMatrix();
+    translate(x, y);
+    rotate(angulo);
+    rect(radius, radius, cuadrado, cuadrado);
+    popMatrix();
   }
 
   void cuadradodos() {
-    float cuadradodos = map(maxt, 5, 39, 0, 50);
+    float cuadradodos = map(maxt, 5, 39, 10, 30);
     stroke (206, 106, 106);
     strokeWeight(5);
-    fill (255, 255, 255, 100);
-    rect(x, y, cuadradodos, cuadradodos);
+    fill (255, 255, 255, 0);
+    pushMatrix();
+    translate(x, y);
+    rotate(angulodos);
+    rect(radius, radius, cuadradodos, cuadradodos);
+    popMatrix();
+  }
+
+  void mover() {
+    float mover = map(mint, 2, 40, 0, 0.2 );
+    angulo += mover;
+    ty++;
+  }
+
+  void moverdos() {
+    float moverdos = map(maxt, 3, 47, 0, 0.3 );
+    angulodos += moverdos;
+    ty++;
   }
 
   void dias(int paso) {
+    //angulo = -PI/2;
     for (int i = 0; i < e.length; i++) {
       if (index >= i * paso && index < i * paso + paso) {
         float factor = map(paso, 7, 182, .03, .4);  
