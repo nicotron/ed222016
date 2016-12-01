@@ -1,6 +1,6 @@
 //Expresión Digital II - Diseño Digital - UDD - 2016
 // M. Elena Errázuriz
-//seasonfinaleELENAERRAZURIZ
+//seasonfinale_elenaerrazuriz
 
 /*
 Se ha recolectado la data climática de Seefeld, Austria, del año 2015. De ésta se han elegido cuatro set de variables 
