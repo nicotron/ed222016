@@ -1,14 +1,14 @@
 /* la clase esta declarada, junto con sus varialbes*/
 class Body {
-  float x, y, rx, ry, mx, my, angle;
+  float x, y, rx, ry, angle;
   Body (float x, float y, float rx, float ry, float mx, float my, float angle) {
 
     this.x = x;
     this.y = y;
     this.rx = rx;
     this.ry = ry;
-    this.mx = mx * .5;
-    this.my = my * .5;
+    // this.mx = mx * .5;
+    // this.my = my * .5;
     this.angle = angle;
   }
 

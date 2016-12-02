@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 s01e01max/s01e02max.png
 *.tif
 
 *.pdf
+=======
+.DS_Store
+*.class
+
+*.java
+>>>>>>> nicotron/master
+
+tareas/s08t00.md
+
+tareas/s07t00.md
