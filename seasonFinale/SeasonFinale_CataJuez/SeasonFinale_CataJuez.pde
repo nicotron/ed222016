@@ -1,8 +1,9 @@
 //Expresión Digital - Diseño Digital - UDD - 2016
 //Catalina Juez
 //Seasonfinale
+//Falta descripción de cómo funciona
 
-objeto [] e;
+Objeto [] e;
 Table tabla;
 int fila, d;
 
@@ -22,7 +23,7 @@ void setup() {
   fullScreen();
   background(255, 255, 255);
   tabla = loadTable("Firenze_Peretola_Italy.csv", "header");
-  e = new objeto[tabla.getRowCount()];
+  e = new Objeto[tabla.getRowCount()];
 
   for (int i = 0; i < tabla.getRowCount(); i++) {
     int index = i;
@@ -31,32 +32,28 @@ void setup() {
     int maxt = fila.getInt("Max TemperatureC");
 
     d = 30;
-    e[i] = new objeto( index, mint, maxt, i);
+    e[i] = new Objeto( index, mint, maxt, i);
   }
 }
 
 void draw() {
   background(230);
-  // for (int i = 0; i < e.length; i++) {
+  for (int i = 0; i < e.length; i++) {
 
-  //   e[i].dias(d);
-  //   e[i].cuadrado();
-  //   e[i].cuadradodos();
-  // }
-      e[frameCount].dias(d);
-    e[frameCount].cuadrado();
-    e[frameCount].cuadradodos();
- 
+    e[i].dias(d);
+    e[i].cuadrado();
+    e[i].cuadradodos();
+  }
 }
 
 void keyPressed() {
-  if (key =='a') {
-    d = 30; // año
+  if (key == 'a') {
+    d = 30; //año
   }
   if (key == 's') {
     d = 180; //semestre
   }
-  if (key =='w') {
+  if (key == 'w') {
     d = 7; //semana
   }
   if (key == 'm') {
