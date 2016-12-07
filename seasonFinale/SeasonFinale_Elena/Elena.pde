@@ -172,7 +172,7 @@ llamados posteriormente en la página principal del código en el void draw()
     float z = map(tem2, - 10, 40, 0, 250);
 
     pushMatrix();
-    translate(width / 2, height / 2);                       //Tasladar centro de elipses a la mitad del canvas
+    translate(width / 2, height / 2);                       //Trasladar centro de elipses a la mitad del canvas
     rotate(radians(index * 360 / 30));                      //Disponer circularmente los elementos de la lista y dividirlos en 30
     stroke(ro);
     strokeWeight(2);
