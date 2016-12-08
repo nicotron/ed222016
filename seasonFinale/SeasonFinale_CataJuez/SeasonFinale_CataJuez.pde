@@ -3,6 +3,10 @@
 //Seasonfinale
 //Falta descripción de cómo funciona
 
+/*
+NIVEL: 1 visualizacion (4.0) + menos de un set de variable (3.5)
+*/
+
 Objeto [] e;
 Table tabla;
 int fila, d;
