@@ -171,6 +171,7 @@ llamados posteriormente en la página principal del código en el void draw()
   }
 
   // el nombre de la función no describe de buena manera lo que hace
+  // esta función tiene buenas intenciones pero se fue de control completamente, no es posible entender nada
   void temp2() {                                             //Construcción de la temperatura
     float amt = map(temperatura, - 7.5, 30, 0, 1);
     c = lerpColor(mo, veram, amt);
