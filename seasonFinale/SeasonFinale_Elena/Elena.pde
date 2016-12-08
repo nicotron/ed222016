@@ -80,6 +80,7 @@ llamados posteriormente en la página principal del código en el void draw()
     line(x, vMax, width / 2 + 20, height);                       //Fijar dos coordenadas de la línea para crear un abanico.
   }
 
+  // el nombre de la función no describe de uena manera lo que hace
   void vientos2() {                                              
 
     float grosor = map(gust, 0, 100, 1, 15);                     
