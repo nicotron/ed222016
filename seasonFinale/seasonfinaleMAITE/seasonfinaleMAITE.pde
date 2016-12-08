@@ -35,7 +35,7 @@ void setup() {
   e = new Maite[tabla.getRowCount()];
 
   for (int i = 0; i < tabla.getRowCount(); i++) {
-    int index = i;
+    int index = i; // esto no es necesario, porque i e index son los mismos valores
     TableRow fila = tabla.getRow(i);
 
     //humedad
