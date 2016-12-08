@@ -137,7 +137,7 @@ void draw() {
   for (int i = 0; i < h.length; i++) {
     //Falta descripción del cuadro de texto
     if (cambio == 1) {
-      h[i].Clouds();
+      h[i].Clouds();// el nombre de la función no puede ser con Mayúscula ya que se refiere a una clase
       h[i].hMax();
       h[i].hMean();
       h[i].hMin();
@@ -154,7 +154,7 @@ void draw() {
       h[i].tMean();
       h[i].tMin();
       h[i].tMax();
-      h[i].Clouds();
+      h[i].Clouds();// el nombre de la función no puede ser con Mayúscula ya que se refiere a una clase
       h[i].dias(cd);
     }
     //Falta descripción del cuadro de texto
@@ -162,7 +162,7 @@ void draw() {
       h[i].vMax();
       h[i].vMean();
       h[i].vMin();
-      h[i].Clouds();
+      h[i].Clouds();// el nombre de la función no puede ser con Mayúscula ya que se refiere a una clase
       h[i].dias(cd);
     }
     //Falta descripción del cuadro de texto
@@ -171,7 +171,7 @@ void draw() {
       h[i].hMean();
       h[i].hMin();
       h[i].tMean();
-      h[i].Clouds();
+      h[i].Clouds();// el nombre de la función no puede ser con Mayúscula ya que se refiere a una clase 
       h[i].dias(cd);
     }
     //Falta descripción del cuadro de texto

@@ -164,6 +164,7 @@ class Hawai {
   }
 
   //Nubes
+  // el nombre de la función no puede ser con Mayúscula ya que se refiere a una clase
   void Clouds() {
 
     float c = map(clouds, 1, 8, i - 1, 40);
