@@ -17,7 +17,7 @@ en la página principal de código, mas la equivalencia de estas mismas.
 */
   Elena(int index, String CET, int temperatura, int tem1, int tem2, int sea1, int sea2, int sea3, int vientomax, int vientomin, int gust, int ver, int ver2, int ver3) {
 
-    this.CET = CET;
+    this.CET = CET; // no se usa
     this.index = index;
     this.temperatura = temperatura;
     this.tem1 = tem1;
@@ -33,8 +33,8 @@ en la página principal de código, mas la equivalencia de estas mismas.
     this.gust = gust;
     this.x = 0;
     this.y = 0;
-    this.velx = 1;
-    this.vely = 1;
+    this.velx = 1; // no se usa
+    this.vely = 1; // no se usa
     this.celb = color(204, 251, 255);
     this.az = color(37, 52, 87);
     this.verd = color(204, 204, 109);
