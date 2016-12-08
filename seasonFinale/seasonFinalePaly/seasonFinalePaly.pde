@@ -2,6 +2,9 @@
 // Paulina Descouvieres
 // seasonFinale_paly
 
+// falta descripción general
+// NIVEL 1 (4.0), + 1 set de variables: no existe más de una visualización entendible
+
 Hawai [] h;
 
 //Tabla para almacenar datos
