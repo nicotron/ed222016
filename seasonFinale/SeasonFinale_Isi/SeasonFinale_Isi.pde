@@ -8,17 +8,17 @@ cuenta con cuatro tipos de visualizaciones que enseñan distintos datos. En prim
 tenemos la visualización del void elipses (tecla '1'), la cual a través del color muestra
 las temperaturas máxima y mínima graficadas con el color rojo y azul respectivamente, generando
 una gama de rosas y morados por las frías temperaturas del lugar. También a través de un frameCount
-vemos como cambia el tamaño de las elipses según los datos entregados del punto de rocío, y por ultimo,
-vemos como la opacidad es alterada por los datos de Visibilidad en kilometros de Barrow.
-En la segunda visualización llamada void lineas (tecla '2'), vemos como los colores son alterados nuevamente,
-pero esta vez gracias a la velocidad del viento, creando gamas entre verdes y azules, y como también
-el tamaño de estas lineas se ve alterado por la cantidad de nubes que hubieron ese día.
-La tercera visualización es el void triángulo ( tecla '3'), la cual estudia la temperatura
-según color y hacia donde se direcciona el vértice, ocupando el punto 'y' de las otras dos aristas
+vemos cómo cambia el tamaño de las elipses según los datos entregados del punto de rocío, y por último,
+vemos cómo la opacidad es alterada por los datos de Visibilidad en kilómetros de Barrow.
+En la segunda visualización llamada void lineas (tecla '2'), vemos cómo los colores son alterados nuevamente,
+pero esta vez gracias a la velocidad del viento, creando gamas entre verdes y azules, y cómo también
+el tamaño de estas líneas se ve alterado por la cantidad de nubes que hubo ese día.
+La tercera visualización es el void triángulo (tecla '3'), la cual estudia la temperatura
+según color y hacia dónde se direcciona el vértice, ocupando el punto 'y' de las otras dos aristas
 como punto 0.
-Por último el void circular ( tecla '4'), este último void estudia el mar, los colores de las lineas
+Por último el void circular (tecla '4'), este último void estudia el mar, los colores de las líneas
 están dados por la presión del mar en tonos rojos y verdes para máxima y mínima respectivamente
-y la ráfaga define el tamaño de la linea.
+y la ráfaga define el tamaño de la línea.
 Para poder usar de una mejor manera los datos, estos tuvieron que mapear sus valores a través de la función
 "map", además al código se le agregaron una serie de teclas para la reorganización de un año, pudiéndolo
 ver en semestre ('f'), estaciones ('d'), meses ('s') y semanas ('s').
@@ -66,7 +66,7 @@ void setup() {
     float Cloud = fila.getFloat(" CloudCover");
 
 
-    o[i] = new Objeto ( i, index, GustSpeed, MaxTemperature, MinTemperature, MeanTemperature, DewPointC, MinDewPointC, Visibility, MaxPressure, MinPressure, MaxWspeed, MeanWspeed, Cloud);
+    o[i] = new Objeto (i, index, GustSpeed, MaxTemperature, MinTemperature, MeanTemperature, DewPointC, MinDewPointC, Visibility, MaxPressure, MinPressure, MaxWspeed, MeanWspeed, Cloud);
   }
 }
 
@@ -109,7 +109,7 @@ void draw() {
     text("El color está representado por la", 900, 550);
     text("velocidad del viento, mientras más", 900, 570);
     text("verde mas viento el tamaño de la ", 900, 590);
-    text("línea está dado por la cantiad de nubes.", 900, 610);
+    text("línea está dado por la cantidad de nubes.", 900, 610);
   }
 
   if (objeto == 2) {
@@ -154,23 +154,23 @@ void draw() {
 //Ejecución con teclado:
 void keyPressed() {
 
-  if (key=='1') {
+  if (key == '1') {
     objeto = 0;
   }
 
-  if (key=='2') {
+  if (key == '2') {
     objeto = 1;
   }
 
-  if (key=='3') {
+  if (key == '3') {
     objeto = 2;
   }
 
-  if (key=='4') {
+  if (key == '4') {
     objeto = 3;
   }
 
-  if (key=='a') {
+  if (key == 'a') {
     a = 7;
     c = 7;
   }
