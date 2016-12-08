@@ -158,6 +158,11 @@ llamados posteriormente en la página principal del código en el void draw()
     translate(20, 0);                                        //Mover en el eje X una figura
     stroke(az);
     strokeWeight(1);
+    /* 
+    este map nn si fuera de 0, 10, 0, 10 no tendrías que crear x2 y y2
+    con x2 y y2 estás diciendo que aunque ver3 sea 0, se verá como 5
+    lo que dificulta la lectura.
+    */
     float nn = map(ver3, 0, 10, 0, 5);
     float x2 = x + 5;
     float y2 = y + 5;
