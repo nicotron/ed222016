@@ -165,6 +165,7 @@ llamados posteriormente en la página principal del código en el void draw()
     popMatrix();                                             //Cerrar el grupo delimitado
   }
 
+  // el nombre de la función no describe de buena manera lo que hace
   void temp2() {                                             //Construcción de la temperatura
     float amt = map(temperatura, - 7.5, 30, 0, 1);
     c = lerpColor(mo, veram, amt);
