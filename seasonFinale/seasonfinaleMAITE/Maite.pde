@@ -128,6 +128,12 @@ class Maite {
    */
   void visibilidad() {
 
+    /* 
+    cuando se trabaja con map en grupos de variables, deben ser igual
+    porque sin importar el valor que entre en cada una de las variables,
+    no podrá ser comparado con el resto, 
+    1, 10 - 6, 17 - 6, 31 deben ser iguales.
+    */
     float maitex = map(minV, 1, 10, 35, 300);  //visibilidad mínima ..
     float maiturri = map(meanV, 6, 17, 35, 300);  //visibilidad media ..
     float maitela = map(maxV, 6, 31, 35, 300);  //visibilidad máxima ..
