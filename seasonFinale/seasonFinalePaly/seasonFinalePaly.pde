@@ -135,7 +135,7 @@ void draw() {
   //h[i].dias(cd);
 
   for (int i = 0; i < h.length; i++) {
-
+    //Falta descripción del cuadro de texto
     if (cambio == 1) {
       h[i].Clouds();
       h[i].hMax();
@@ -149,7 +149,7 @@ void draw() {
       h[i].vMin();
       h[i].dias(cd);
     }
-
+    //Falta descripción del cuadro de texto
     if (cambio == 2) {
       h[i].tMean();
       h[i].tMin();
@@ -157,7 +157,7 @@ void draw() {
       h[i].Clouds();
       h[i].dias(cd);
     }
-
+    //Falta descripción del cuadro de texto
     if (cambio == 3) {
       h[i].vMax();
       h[i].vMean();
@@ -165,7 +165,7 @@ void draw() {
       h[i].Clouds();
       h[i].dias(cd);
     }
-
+    //Falta descripción del cuadro de texto
     if (cambio == 4) {
       h[i].hMax();
       h[i].hMean();
@@ -174,21 +174,21 @@ void draw() {
       h[i].Clouds();
       h[i].dias(cd);
     }
-
+    //Falta descripción del cuadro de texto
     if (cambio == 5) {
       h[i].tMax();
       h[i].vMax();
       h[i].hMax();
       h[i].dias(cd);
     }
-
+    //Falta descripción del cuadro de texto
     if (cambio == 6) {
       h[i].tMean();
       h[i].vMean();
       h[i].hMean();
       h[i].dias(cd);
     }
-
+    //Falta descripción del cuadro de texto
     if (cambio == 7) {
       h[i].tMin();
       h[i].vMin();
