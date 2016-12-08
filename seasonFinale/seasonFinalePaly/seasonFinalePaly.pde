@@ -120,6 +120,7 @@ void draw() {
     text("- Mínimas", 10, 60);
   }
 
+//Este código si no va, no va.
   //Todas las funciones
   //h[i].tMax();
   //h[i].tMean();
