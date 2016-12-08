@@ -16,7 +16,7 @@ Maite [] e;
 Table tabla;
 //Tipografía
 PFont titulo, cuerpo;
-int fila, k, q, manitos;
+int fila, k, manitos;
 
 void setup() {
 
