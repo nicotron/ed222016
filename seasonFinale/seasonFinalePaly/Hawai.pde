@@ -135,7 +135,7 @@ class Hawai {
     pushMatrix();
     stroke(white, h);
     strokeWeight(3);
-    line(x, y, x, y - (h/5));
+    line(x, y, x, y - (h / 5));
     popMatrix();
   }
 

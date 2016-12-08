@@ -157,6 +157,10 @@ void draw() {
       h[i].Clouds();// el nombre de la función no puede ser con Mayúscula ya que se refiere a una clase
       h[i].dias(cd);
     }
+    /*
+    Esta es la única visualización que es posible entender un poco, el resto de las 6 
+    son completamente ilegibles, lo que deja la entrega con una sola visualización
+    */
     //Falta descripción del cuadro de texto
     if (cambio == 3) {
       h[i].vMax();
@@ -165,6 +169,7 @@ void draw() {
       h[i].Clouds();// el nombre de la función no puede ser con Mayúscula ya que se refiere a una clase
       h[i].dias(cd);
     }
+
     //Falta descripción del cuadro de texto
     if (cambio == 4) {
       h[i].hMax();
