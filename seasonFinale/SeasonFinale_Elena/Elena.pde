@@ -80,7 +80,7 @@ llamados posteriormente en la página principal del código en el void draw()
     line(x, vMax, width / 2 + 20, height);                       //Fijar dos coordenadas de la línea para crear un abanico.
   }
 
-  // el nombre de la función no describe de uena manera lo que hace
+  // el nombre de la función no describe de buena manera lo que hace
   void vientos2() {                                              
 
     float grosor = map(gust, 0, 100, 1, 15);                     
@@ -92,6 +92,7 @@ llamados posteriormente en la página principal del código en el void draw()
     line(x, vMin, width / 2 + 20, height);
   }
 
+  // el nombre de la función no describe de buena manera lo que hace
   void dias(int paso) {                                         //Función que permite dividir los elementos del largo de la lista de datos en columnas, creando las medidas de tiempo
     for (int i = 0; i < e.length; i++) {
       if (index >= i * paso && index < i * paso + paso) { 
@@ -109,6 +110,7 @@ llamados posteriormente en la página principal del código en el void draw()
     }
   }
 
+  // el nombre de la función no describe de buena manera lo que hace
   void dias2(int paso) {
     for (int i = 0; i < e.length; i++) {
       if (index >= i * paso && index < i * paso + paso) { 
@@ -126,6 +128,7 @@ llamados posteriormente en la página principal del código en el void draw()
     }
   }
 
+  // el nombre de la función no describe de buena manera lo que hace
   void dias3(int paso) {
     for (int i = 0; i < e.length; i++) {
       if (index >= i * paso && index < i * paso + paso) { 
