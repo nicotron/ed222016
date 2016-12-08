@@ -138,6 +138,11 @@ class Maite {
     float maiturri = map(meanV, 6, 17, 35, 300);  //visibilidad media ..
     float maitela = map(maxV, 6, 31, 35, 300);  //visibilidad máxima ..
 
+    /*
+    Si las lineas se sobreponen y además inician en radios distintos,
+    no podemos saber cuando termina una que está en el fondo,
+    y tampoco comparar esos valores con el resto
+    */
     //visibilidad mínima
     pushMatrix();
     translate(width / 2, height / 2);
@@ -166,6 +171,12 @@ class Maite {
     popMatrix();
   } 
 
+  /*
+  El uso de esta función es irrelevante porque es una copia de la función dias
+  con la diferencia de 
+  an = -PI/2; 
+  qué además no se usa. 
+  */
   //Usado en viento, se usa an = PI/2.
   void diasprincipe(int paso) {
     an = -PI/2;
@@ -176,10 +187,10 @@ class Maite {
         float factor2 = map(paso, 7, 182, .1, .1); // distancia x
         float factor3 = map(paso, 7, 182, .10, .9); //distancia x
 
-        float x1 = map(index % paso, 0, paso-1, width * factor2, width * factor3);
+        float x1 = map(index % paso, 0, paso - 1, width * factor2, width * factor3);
         x = x1;
 
-        float y1 = map((i), 0, 365/paso, height * factor, height * factor1);
+        float y1 = map((i), 0, 365 / paso, height * factor, height * factor1);
         y = y1;
       }
     }
@@ -197,10 +208,10 @@ class Maite {
         float factor2 = map(paso, 7, 182, .09, .1); // distancia x
         float factor3 = map(paso, 7, 182, .9, .9); //distancia x
 
-        float x1 = map(index % paso, 0, paso-1, width * factor2, width * factor3);
+        float x1 = map(index % paso, 0, paso - 1, width * factor2, width * factor3);
         x = x1;
 
-        float y1 = map((i), 0, 365/paso, height * factor, height * factor1);
+        float y1 = map((i), 0, 365 / paso, height * factor, height * factor1);
         y = y1;
       }
     }

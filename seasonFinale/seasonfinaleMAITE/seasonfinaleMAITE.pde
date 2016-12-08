@@ -105,7 +105,7 @@ void draw() {
   for (int i = 0; i < e.length; i++) {
     //descripción general del bloque de texto
     if (manitos == 1) {
-      e[i].diasprincipe(k);
+      e[i].dias(k);
       e[i].visibilidad();
     }
     //descripción general del bloque de texto
