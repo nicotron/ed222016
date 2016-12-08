@@ -20,7 +20,7 @@ void setup() {
   text("m = meses ", 550, 50);
   text("e = salir ", 700, 50);
 
-  fullScreen();
+  fullScreen(); // buena decisión
   background(255, 255, 255);
   tabla = loadTable("Firenze_Peretola_Italy.csv", "header");
   e = new Objeto[tabla.getRowCount()];
