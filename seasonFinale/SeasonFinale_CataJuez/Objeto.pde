@@ -1,6 +1,6 @@
 class Objeto {
   int i, index, paso, mint, maxt;
-  float x, y, meanv, maxv, angulo, angulodos, ty, radius;
+  float x, y, meanv, maxv, angulo, angulodos, radius;
   String titulo;
   boolean Speed;
 
@@ -8,8 +8,8 @@ class Objeto {
 
     x = 0;
     y = 0;
-    this.angulo = angulo;    
-    this.angulodos = angulodos;
+    this.angulo = angulo;   // no se usa
+    this.angulodos = angulodos; // no se usa
     rectMode(CENTER);
     mint = t_mint;
     maxt = t_maxt;
@@ -30,7 +30,7 @@ class Objeto {
 //Falta descripción del cuadro de texto
   void cuadradodos() {
     float cuadradodos = map(maxt, 5, 39, 10, 30);
-    stroke (206, 106, 106);
+    stroke(206, 106, 106);
     strokeWeight(5);
     fill (255, 255, 255, 0);
     pushMatrix();
@@ -39,6 +39,9 @@ class Objeto {
     rect(radius, radius, cuadradodos, cuadradodos);
     popMatrix();
   }
+/*
+Funciones en desuso
+
 //Falta descripción del cuadro de texto
   void mover() {
     float mover = map(mint, 2, 40, 0, 0.2 );
@@ -51,6 +54,8 @@ class Objeto {
     angulodos += moverdos;
     ty++;
   }
+*/
+
 //Falta descripción del cuadro de texto
   void dias(int paso) {
     //angulo = -PI/2;
