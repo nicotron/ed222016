@@ -11,7 +11,9 @@
  Este código cuenta con 5 set de variables y 4 visualizaciones distintas, correspondientes a: año, semestre, trimestre, mes y + día. 
  */
 
-
+/*
+NIVEL: 6.0 (4 visualizaciones) + 7.0 más de 2 set de variables: 5 sets (8.5).
+*/
 Maite [] e;
 Table tabla;
 //Tipografía
