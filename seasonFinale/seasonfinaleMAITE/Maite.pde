@@ -93,21 +93,21 @@ class Maite {
     g = lerpColor(amarillo, rojo, loca);
 
     fill(d); // mínima ..
-    strokeWeight(1);  
+    strokeWeight(1);  // todo valor que el map bacan de inferior a 2, no se verá por que este strokeWeight es muy grande.  
     stroke(celeste);
-    float funciona = map(mint, 23, 28, 0, 5);
+    float funciona = map(mint, 23, 28, 0, 5); // que es el 40% de valores posibles
     ellipse(x - 8, y - 8, funciona, funciona);
 
     fill(f); // media ..
     strokeWeight(2);  
-    stroke(amarillo);
-    float funciono = map(meant, 26, 32, 0, 10);
+    stroke(amarillo); // todo valor que el map bacan de inferior a 4, no se verá por que este strokeWeight es muy grande.
+    float funciono = map(meant, 26, 32, 0, 10);// que es el 40% de valores posibles
     ellipse(x, y, funciono, funciono);
 
     fill(g); // máxima ..
-    strokeWeight(3);  
+    strokeWeight(3);  // todo valor que el map bacan de inferior a 6, no se verá por que este strokeWeight es muy grande.
     stroke(rojo);
-    float bacan = map(maxt, 29, 35, 0, 15);
+    float bacan = map(maxt, 29, 35, 0, 15); // que es el 33% de valores posibles
     ellipse(x + 8, y + 8, bacan, bacan);
   }
 
