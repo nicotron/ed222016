@@ -69,7 +69,7 @@ llamados posteriormente en la página principal del código en el void draw()
     rect(x, y, rr, rr);
   }
 
-  // Esta función tiene problemas de diseño gráfico ya que no se logra entender la información que hay en la 
+  // Esta función tiene problemas de diseño gráfico ya que no se logra entender la información que hay en la cuarta columna
   void vientos() {                                               //Construcción de los vientos.
 
     float grosor = map(gust, 0, 100, 1, 15);                     
