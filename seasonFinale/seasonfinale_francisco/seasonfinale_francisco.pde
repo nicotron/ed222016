@@ -4,7 +4,7 @@
 
 /*
 Visualización de data, mostrando las características del clima en Tromso, Noruega. Cada elemento vertical corresponde a un día, siendo la característica principal,
- la temperatura que va del mas mínimo registrado (azul), al más cálido registrado (rojo). Además de agrego el viento en un formato homologo a la temperatura.
+ la temperatura que va del mas mínimo registrado (azul), al más cálido registrado (rojo). Además se agregó el viento en un formato homólogo a la temperatura.
  */
 
 Objeto[] o; 
@@ -23,9 +23,9 @@ void setup() {
   noStroke();
   table = loadTable("Tromso_Norway.csv", "header");
   o = new Objeto [table.getRowCount()]; 
-  // de esta forma la lista de objetos sera del tamano de la tabla
+  // de esta forma la lista de objetos será del tamano de la tabla
 
-  // Acceder a todos las filas de la tabla
+  // Acceder a todas las filas de la tabla
   for (int i = 0; i < table.getRowCount(); i++) {
     
     TableRow fila = table.getRow(i); 

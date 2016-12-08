@@ -2,7 +2,7 @@ class Objeto {
   int  x, y, z, w, wind_max, wind_mean, h, j, k;                              // Estos corresponden a los valores de la T°(c°), el número del valor en la tabla, humedad y los valores del viento.
   float posX, posY_1, posY_2, posY_3, posY_Wmean, posY_Wmax, t1, t2, e1, e2;  // Las coordenadas, horizontales y verticales, tanto para temperatura y viento.
   float posH_1, posH_2, posH_3;
-  color c0_5, c1, c1_5, c2, c2_5, c3, c3_5;                                   // Colores del azul al rojo, promediandose y cambiando. Los enteros estan en las formas, los decimales en las lineas.
+  color c0_5, c1, c1_5, c2, c2_5, c3, c3_5;                                   // Colores del azul al rojo, promediándose y cambiando. Los enteros estan en las formas, los decimales en las líneas.
   
   Objeto(int x, int y, int z, int w, int wind_max, int wind_mean, int h, int j, int k) {
     // Inicializar variables con valores desde el constructor
@@ -30,18 +30,18 @@ class Objeto {
 
     c0_5 = color(map(posY_1 /2, 0, height, 240, 360), 360, 360);                        // Mapeo de colores, según sus elementos cercanos y el tamaño del canvas.
     c1 =   color(map(posY_1, 0, height, 240, 360), 360, 360);
-    c1_5 = color(map((posY_1+posY_2)/2, 0, height, 240, 360), 360, 360);
+    c1_5 = color(map((posY_1 + posY_2) / 2, 0, height, 240, 360), 360, 360);
     c2 =   color(map(posY_2, 0, height, 240, 360), 360, 360);
-    c2_5 = color(map((posY_2+posY_3)/2, 0, height, 240, 360), 360, 360);
+    c2_5 = color(map((posY_2 + posY_3) / 2, 0, height, 240, 360), 360, 360);
     c3 =   color(map(posY_3, 0, height, 240, 360), 360, 360);    
-    c3_5 = color(map((posY_3+height)/2, 0, height, 240, 360), 360, 360);
+    c3_5 = color(map((posY_3 + height) / 2, 0, height, 240, 360), 360, 360);
 
     if (flip == true){
 
     strokeWeight(4);
 
     stroke(c0_5);                                                                       // Cada línea conectando un elemento comienza donde la otra termina, o desde el margen del canvas.
-    line(posX, 0, posX, posY_1);                                                        // Cada una con su color especifico.
+    line(posX, 0, posX, posY_1);                                                        // Cada una con su color específico.
     stroke(c1_5);
     line(posX, posY_1, posX, posY_2);
     stroke(c2_5);    
@@ -55,9 +55,9 @@ class Objeto {
     fill(c1);
     translate(posX, posY_1);
     rotate(PI);
-    triangle(0, 10*sqrt(3), 
-      10*sqrt(3), -10*sqrt(3), 
-      -10*sqrt(3), -10*sqrt(3));  
+    triangle(0, 10 * sqrt(3), 
+      10 * sqrt(3), -10 * sqrt(3), 
+      -10 * sqrt(3), -10 * sqrt(3));  
     popMatrix();         
 
     pushMatrix();
@@ -107,7 +107,7 @@ class Objeto {
     fill(0, 0, 360, a);
     textSize(22);
     text("Datos en pantalla =", 40, 40);
-    text(weekMax-weekMin, 260, 40);
+    text(weekMax - weekMin, 260, 40);
     textSize(18);
     text("Custom data", 40, 90);
     text(minDate, 180, 120);
