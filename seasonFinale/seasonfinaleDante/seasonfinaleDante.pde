@@ -33,7 +33,7 @@ void setup() {
   for (int i = 0; i < tabla.getRowCount(); i++) {
     TableRow datos = tabla.getRow(i);
 
-    int index = i; 
+    int index = i; // esto no es necesario, porque i e index son los mismos valores
     int temperatura_max = datos.getInt("Max TemperatureC");
     int temperatura_mean = datos.getInt("Mean TemperatureC");
     int temperatura_min = datos.getInt("Min TemperatureC");

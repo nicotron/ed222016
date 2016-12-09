@@ -24,7 +24,7 @@ class Objects {
     pushMatrix();
     translate((width / 2 - 270), (height / 2)); 
     rotate(TWO_PI * 3 / 4);
-    translate((X * 2), (Y * 2));
+    // translate((X * 2), (Y * 2));
     float deI = map(index, 0, 364, 0, TWO_PI);
     float c1 = map(temperatura_max, 16, 40, 200, 250);   
     float c2 = map(temperatura_min, 4, 33, 200, 150);   
@@ -61,7 +61,7 @@ class Objects {
     pushMatrix();
     translate((width / 2 - 360), (height / 2)); 
     rotate(TWO_PI * 3 / 4);
-    translate((X * 2), (Y * 2));
+    // translate((X * 2), (Y * 2));
 
     float deI = map(index, 0, 180, 0, TWO_PI);
     float c1 = map(dewpoint_max, -23, 29, 100, 150);   
@@ -106,7 +106,7 @@ class Objects {
     pushMatrix();
     translate((width / 2 - 270), (height / 2 - 150)); 
     rotate(TWO_PI * 3 / 4);
-    translate((X * 2), (Y * 2));
+    // translate((X * 2), (Y * 2));
 // Se modifica el valor de las variables para así lograr que roten.
     float deI = map(index, 0, 91, 0, TWO_PI);
     float wind_direct = map(wind_direction, 9, 351, 0, 140);
