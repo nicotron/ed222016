@@ -78,7 +78,7 @@ class Cuerpo {
     mw = map(wind, 359, 5, 100, 300);
     mw2 = map(wind, 359, 5, 7, 3);
     translate(width / 2, height / 2);
-    float col = map(mw, 5, 359, 0, 1); // esto contradice la linea 78
+    float col = map(mw, 100, 300, 0, 1); // esto contradice la linea 78
     p = lerpColor(celeste, verde, col);
     strokeWeight(mw2);
     stroke(p);
@@ -154,6 +154,8 @@ class Cuerpo {
   }
 }
 
+
+//si el código no va y está comentado, no debe ir escrito
 
 // variables y maps listado
 
