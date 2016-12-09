@@ -13,14 +13,14 @@ class Objeto {
     this.h = h;
     this.j = j;
     this.k = k;
-    this.wind_max= wind_max;
-    this.wind_mean= wind_mean;
+    this.wind_max = wind_max;
+    this.wind_mean = wind_mean;
   }
 
   // sus funciones
   void display() {
 
-    posX = map(w, weekMin-1, weekMax, 0, width);                                        // Posiciones de la data en el canvas.
+    posX = map(w, weekMin - 1, weekMax, 0, width);                                        // Posiciones de la data en el canvas.
     posY_1 = map(y, -15, 13, 0, height);                                                // Para temperatura.
     posY_2 = map(z, -15, 13, 0, height);
     posY_3 = map(x, -15, 13, 0, height);
@@ -28,7 +28,7 @@ class Objeto {
     posY_Wmean = map(wind_mean, 3, 95, 0, height);                                      // Para el viento máximo y su mediana.
     posY_Wmax = map(wind_max, 3, 95, 0, height);
 
-    c0_5 = color(map(posY_1 /2, 0, height, 240, 360), 360, 360);                        // Mapeo de colores, según sus elementos cercanos y el tamaño del canvas.
+    c0_5 = color(map(posY_1 / 2, 0, height, 240, 360), 360, 360);                        // Mapeo de colores, según sus elementos cercanos y el tamaño del canvas.
     c1 =   color(map(posY_1, 0, height, 240, 360), 360, 360);
     c1_5 = color(map((posY_1 + posY_2) / 2, 0, height, 240, 360), 360, 360);
     c2 =   color(map(posY_2, 0, height, 240, 360), 360, 360);

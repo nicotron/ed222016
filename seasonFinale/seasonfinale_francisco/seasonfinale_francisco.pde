@@ -66,62 +66,62 @@ void keyPressed() {                                        // Botones para contr
     weekMin = 0;
     weekMax = 365;
   }
-  if (key == 'o') {
+  if (key == 'o') { // falta titulo descriptivo del bloque de texto
     weekMin = 0;
     weekMax = 183;
   }
-  if (key == 'i') {
+  if (key == 'i') { // falta titulo descriptivo del bloque de texto
     weekMin = 0;
     weekMax = 30;
   }
-  if (key == 'u') {
+  if (key == 'u') { // falta titulo descriptivo del bloque de texto
     weekMin = 0;
     weekMax = 7;
   }
-  if (key == 'y') {
+  if (key == 'y') { // falta titulo descriptivo del bloque de texto
     weekMin = 0;
     weekMax = 1;
   }
-  if (key == 'r') {
+  if (key == 'r') { // falta titulo descriptivo del bloque de texto
     weekMin = 0;
     weekMax = 7;
     minDate = 0;
     maxDate = 7;
   }
 
-  if (minDate>0) {
+  if (minDate > 0) { // falta titulo descriptivo del bloque de texto
     if (key == 'v') {
       minDate --;
     }
   }
-  if (minDate<maxDate) {
+  if (minDate < maxDate) { // falta titulo descriptivo del bloque de texto
     if (key == 'b') {
       minDate ++;
     }
   }
-  if (maxDate > minDate) {
+  if (maxDate > minDate) { // falta titulo descriptivo del bloque de texto
     if (key == 'n') {
       maxDate --;
     }
   }
-  if (maxDate < 365) {
+  if (maxDate < 365) { // falta titulo descriptivo del bloque de texto
     if (key == 'm') {
       maxDate ++;
     }
   }
-  if (key == 'g') {
+  if (key == 'g') { // falta titulo descriptivo del bloque de texto
     weekMin = minDate;
     weekMax = maxDate;
   }
-  if (weekMax != 365) {
+  if (weekMax != 365) { // falta titulo descriptivo del bloque de texto
     if (key == 'k') {
       weekMax ++;
     }
   }
-  if (key == 'a') {
+  if (key == 'a') { // falta titulo descriptivo del bloque de texto
     a *= -1;
   }
-  if (key == 's') {
+  if (key == 's') { // falta titulo descriptivo del bloque de texto
     flip =! flip;
   }
 }
