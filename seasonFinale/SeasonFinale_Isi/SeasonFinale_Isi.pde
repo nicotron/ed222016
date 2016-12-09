@@ -23,7 +23,9 @@ Para poder usar de una mejor manera los datos, estos tuvieron que mapear sus val
 "map", además al código se le agregaron una serie de teclas para la reorganización de un año, pudiéndolo
 ver en semestre ('f'), estaciones ('d'), meses ('s') y semanas ('s').
 */
-
+/*
+NIVEL: 
+*/
 // Creación de variables y Objeto:
 Objeto[] o;
 Table table;
@@ -52,21 +54,21 @@ void setup() {
     TableRow fila = table.getRow(i);
 
     int index = i; // esto no es necesario, porque i e index son los mismos valores
-    int MaxTemperature = fila.getInt("Max TemperatureC");
-    int MinTemperature = fila.getInt("Min TemperatureC");
-    int MeanTemperature = fila.getInt("Mean TemperatureC");
-    int DewPointC = fila.getInt("Dew PointC");
-    int MinDewPointC = fila.getInt("Min DewpointC");
-    int Visibility = fila.getInt(" Mean VisibilityKm");
-    int GustSpeed = fila.getInt(" Max Gust SpeedKm/h");
-    int MaxWspeed = fila.getInt("Max Wind SpeedKm/h");
-    int MeanWspeed = fila.getInt(" Mean Wind SpeedKm/h");
-    float MaxPressure = fila.getFloat(" Max Sea Level PressurehPa");
-    float MinPressure = fila.getFloat(" Min Sea Level PressurehPa");
-    float Cloud = fila.getFloat(" CloudCover");
+    int maxTemperature = fila.getInt("Max TemperatureC");
+    int minTemperature = fila.getInt("Min TemperatureC");
+    int meanTemperature = fila.getInt("Mean TemperatureC");
+    int dewPointC = fila.getInt("Dew PointC");
+    int minDewPointC = fila.getInt("Min DewpointC");
+    int visibility = fila.getInt(" Mean VisibilityKm");
+    int gustSpeed = fila.getInt(" Max Gust SpeedKm/h");
+    int maxWspeed = fila.getInt("Max Wind SpeedKm/h");
+    int meanWspeed = fila.getInt(" Mean Wind SpeedKm/h");
+    float maxPressure = fila.getFloat(" Max Sea Level PressurehPa");
+    float minPressure = fila.getFloat(" Min Sea Level PressurehPa");
+    float cloud = fila.getFloat(" CloudCover");
 
 
-    o[i] = new Objeto (i, index, GustSpeed, MaxTemperature, MinTemperature, MeanTemperature, DewPointC, MinDewPointC, Visibility, MaxPressure, MinPressure, MaxWspeed, MeanWspeed, Cloud);
+    o[i] = new Objeto (i, index, gustSpeed, maxTemperature, minTemperature, meanTemperature, dewPointC, minDewPointC, visibility, maxPressure, minPressure, maxWspeed, meanWspeed, cloud);
   }
 }
 
