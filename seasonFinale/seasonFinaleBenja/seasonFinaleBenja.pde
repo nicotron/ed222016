@@ -114,8 +114,8 @@ void draw() {
       textFont(bajada);
       fill(255);
       text("Semanal", 35, 25);
-      text("Velociadad Maxima del viento", 15, 45);
-      text("Velociadad Media del viento", 16, 65);
+      text("Velocidad Maxima del viento", 15, 45);
+      text("Velocidad Media del viento", 16, 65);
       popMatrix();
     }
     for (int i = 0; i < c.length; i++) {
