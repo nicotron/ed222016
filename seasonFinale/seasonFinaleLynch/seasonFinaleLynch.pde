@@ -1,6 +1,11 @@
 //no hay nombre
 //no hay descripción
 
+/*
+NIVEL: 2 visualizaciones (5.0) + 3 set de variable (7.0)
+*/
+
+
 Table table;
 int fila;
 int days;

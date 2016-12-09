@@ -90,7 +90,7 @@ class Dia {
     posY2 = map(meanT, -13, 18, 0, height);
     posY3 = map(maxT, -13, 18, 0, height);
     stroke(255);
-    line(posX + 25, height, posX+25, 0);
+    line(posX + 25, height, posX + 25, 0);
     noStroke();
     ellipseMode(CORNER);
     fill(200, 20, 20);
