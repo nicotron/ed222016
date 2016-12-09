@@ -12,6 +12,10 @@
  si hubo precipitaciones.
  */
 
+ /*
+NIVEL 4 visualizaciones (6.0) + 4 set de variables (7.5)
+ */
+
 Calu [] o;
 Table tabla; //datos
 PFont titulo, bajada, tecla; //texto
