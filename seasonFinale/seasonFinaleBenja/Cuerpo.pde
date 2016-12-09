@@ -144,10 +144,10 @@ class Cuerpo {
         float factor2 = map(paso, 7, 182, .5, .05);
         float factor3 = map(paso, 7, 182, .9, .9);
 
-        float x1 = map(index % paso, 0, paso-1, width * factor2, width * factor3);
+        float x1 = map(index % paso, 0, paso - 1, width * factor2, width * factor3);
         x = x1;
 
-        float y1 = map((i), 0, 365/paso, height * factor, height * factor1);
+        float y1 = map(i, 0, 365 / paso, height * factor, height * factor1);
         y = y1;
       }
     }
