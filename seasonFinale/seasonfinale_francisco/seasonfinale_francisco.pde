@@ -7,6 +7,10 @@ Visualización de data, mostrando las características del clima en Tromso, Noru
  la temperatura que va del mas mínimo registrado (azul), al más cálido registrado (rojo). Además se agregó el viento en un formato homólogo a la temperatura.
  */
 
+ /*
+NIVEL: 1 visualización (4.5) + 3 set de variables (7.5)
+ */
+
 Objeto[] o; 
 Table table; 
 
