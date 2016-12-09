@@ -93,7 +93,8 @@ void draw() {
     textFont(bajada);
     fill(255);
     text("Precipitaciones", 15, 35);
-    text("Días", 15, 48);
+    text("Días", 15, 48); //se ve todo el año, al igual que en las otras visualizaciones. 
+    // la palabra "Días" no describe lo que se visualiza
   }
 
   for (int i = 0; i < o.length; i++) {
