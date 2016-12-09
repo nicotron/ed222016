@@ -1,3 +1,5 @@
+No es archivo md
+
 Cree un programa compilado en una aplicación que muestra una visualización de datos de la cuidad de Miami, Florida, durante el año 2005.
 Se crearon 3 set de variables. Si se apreta 1 se muestra la Temperatura Máxima, Temperatura Media y Lluvia agrupados en días con el fin de visualizar el año completo. Aquí se puede tener ver como varía la temperatura máxima y como coincide con los días de lluvia en una zona tropical.
 Si se apreta 2 se muestra la relación entre humedad máxima y nubes agrupados en semestre Generalmente la humedad esta relacionada con la presencia de nubes, y eso es lo que se quería mostrar.
