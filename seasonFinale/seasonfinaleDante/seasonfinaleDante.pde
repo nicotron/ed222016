@@ -9,7 +9,7 @@ Además se dibujan líneas grises indicando la duración de cada mes, siendo ene
 La segunda, abriéndola presionando la tecla 's', muestra una visualización con líneas en el contorno de dos círculos. Las líneas que van hacia
 afuera con un grosor mas grande son el punto de rocío máximo, la continuación de estas líneas es el punto de rocío mínimo, el color de cada línea muestra en un rango entre azul 
 y amarillo el punto de rocío medio. Además se dibujan líneas grises indicando la duración de cada mes, siendo enero la primera visualización en sentido horario de la figura izquierda
-y Julio de la derecha.
+y julio de la derecha.
 La tercera, abriéndola presionando la tecla 'e', muestra cuatro visualizaciones con líneas desde el centro de cada círculo. Las líneas que van hacia afuera muestran la dirección del
 viento en ángulos. La primera visualización correspondiente a verano inicia a las 12 en sentido horario, la segunda, a su derecha otoño, la tercera a mano izquierda abajo invierno y
 por último, a mano derecha abajo primavera.
@@ -71,7 +71,7 @@ void draw() {
     text("El color es la temperatura media", 900, 340);
     text("Las líneas grises son los meses,", 900, 370);
     text("la línea que apunta a las 12 es Enero", 900, 400);
-    text("y así continua en sentido horario", 900, 430);
+    text("y así continúa en sentido horario", 900, 430);
   }
   if (visualiza == 1) {
     text("Las líneas que van hacia afuera", 900, 220);
@@ -81,8 +81,8 @@ void draw() {
     text("son el punto de rocío mínimo", 900, 340);
     text("Las líneas grises son los meses,", 900, 370);
     text("la línea que apunta a las 12 es Enero", 900, 400);
-    text("y así continua en sentido horario,", 900, 430);
-    text("El mes de Julio comienza a las 12", 900, 460);
+    text("y así continúa en sentido horario,", 900, 430);
+    text("El mes de julio comienza a las 12", 900, 460);
     text("En la figura derecha.", 900, 490);
   }
   if (visualiza == 3) {

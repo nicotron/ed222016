@@ -179,7 +179,7 @@ class Maite {
   */
   //Usado en viento, se usa an = PI/2.
   void diasprincipe(int paso) {
-    an = -PI/2;
+    an = -PI / 2;
     for (int i = 0; i < e.length; i++) {
       if (index >= i * paso && index < i * paso + paso) {
         float factor = map(paso, 7, 182, .04, .4);  //distancia Y
