@@ -1,3 +1,6 @@
+//no hay nombre
+//no hay descripción
+
 Table table;
 int fila;
 int days;
