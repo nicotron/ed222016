@@ -1,7 +1,7 @@
 //Expresión Digital - Diseño Digital - UDD - 2016
 //Benjamin Gutierrez 
 
-
+//Falta descripción general
 
 Cuerpo[] c;
 Table tabula;//una tabla para almacenar las datos
