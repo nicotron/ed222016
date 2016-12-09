@@ -37,13 +37,13 @@ class Dia {
 
   void display() {
 
-
+//Falta descripción del bloque de texto
     pushMatrix();
-    translate(width/2, height/2);
+    translate(width / 2, height / 2);
     flechaViento();
     popMatrix();
   }
-
+//Falta descripción del bloque de texto
   void flechaViento() {
     pushMatrix();
     noFill();
@@ -56,7 +56,7 @@ class Dia {
   }
 
 
-
+//Falta descripción del bloque de texto
   void datos() {
     if (pantalla == 0) {
       fill(255);   
@@ -70,10 +70,10 @@ class Dia {
       text(info, 20, 50);
     }
   }
-
+//Falta descripción del bloque de texto
   void precip() {
-    for (int i = 0; i < width; i+= width/precipitation) {
-      for (int j = 0; j < height; j+= height/precipitation) {
+    for (int i = 0; i < width; i += width / precipitation) {
+      for (int j = 0; j < height; j += height / precipitation) {
         if (precipitation > 1) {
           fill(200, 200, 255);
           noStroke();
@@ -83,14 +83,14 @@ class Dia {
       }
     }
   }
-
+//Falta descripción del bloque de texto
   void temps() {
     posX = map(pos, weekS, weekO, 0, width);
     posY = map(minT, -13, 18, 0, height);
     posY2 = map(meanT, -13, 18, 0, height);
     posY3 = map(maxT, -13, 18, 0, height);
     stroke(255);
-    line(posX+25, height, posX+25, 0);
+    line(posX + 25, height, posX+25, 0);
     noStroke();
     ellipseMode(CORNER);
     fill(200, 20, 20);
@@ -100,11 +100,11 @@ class Dia {
     fill(20, 20, 200);
     ellipse(posX, posY3, 50, 20);
   }
-
+//Falta descripción del bloque de texto
   void eventos(int r) {
 
     pushMatrix();
-    translate(width/2, height/2);
+    translate(width / 2, height / 2);
     imageMode(CENTER);
     tint(255, transp);
     foto = loadImage(eventos + ".png");  
