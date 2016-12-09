@@ -15,6 +15,10 @@ viento en ángulos. La primera visualización correspondiente a verano inicia a 
 por último, a mano derecha abajo primavera.
  */
 
+/*
+NIVEL: 3 visualizaciones (5.5) + 3 set de variables (7.0)
+*/
+
 // Se crean las variables y el class.
 Objects [] objetos;
 Table tabla;
