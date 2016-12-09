@@ -87,7 +87,7 @@ class Calu {
 
   //PRECIPITACIONES
   void precipitacion() {
-    float precipit = map(pre, 0.00, 9.91, 210, 300);
+    float precipit = map(pre, 0.00, 9.91, 210, 300); // si no hubieron lluvias igual se ve una línea de 10px, lo que dificulta el entendimiento de los datos
     pushMatrix();
     translate(width / 2, height / 2);
     rotate(radians(270));
