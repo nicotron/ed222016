@@ -37,6 +37,7 @@ void setup() {
     //Objeto con datos
     e[i] = new Temperatura(index, tmax, tmin, tmean);
    }
+   n = 1;
  }
   
 void draw() {
