@@ -8,8 +8,8 @@ void tecLeft() {
     }
   } else {
     if (weekS > 6) {
-      weekS -=7;
-      weekO -=7;
+      weekS -= 7;
+      weekO -= 7;
     }
   }
 }
