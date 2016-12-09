@@ -78,7 +78,7 @@ class Cuerpo {
     mw = map(wind, 359, 5, 100, 300);
     mw2 = map(wind, 359, 5, 7, 3);
     translate(width / 2, height / 2);
-    float col = map(mw, 5, 359, 0, 1);
+    float col = map(mw, 5, 359, 0, 1); // esto contradice la linea 78
     p = lerpColor(celeste, verde, col);
     strokeWeight(mw2);
     stroke(p);
@@ -98,7 +98,7 @@ class Cuerpo {
     p = lerpColor(rojo, verde, col);
     stroke(p);
     strokeWeight(wndx);
-    line( x, y, x + 15, y);
+    line(x, y, x + 15, y);
     popMatrix();
   }
 
