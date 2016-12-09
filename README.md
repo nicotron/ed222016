@@ -67,5 +67,5 @@ Cada semana se creará un archivo [wiki](https://github.com/nicotron/ed222016/wi
 | **Paulina Descouvieres** |  2.584   |  3.2   |     2.769      |
 | **Ricardo Vidal**        |   3.59   |  3.88  |     3.677      |
 
+Este documento está cerrado.
 
-Este documento se irá llenando con más información a medida que avance el curso.
