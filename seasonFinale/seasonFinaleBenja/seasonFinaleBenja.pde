@@ -27,7 +27,7 @@ void setup() {
   for (int i = 0; i < tabula.getRowCount(); i++) {
     //paso por cada fila del CSV
     TableRow fila = tabula.getRow(i); // cambia i, baja una fila del CSV
-    int index = i;
+    int index = i; // esto no es necesario, porque i e index son los mismos valores
 
     //para acceder a cada columna dentro de cada fila y crear una variable por cada columna con nombre del header
     String day = fila.getString("DAY");
