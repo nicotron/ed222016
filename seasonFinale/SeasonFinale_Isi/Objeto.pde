@@ -3,12 +3,12 @@ class Objeto {
   // Declaración de variables:
 
   float Visibility, MaxPressure, MinPressure, x, y, t, y3, Cloud;
-  int MaxTemperature, MinTemperature, MeanTemperature, DewPointC, MinDewPointC, GustSpeed, MaxWspeed, MeanWspeed;
+  int maxTemperature, minTemperature, meanTemperature, dewPointC, minDewPointC, gustSpeed, maxWspeed, meanWspeed;
   int index, i, div;
   boolean bol;
   
   // Inicialización de variables:
-  Objeto(int i, int index, int GustSpeed, int MaxTemperature, int MinTemperature, int MeanTemperature, int DewPointC, int MinDewPointC, float Visibility, float MaxPressure, float MinPressure, int MaxWspeed, int MeanWspeed, float Cloud) {
+  Objeto(int i, int index, int gustSpeed, int maxTemperature, int minTemperature, int meanTemperature, int dewPointC, int minDewPointC, float visibility, float maxPressure, float minPressure, int maxWspeed, int meanWspeed, float cloud) {
     this.i = i;
     this.index = index;
     this.MaxTemperature = MaxTemperature;
