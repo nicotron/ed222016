@@ -66,19 +66,19 @@ class Calu {
   void humedad() {
     pushMatrix();
     //máxima
-    float ma = map(maxhu, 49, 100, 0, 30);
+    float ma = map(maxhu, 49, 100, 0, 30); //el map es diferente para el set de variable
     noStroke();
     fill(blanco, 160);
     rect(x, y + 40, ma, ma);
 
     //mean
-    float me = map(meanhu, 32, 97, 0, 30);
+    float me = map(meanhu, 32, 97, 0, 30); //el map es diferente para el set de variable
 
     fill(verdeo, 160);
     rect(x, y + 20, me, me);
 
     //mínimo
-    float mi = map(minhu, 10, 93, 0, 30);
+    float mi = map(minhu, 10, 93, 0, 30); //el map es diferente para el set de variable
 
     fill(amarillo, 160);
     rect(x, y, mi, mi);
