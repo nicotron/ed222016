@@ -1,6 +1,8 @@
 //Expresión Digital - Diseño Digital - UDD - 2016
 //Benjamin Gutierrez 
 
+
+
 Cuerpo[] c;
 Table tabula;//una tabla para almacenar las datos
 PFont titulo, bajada, instruc;
@@ -60,7 +62,7 @@ void draw() {
   }
 
   if (diaporanio) {
-
+// falta descripción de los bloques de texto
     if ( iteracion == 1) {
       pushMatrix();
       translate(width *.80, height * .90);
@@ -71,6 +73,7 @@ void draw() {
       text("Temperatura Maxima", 15, 45);
       popMatrix();
     }
+    // falta descripción de los bloques de texto
     if ( iteracion == 2) {
       pushMatrix();
       translate(width *.80, height * .90);
@@ -81,6 +84,7 @@ void draw() {
       text("temperatura Minima", 15, 45);
       popMatrix();
     }
+    // falta descripción de los bloques de texto
     if ( iteracion == 3) {
       pushMatrix();
       translate(width *.80, height * .90);
@@ -91,6 +95,7 @@ void draw() {
       text("Temperatura Media", 15, 45);
       popMatrix();
     }
+    // falta descripción de los bloques de texto
     if ( iteracion == 4) {
       pushMatrix();
       translate(width *.80, height * .90);
@@ -101,6 +106,7 @@ void draw() {
       text("Dirección del Viento", 15, 45);
       popMatrix();
     }
+    // falta descripción de los bloques de texto
     if ( iteracion == 5) {
       pushMatrix();
       translate(width *.80, height * .90);
@@ -113,29 +119,29 @@ void draw() {
       popMatrix();
     }
     for (int i = 0; i < c.length; i++) {
-
+// falta descripción de los bloques de texto
       if (iteracion == 1) {
         c[i].dias(u);
         c[i].tempx();
       }
-
+// falta descripción de los bloques de texto
       if (iteracion == 2) {
         c[i].dias(u);
         c[i].tempn();
       }
-
+// falta descripción de los bloques de texto
       if (iteracion == 3) {
         c[i].dias(u);
         c[i].meant();
       }
 
-
+// falta descripción de los bloques de texto
       if (iteracion == 4) {
         c[i].dias(u);
         c[i].viento();
       }
 
-
+// falta descripción de los bloques de texto
       if (iteracion == 5) {
         c[i].dias(u);
         c[i].wndrec();
@@ -146,29 +152,29 @@ void draw() {
 }
 
 
-
+// falta descripción de los bloques de texto
 void keyPressed() {
   if (key == 'q') {
     iteracion = 1;
     u = 30;
   }
-  if (key == 'w') {
+  if (key == 'w') {// falta descripción de los bloques de texto
     iteracion = 2;
     u = 52;
   }
-  if (key == 'e') {
+  if (key == 'e') {// falta descripción de los bloques de texto
     iteracion = 3;
     u = 182;
   }
-  if (key == 'r') {
+  if (key == 'r') {// falta descripción de los bloques de texto
     iteracion = 4;
     u = 365;
   }
-  if (key == 't') {
+  if (key == 't') {// falta descripción de los bloques de texto
     iteracion = 5;
     u = 52;
   }
-  if (key == ' ') {
+  if (key == ' ') {// falta descripción de los bloques de texto
     diaporanio = !diaporanio;
   }
 }
