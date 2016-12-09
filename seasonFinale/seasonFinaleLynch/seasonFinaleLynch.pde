@@ -1,3 +1,11 @@
+//no hay nombre
+//no hay descripción
+
+/*
+NIVEL: 2 visualizaciones (5.0) + 3 set de variable (7.0)
+*/
+
+
 Table table;
 int fila;
 int days;
@@ -26,7 +34,7 @@ void setup() {
   days = table.getRowCount();
   fuente = loadFont("PerpetuaTitlingMT-Light-48.vlw");
   info = loadImage("info.png");
-  for (int i = 0; i< table.getRowCount(); i++) {
+  for (int i = 0; i < table.getRowCount(); i++) {
 
     TableRow fila = table.getRow(i);
     String titulo = fila.getString("GMT");
@@ -40,9 +48,9 @@ void setup() {
     precipitation = fila.getInt("Precipitationmm");
     dia[i] = new Dia(titulo, maxWSpeed, meanWSpeed, wDir, eventos, precipitation, i, minT, meanT, maxT, i);
   }
-  btInfo = new Boton(width-100, height-100, 100, true, "info");
-  btDay = new Boton(0, height-100, 100, false, "day");
-  btWeek = new Boton(0, height-200, 100, false, "week");
+  btInfo = new Boton(width - 100, height - 100, 100, true, "info");
+  btDay = new Boton(0, height - 100, 100, false, "day");
+  btWeek = new Boton(0, height - 200, 100, false, "week");
 }
 
 void draw() {
@@ -60,7 +68,7 @@ void draw() {
     for (int i = weekS; i < weekO; i++) {    
       if (visu == 0) {
         dia[i].display();
-        dia[i].eventos((i-weekS)*20);
+        dia[i].eventos((i - weekS) * 20);
       }
       if (visu == 1) dia[i].temps();
 
@@ -72,7 +80,7 @@ void draw() {
   btWeek.display();
   btInfo.display();
 }
-
+//Falta descripción del mousePressed
 void mousePressed() {
 
   if (btInfo.mouseOver()) {
@@ -86,7 +94,7 @@ void mousePressed() {
   }
 }
 
-
+//Falta descripción del keyPressed
 void keyPressed() {
 
   if (key == CODED) {
@@ -98,10 +106,10 @@ void keyPressed() {
     if (keyCode == LEFT) tecLeft();   
     if (keyCode == RIGHT)  tecRight(); 
 
-    if ( select < 0 ) select = 0;
-    if ( select > 364) select = 364;
-    if ( weekS < 0 ) weekS = 0;
-    if ( weekS > 357 ) weekS = 357;
+    if (select < 0) select = 0;
+    if (select > 364) select = 364;
+    if (weekS < 0) weekS = 0;
+    if (weekS > 357) weekS = 357;
   }
   if (key == 'a') visu = 0;
   if (key == 's') visu = 1;

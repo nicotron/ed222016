@@ -23,6 +23,10 @@ Se ha recolectado la data climática de Seefeld, Austria, del año 2015. De ést
  */
 
 /*
+NIVEL: 4-1 visualizaciones (5.5), 4 set de variables (8.0)
+*/
+
+/*
 Declaración de variables globales y del class.
  */
 Elena [] e;

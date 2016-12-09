@@ -3,12 +3,12 @@ class Objeto {
   // Declaración de variables:
 
   float Visibility, MaxPressure, MinPressure, x, y, t, y3, Cloud;
-  int MaxTemperature, MinTemperature, MeanTemperature, DewPointC, MinDewPointC, GustSpeed, MaxWspeed, MeanWspeed;
+  int maxTemperature, minTemperature, meanTemperature, dewPointC, minDewPointC, gustSpeed, maxWspeed, meanWspeed;
   int index, i, div;
   boolean bol;
   
   // Inicialización de variables:
-  Objeto( int i, int index, int GustSpeed, int MaxTemperature, int MinTemperature, int MeanTemperature, int DewPointC, int MinDewPointC, float Visibility, float MaxPressure, float MinPressure, int MaxWspeed, int MeanWspeed, float Cloud) {
+  Objeto(int i, int index, int gustSpeed, int maxTemperature, int minTemperature, int meanTemperature, int dewPointC, int minDewPointC, float visibility, float maxPressure, float minPressure, int maxWspeed, int meanWspeed, float cloud) {
     this.i = i;
     this.index = index;
     this.MaxTemperature = MaxTemperature;
@@ -38,10 +38,11 @@ class Objeto {
     if (frameCount % 200 == 0) {
       bol= !bol;
     }
+    // no está desrito en la visualización, cuando esto ocurre.
     if (bol == true) {
-      t= MaxdP;
+      t = MaxdP;
     } else {
-      t= MindP;
+      t = MindP;
     }
     //Creación del Objeto:
     ellipseMode(CENTER);
@@ -54,7 +55,7 @@ class Objeto {
     ellipse(x, y, t, t);
   }
 
-// Void que dibuja lineas que cambian según el viento y la nubosidad:
+// Void que dibuja líneas que cambian según el viento y la nubosidad:
   void linea() {
     // Mapeo de datos:
     ellipseMode(CENTER);
@@ -78,8 +79,8 @@ class Objeto {
     float c1 = map(MaxPressure, 991, 1049, 50, 255);   //dato para colores.
     float c2 = map(MinPressure, 990, 1043, 50, 255);   //dato para colores. 
     float tam = map(GustSpeed, 13, 79, 0.9, 1.2);      //dato para tamaño. 
-    float x2= (width / 2) + 200 * tam * cos(rot);
-    float y2= (height / 2) + 200 * tam * sin(rot);
+    float x2 = (width / 2) + 200 * tam * cos(rot);
+    float y2 = (height / 2) + 200 * tam * sin(rot);
 
     x = (width / 2) + 200 * cos(rot);
     y = (height / 2) + 200 * sin(rot);

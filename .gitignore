@@ -1,4 +1,15 @@
 .DS_Store
+
 *.class
 
 *.java
+<<<<<<< HEAD
+=======
+
+.DS_Store
+<<<<<<< HEAD
+
+.DS_Store
+=======
+>>>>>>> nicotron/correccion_Examen_Nicolas
+>>>>>>> origin/correccion_Examen_Nicolas

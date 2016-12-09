@@ -47,7 +47,25 @@ Cada semana se creará un archivo [wiki](https://github.com/nicotron/ed222016/wi
 | `3.67` **Francisco Barria**     | `4.51` **Ricardo Vidal**    | `3.64` **Javiera Ramírez**     |
 | `5.36`  **Dante Crovetto**      | `3.32` **Gabriela Navarro** | `2.36` **Catalina Ringeling**  |
 
+#### Notas finales
 
+| Alumno                   | Promedio | Examen | Promedio Final |
+| :----------------------- | :------: | :----: | :------------: |
+| **Ana María Ortiz**      |  4.858   |  5.72  |   **5.117**    |
+| **Benjamin Guten**       |  4.438   |  3.08  |   **4.031**    |
+| **Catalina Juez**        |  4.148   |  2.68  |     3.708      |
+| **Catalina Ringelings**  |  1.384   |  1.0   |     1.269      |
+| **Dante Crovetto**       |  4.133   |  6.12  |   **4.729**    |
+| **Elena Errazuriz**      |  5.012   |  6.12  |   **5.344**    |
+| **Francisco Barria**     |  3.688   |  3.2   |     3.542      |
+| **Gabriela Navarro**     |   1.85   |  1.0   |     1.595      |
+| **Isidora Ordoñez**      |  5.094   |  3.04  |   **4.478**    |
+| **Javiera Ramirez**      |  2.844   |  1.0   |     2.291      |
+| **Mate Iturriaga**       |  4.206   |  4.88  |   **4.408**    |
+| **Margaux Leroy**        |  5.664   |  3.0   |    **4.9**     |
+| **Maximiliano Cordero**  |  5.334   |  5.84  |   **5.486**    |
+| **Paulina Descouvieres** |  2.584   |  3.2   |     2.769      |
+| **Ricardo Vidal**        |   3.59   |  3.88  |     3.677      |
 
 
 Este documento se irá llenando con más información a medida que avance el curso.

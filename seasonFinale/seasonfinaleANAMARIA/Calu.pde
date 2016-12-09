@@ -32,7 +32,7 @@ class Calu {
   //TEMPERATURA
   void temp() {
     pushMatrix();
-    //maxima
+    //máxima
     float ma = map(maxte, -1, 36, 0, 1);
     d = lerpColor(rojo, amarillo, ma);
 
@@ -51,7 +51,7 @@ class Calu {
     ellipse(x + 8, y + 8, mea, mea);
 
 
-    //minima
+    //mínima
     float mi = map(minte, -9, 19, 0, 1);
     g = lerpColor(verdeo, blanco, mi);
 
@@ -65,20 +65,20 @@ class Calu {
   //HUMEDAD
   void humedad() {
     pushMatrix();
-    //maxima
-    float ma = map(maxhu, 49, 100, 0, 30);
+    //máxima
+    float ma = map(maxhu, 49, 100, 0, 30); //el map es diferente para el set de variable
     noStroke();
     fill(blanco, 160);
-    rect(x, y +40, ma, ma);
+    rect(x, y + 40, ma, ma);
 
     //mean
-    float me = map(meanhu, 32, 97, 0, 30);
+    float me = map(meanhu, 32, 97, 0, 30); //el map es diferente para el set de variable
 
     fill(verdeo, 160);
     rect(x, y + 20, me, me);
 
-    //minimo
-    float mi = map(minhu, 10, 93, 0, 30);
+    //mínimo
+    float mi = map(minhu, 10, 93, 0, 30); //el map es diferente para el set de variable
 
     fill(amarillo, 160);
     rect(x, y, mi, mi);
@@ -87,7 +87,7 @@ class Calu {
 
   //PRECIPITACIONES
   void precipitacion() {
-    float precipit = map(pre, 0.00, 9.91, 210, 300);
+    float precipit = map(pre, 0.00, 9.91, 210, 300); // si no hubieron lluvias igual se ve una línea de 10px, lo que dificulta el entendimiento de los datos
     pushMatrix();
     translate(width / 2, height / 2);
     rotate(radians(270));
@@ -110,7 +110,7 @@ class Calu {
     popMatrix();
   }
 
-  //todos
+  //El titulo debe describir mejor la función
   void dias(int paso) {
     for (int i = 0; i < o.length; i++) {
       if (index >= i * paso && index < i * paso + paso) {
@@ -119,10 +119,10 @@ class Calu {
         float factor2 = map(paso, 7, 182, .09, .1); 
         float factor3 = map(paso, 7, 182, .9, .9); 
 
-        float x1 = map(index % paso, 0, paso-1, width * factor2, width * factor3);
+        float x1 = map(index % paso, 0, paso - 1, width * factor2, width * factor3);
         x = x1;
 
-        float y1 = map((i), 0, 365/paso, height * factor, height * factor1);
+        float y1 = map((i), 0, 365 / paso, height * factor, height * factor1);
         y = y1;
       }
     }
@@ -130,7 +130,7 @@ class Calu {
 
   //circulo
   void circulo(int paso) {
-    an = -PI/2;
+    an = -PI / 2;
     for (int i = 0; i < o.length; i++) {
       if (index >= i * paso && index < i * paso + paso) {
         float factor = map(paso, 7, 182, .03, .4);  
@@ -138,10 +138,10 @@ class Calu {
         float factor2 = map(paso, 7, 182, .09, .1); 
         float factor3 = map(paso, 7, 182, .9, .9); 
 
-        float x1 = map(index % paso, 0, paso-1, width * factor2, width * factor3);
+        float x1 = map(index % paso, 0, paso - 1, width * factor2, width * factor3);
         x = x1;
 
-        float y1 = map((i), 0, 365/paso, height * factor, height * factor1);
+        float y1 = map((i), 0, 365 / paso, height * factor, height * factor1);
         y = y1;
       }
     }

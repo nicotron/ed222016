@@ -11,7 +11,7 @@ class Temperatura {
     this.tmean = tmean;
   }
   
-  void TempMax() {
+  void TempMax() { // las funciones deben ser con minúsculas, porque sino, hacen referencia a una posible clase
     //Maxima
     pushMatrix();
     fill(#D6B9B8);
@@ -20,7 +20,7 @@ class Temperatura {
     popMatrix();
   }
   
-  void TempMin() {
+  void TempMin() { // las funciones deben ser con minúsculas, porque sino, hacen referencia a una posible clase
     //Minima
     noStroke();
     fill(#FA5C5F);
@@ -28,7 +28,7 @@ class Temperatura {
     ellipse(400, 440, index, tmin);
   }
   
-  void TempMean() {
+  void TempMean() { // las funciones deben ser con minúsculas, porque sino, hacen referencia a una posible clase
     //Mediana
     strokeWeight(5);
     stroke(#151927);

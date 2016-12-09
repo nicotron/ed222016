@@ -7,7 +7,7 @@ donde los datos se ordenan de máximo a mínimo, desde abajo hacia arriba.
 Para navegar por estos datos se necesita usar los botones predeterminados del programa.
 ---------------------------------------------------------------------------------------
 En este programa, puedes visualizar el clima entre los valores que escojas.
-Tan solo usa los botones de acceso rápido, o pon los valores de limite custom lo que necesites.
+Tan solo usa los botones de acceso rápido, o pon los valores de l’mite custom lo que necesites.
 
 
 Visualización rápida:
@@ -26,11 +26,11 @@ Visualización rápida:
 Visualización custom:
 
 
-	Limite Mínimo:
+	L’mite Mínimo:
 		Disminuir:  v
 		Aumentar:   b
 
-	Limite Mayor:
+	L’mite Mayor:
 		Disminuir:  n
 		Aumentar:   m
 

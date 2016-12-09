@@ -4,7 +4,11 @@
 /*Programa que muestra una visualización de datos de la cuidad de Miami durante el año 2005.
 Se crearon 3 set de variables. Si se apreta 1 se Temperatura Máxima, Temperatura Media y Lluvia agrupados en días con el fin de visualizar el año completo.
 Si se apreta 2 se muestra la relación entre humedad máxima y nubes agrupados en semestre.
-Por último, si se apreta 3 se muestra la relacion entre las ráfagas de viento, la humedad máxima y el viento. */
+Por último, si se apreta 3 se muestra la relación entre las ráfagas de viento, la humedad máxima y el viento. */
+
+/*
+NIVEL: 3 visualizaciones (solo 2 funcionan bien) + 5 set de variables (8.0)
+*/
 
 Miami2005 [] m;
 
@@ -23,7 +27,7 @@ int variable;
 
 void setup() {
   size(1200, 900);
-  variable =1;
+  variable = 1;
 
   tipografia = createFont("HelveticaNeue-Bold", 16);
   light = createFont("HelveticaNeue", 16);
@@ -35,7 +39,7 @@ void setup() {
   for (int i = 0; i < tabla.getRowCount(); i++) {
     TableRow fila = tabla.getRow(i);
 
-    int index = i;
+    int index = i; // esto no es necesario, porque i e index son los mismos valores
 
     //relacionar datos con columnas
     String dia = fila.getString("EST");

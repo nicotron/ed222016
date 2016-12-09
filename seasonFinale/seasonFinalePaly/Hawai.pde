@@ -68,7 +68,7 @@ class Hawai {
     fill(red, 80);
     ellipse(x, y, d, d);
   }
-
+  //Falta descripción del cuadro de texto  
   void tMean() {
 
     float d = map(tmean, 20, 29, 5, 20);
@@ -78,6 +78,7 @@ class Hawai {
     ellipse(x, y, d, d);
   }
 
+  //Falta descripción del cuadro de texto  
   void tMin() {
 
     float d = map(tmean, 15, 25, 5, 20);
@@ -100,6 +101,7 @@ class Hawai {
     popMatrix();
   }
 
+  //Falta descripción del cuadro de texto  
   void vMean() {
 
     float m = map(vmean, 4, 16, 10, 100);
@@ -112,6 +114,7 @@ class Hawai {
     popMatrix();
   }
 
+  //Falta descripción del cuadro de texto  
   void vMin() {
 
     float m = map(vmin, 0, 16, 10, 100);
@@ -132,10 +135,11 @@ class Hawai {
     pushMatrix();
     stroke(white, h);
     strokeWeight(3);
-    line(x, y, x, y - (h/5));
+    line(x, y, x, y - (h / 5));
     popMatrix();
   }
 
+  //Falta descripción del cuadro de texto  
   void hMean() {
 
     float h = map(hmean, 45, 97, 10, 100);
@@ -147,6 +151,7 @@ class Hawai {
     popMatrix();
   }
 
+  //Falta descripción del cuadro de texto  
   void hMin() {
 
     float h = map(hmin, 0, 90, 10, 100);
@@ -159,6 +164,7 @@ class Hawai {
   }
 
   //Nubes
+  // el nombre de la función no puede ser con Mayúscula ya que se refiere a una clase
   void Clouds() {
 
     float c = map(clouds, 1, 8, i - 1, 40);

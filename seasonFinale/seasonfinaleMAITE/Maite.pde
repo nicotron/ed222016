@@ -47,19 +47,19 @@ class Maite {
    */
   void humedad() {
     float locura = map(minH, 6, 31, 0, 30);
-    float locura2 = map(minH, 6, 31, 1, 5);
+    float locura2 = map(minH, 6, 31, 1, 5); //el map esta fuera de rango en el set de variable
     fill(blanco, locura);
     noStroke();
     ellipse(x, y - 16, locura2, locura2); //arriba
 
     float loca = map(meanH, 6, 31, 31, 70);
-    float loca2 = map(meanH, 6, 31, 5, 8);
+    float loca2 = map(meanH, 6, 31, 5, 8);//el map esta fuera de rango en el set de variable
     fill(blanco, loca);
     noStroke();
     ellipse(x, y, loca2, loca2); //centro
 
     float loco = map(maxH, 6, 31, 71, 100);
-    float loco2 = map(maxH, 6, 31, 8, 10);
+    float loco2 = map(maxH, 6, 31, 8, 10);//el map esta fuera de rango en el set de variable
     fill(blanco, loco);
     noStroke();
     ellipse(x, y + 16, loco2, loco2); //abajo
@@ -93,21 +93,21 @@ class Maite {
     g = lerpColor(amarillo, rojo, loca);
 
     fill(d); // mínima ..
-    strokeWeight(1);  
+    strokeWeight(1);  // todo valor que el map bacan de inferior a 2, no se verá por que este strokeWeight es muy grande.  
     stroke(celeste);
-    float funciona = map(mint, 23, 28, 0, 5);
+    float funciona = map(mint, 23, 28, 0, 5); // que es el 40% de valores posibles
     ellipse(x - 8, y - 8, funciona, funciona);
 
     fill(f); // media ..
     strokeWeight(2);  
-    stroke(amarillo);
-    float funciono = map(meant, 26, 32, 0, 10);
+    stroke(amarillo); // todo valor que el map bacan de inferior a 4, no se verá por que este strokeWeight es muy grande.
+    float funciono = map(meant, 26, 32, 0, 10);// que es el 40% de valores posibles
     ellipse(x, y, funciono, funciono);
 
     fill(g); // máxima ..
-    strokeWeight(3);  
+    strokeWeight(3);  // todo valor que el map bacan de inferior a 6, no se verá por que este strokeWeight es muy grande.
     stroke(rojo);
-    float bacan = map(maxt, 29, 35, 0, 15);
+    float bacan = map(maxt, 29, 35, 0, 15); // que es el 33% de valores posibles
     ellipse(x + 8, y + 8, bacan, bacan);
   }
 
@@ -128,10 +128,21 @@ class Maite {
    */
   void visibilidad() {
 
+    /* 
+    cuando se trabaja con map en grupos de variables, deben ser igual
+    porque sin importar el valor que entre en cada una de las variables,
+    no podrá ser comparado con el resto, 
+    1, 10 - 6, 17 - 6, 31 deben ser iguales.
+    */
     float maitex = map(minV, 1, 10, 35, 300);  //visibilidad mínima ..
     float maiturri = map(meanV, 6, 17, 35, 300);  //visibilidad media ..
     float maitela = map(maxV, 6, 31, 35, 300);  //visibilidad máxima ..
 
+    /*
+    Si las lineas se sobreponen y además inician en radios distintos,
+    no podemos saber cuando termina una que está en el fondo,
+    y tampoco comparar esos valores con el resto
+    */
     //visibilidad mínima
     pushMatrix();
     translate(width / 2, height / 2);
@@ -160,9 +171,15 @@ class Maite {
     popMatrix();
   } 
 
+  /*
+  El uso de esta función es irrelevante porque es una copia de la función dias
+  con la diferencia de 
+  an = -PI/2; 
+  qué además no se usa. 
+  */
   //Usado en viento, se usa an = PI/2.
   void diasprincipe(int paso) {
-    an = -PI/2;
+    an = -PI / 2;
     for (int i = 0; i < e.length; i++) {
       if (index >= i * paso && index < i * paso + paso) {
         float factor = map(paso, 7, 182, .04, .4);  //distancia Y
@@ -170,10 +187,10 @@ class Maite {
         float factor2 = map(paso, 7, 182, .1, .1); // distancia x
         float factor3 = map(paso, 7, 182, .10, .9); //distancia x
 
-        float x1 = map(index % paso, 0, paso-1, width * factor2, width * factor3);
+        float x1 = map(index % paso, 0, paso - 1, width * factor2, width * factor3);
         x = x1;
 
-        float y1 = map((i), 0, 365/paso, height * factor, height * factor1);
+        float y1 = map((i), 0, 365 / paso, height * factor, height * factor1);
         y = y1;
       }
     }
@@ -191,10 +208,10 @@ class Maite {
         float factor2 = map(paso, 7, 182, .09, .1); // distancia x
         float factor3 = map(paso, 7, 182, .9, .9); //distancia x
 
-        float x1 = map(index % paso, 0, paso-1, width * factor2, width * factor3);
+        float x1 = map(index % paso, 0, paso - 1, width * factor2, width * factor3);
         x = x1;
 
-        float y1 = map((i), 0, 365/paso, height * factor, height * factor1);
+        float y1 = map((i), 0, 365 / paso, height * factor, height * factor1);
         y = y1;
       }
     }

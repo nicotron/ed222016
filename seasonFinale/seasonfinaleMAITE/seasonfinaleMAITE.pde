@@ -1,22 +1,24 @@
-/* Expresión Digital II - Diseño Digital - UDD- 2016
+/* Expresión Digital II - Diseño Digital - UDD - 2016
  Maite Iturriaga Batlle
  seasonfinale_MAITE
  
  Examen processing, mi código lee los datos meteorológicos de Aruba 2015.
- es necesario el uso del teclado para ver el proyecto, teclas: 1,2,3,4.
+ es necesario el uso del teclado para ver el proyecto, teclas: 1, 2, 3, 4.
  1. Muestra en una circunferencia gracias a líneas, la visibilidad mínima, media y máxima. 
  2. Muestra la humedad presente en el trimestre, consiste en mínima, media y máxima, se representa en opacidad y tamaño de elipses
  3. Muestra la temperatura que presentó Aruba en el año 2015, a través de un map y lerp de colores, las elipses cambian de tamaño y color dependiendo la mínima, media y máxima.
  4. Muestra la lluvia y nubes que se presentaron, todo esto visto mes a mes, los rectángulos varian en su eje x y opacidad (nubes), precipitaciones representados en puntos y grosor del punto define cantidad de mm.
- Este código cuenta con 5 set de variables y 4 visualizaciones distintas, correspondientes a: año, semestre, trimestre, mes y + día. 
+ Este código cuenta con 5 set de variables y 4 visualizaciones distintas, correspondientes a: año, semestre, trimestre, mes y día. 
  */
 
-
+/*
+NIVEL: 6.0 (4 visualizaciones) + 7.0 más de 2 set de variables: 5 sets (8.5).
+*/
 Maite [] e;
 Table tabla;
 //Tipografía
 PFont titulo, cuerpo;
-int fila, k, q, manitos;
+int fila, k, manitos;
 
 void setup() {
 
@@ -35,7 +37,7 @@ void setup() {
   e = new Maite[tabla.getRowCount()];
 
   for (int i = 0; i < tabla.getRowCount(); i++) {
-    int index = i;
+    int index = i; // esto no es necesario, porque i e index son los mismos valores
     TableRow fila = tabla.getRow(i);
 
     //humedad
@@ -57,7 +59,7 @@ void setup() {
 
     k = 30;
 
-    e[i] = new Maite( index, maxt, meant, mint, maxV, meanV, minV, prec, nube, maxH, meanH, minH);
+    e[i] = new Maite(index, maxt, meant, mint, maxV, meanV, minV, prec, nube, maxH, meanH, minH);
   }
 }
 void draw() {
@@ -68,7 +70,7 @@ void draw() {
   text("KeyPressed 1, 2, 3, 4", 535, 20);
 
 
-
+  //descripción general del bloque de texto
   if (manitos == 1) {
     textFont(cuerpo);
     fill(255);
@@ -101,24 +103,25 @@ void draw() {
     text("Puntos: Stroke representa los mm - Rectángulos: eje x y su opacidad representan", 400, 720);
   }
 
-  for (int i = 0; i < e.length; i++) {
 
+  for (int i = 0; i < e.length; i++) {
+    //descripción general del bloque de texto
     if (manitos == 1) {
-      e[i].diasprincipe(k);
+      e[i].dias(k);
       e[i].visibilidad();
     }
-
+    //descripción general del bloque de texto
     if (manitos == 2) {
       e[i].dias(k);
       e[i].humedad();
     }
 
-
+    //descripción general del bloque de texto
     if (manitos == 3) {
       e[i].dias(k);
       e[i].temperatura();
     }
-
+    //descripción general del bloque de texto
     if (manitos == 4) {
 
       e[i].dias(k);
@@ -130,7 +133,7 @@ void draw() {
 
 void keyPressed() {
 
-  if (key =='1') {
+  if (key == '1') {
     manitos = 1;
     k = 51; //Año
   }
@@ -145,7 +148,7 @@ void keyPressed() {
     k = 180; //Semestre
   }
 
-  if (key =='4') {
+  if (key == '4') {
     manitos = 4;
     k = 30; //Mes
   }

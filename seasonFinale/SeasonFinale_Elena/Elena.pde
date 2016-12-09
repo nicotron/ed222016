@@ -17,7 +17,7 @@ en la página principal de código, mas la equivalencia de estas mismas.
 */
   Elena(int index, String CET, int temperatura, int tem1, int tem2, int sea1, int sea2, int sea3, int vientomax, int vientomin, int gust, int ver, int ver2, int ver3) {
 
-    this.CET = CET;
+    this.CET = CET; // no se usa
     this.index = index;
     this.temperatura = temperatura;
     this.tem1 = tem1;
@@ -33,8 +33,8 @@ en la página principal de código, mas la equivalencia de estas mismas.
     this.gust = gust;
     this.x = 0;
     this.y = 0;
-    this.velx = 1;
-    this.vely = 1;
+    this.velx = 1; // no se usa
+    this.vely = 1; // no se usa
     this.celb = color(204, 251, 255);
     this.az = color(37, 52, 87);
     this.verd = color(204, 204, 109);
@@ -69,6 +69,7 @@ llamados posteriormente en la página principal del código en el void draw()
     rect(x, y, rr, rr);
   }
 
+  // Esta función tiene problemas de diseño gráfico ya que no se logra entender la información que hay en la cuarta columna
   void vientos() {                                               //Construcción de los vientos.
 
     float grosor = map(gust, 0, 100, 1, 15);                     
@@ -80,6 +81,7 @@ llamados posteriormente en la página principal del código en el void draw()
     line(x, vMax, width / 2 + 20, height);                       //Fijar dos coordenadas de la línea para crear un abanico.
   }
 
+  // el nombre de la función no describe de buena manera lo que hace
   void vientos2() {                                              
 
     float grosor = map(gust, 0, 100, 1, 15);                     
@@ -91,6 +93,7 @@ llamados posteriormente en la página principal del código en el void draw()
     line(x, vMin, width / 2 + 20, height);
   }
 
+  // el nombre de la función no describe de buena manera lo que hace
   void dias(int paso) {                                         //Función que permite dividir los elementos del largo de la lista de datos en columnas, creando las medidas de tiempo
     for (int i = 0; i < e.length; i++) {
       if (index >= i * paso && index < i * paso + paso) { 
@@ -108,6 +111,7 @@ llamados posteriormente en la página principal del código en el void draw()
     }
   }
 
+  // el nombre de la función no describe de buena manera lo que hace
   void dias2(int paso) {
     for (int i = 0; i < e.length; i++) {
       if (index >= i * paso && index < i * paso + paso) { 
@@ -125,6 +129,7 @@ llamados posteriormente en la página principal del código en el void draw()
     }
   }
 
+  // el nombre de la función no describe de buena manera lo que hace
   void dias3(int paso) {
     for (int i = 0; i < e.length; i++) {
       if (index >= i * paso && index < i * paso + paso) { 
@@ -154,6 +159,11 @@ llamados posteriormente en la página principal del código en el void draw()
     translate(20, 0);                                        //Mover en el eje X una figura
     stroke(az);
     strokeWeight(1);
+    /* 
+    este map nn si fuera de 0, 10, 0, 10 no tendrías que crear x2 y y2
+    con x2 y y2 estás diciendo que aunque ver3 sea 0, se verá como 5
+    lo que dificulta la lectura.
+    */
     float nn = map(ver3, 0, 10, 0, 5);
     float x2 = x + 5;
     float y2 = y + 5;
@@ -161,6 +171,8 @@ llamados posteriormente en la página principal del código en el void draw()
     popMatrix();                                             //Cerrar el grupo delimitado
   }
 
+  // el nombre de la función no describe de buena manera lo que hace
+  // esta función tiene buenas intenciones pero se fue de control completamente, no es posible entender nada
   void temp2() {                                             //Construcción de la temperatura
     float amt = map(temperatura, - 7.5, 30, 0, 1);
     c = lerpColor(mo, veram, amt);
@@ -172,7 +184,7 @@ llamados posteriormente en la página principal del código en el void draw()
     float z = map(tem2, - 10, 40, 0, 250);
 
     pushMatrix();
-    translate(width / 2, height / 2);                       //Tasladar centro de elipses a la mitad del canvas
+    translate(width / 2, height / 2);                       //Trasladar centro de elipses a la mitad del canvas
     rotate(radians(index * 360 / 30));                      //Disponer circularmente los elementos de la lista y dividirlos en 30
     stroke(ro);
     strokeWeight(2);

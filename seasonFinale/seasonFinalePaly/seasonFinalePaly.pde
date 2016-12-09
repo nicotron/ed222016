@@ -2,6 +2,9 @@
 // Paulina Descouvieres
 // seasonFinale_paly
 
+// falta descripción general
+// NIVEL 1 (4.0), + 1 set de variables: no existe más de una visualización entendible
+
 Hawai [] h;
 
 //Tabla para almacenar datos
@@ -120,6 +123,7 @@ void draw() {
     text("- Mínimas", 10, 60);
   }
 
+//Este código si no va, no va.
   //Todas las funciones
   //h[i].tMax();
   //h[i].tMean();
@@ -134,9 +138,9 @@ void draw() {
   //h[i].dias(cd);
 
   for (int i = 0; i < h.length; i++) {
-
+    //Falta descripción del cuadro de texto
     if (cambio == 1) {
-      h[i].Clouds();
+      h[i].Clouds();// el nombre de la función no puede ser con Mayúscula ya que se refiere a una clase
       h[i].hMax();
       h[i].hMean();
       h[i].hMin();
@@ -148,46 +152,51 @@ void draw() {
       h[i].vMin();
       h[i].dias(cd);
     }
-
+    //Falta descripción del cuadro de texto
     if (cambio == 2) {
       h[i].tMean();
       h[i].tMin();
       h[i].tMax();
-      h[i].Clouds();
+      h[i].Clouds();// el nombre de la función no puede ser con Mayúscula ya que se refiere a una clase
       h[i].dias(cd);
     }
-
+    /*
+    Esta es la única visualización que es posible entender un poco, el resto de las 6 
+    son completamente ilegibles, lo que deja la entrega con una sola visualización
+    */
+    //Falta descripción del cuadro de texto
     if (cambio == 3) {
       h[i].vMax();
       h[i].vMean();
       h[i].vMin();
-      h[i].Clouds();
+      h[i].Clouds();// el nombre de la función no puede ser con Mayúscula ya que se refiere a una clase
       h[i].dias(cd);
     }
 
+    //Falta descripción del cuadro de texto
     if (cambio == 4) {
       h[i].hMax();
       h[i].hMean();
       h[i].hMin();
       h[i].tMean();
-      h[i].Clouds();
+      h[i].Clouds();// el nombre de la función no puede ser con Mayúscula ya que se refiere a una clase 
       h[i].dias(cd);
     }
-
+    //Falta descripción del cuadro de texto
     if (cambio == 5) {
       h[i].tMax();
       h[i].vMax();
       h[i].hMax();
       h[i].dias(cd);
     }
-
+    //Falta descripción del cuadro de texto
     if (cambio == 6) {
       h[i].tMean();
       h[i].vMean();
       h[i].hMean();
       h[i].dias(cd);
     }
-
+    //Falta descripción del cuadro de texto
     if (cambio == 7) {
       h[i].tMin();
       h[i].vMin();
