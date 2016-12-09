@@ -11,6 +11,10 @@ Para la mediana, es la línea en el medio que crece o decrece.
 No tuve éxito con mi programa. Vale un 1, pero lo subo de todas formas.
 */
 
+/*
+NIVEL: 1 una visualización (4.0) + sin set de variables a visualizar
+*/
+
 //Declaración de variables
 Temperatura[] e;
 Table t;
