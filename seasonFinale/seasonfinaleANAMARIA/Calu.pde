@@ -110,7 +110,7 @@ class Calu {
     popMatrix();
   }
 
-  //todos
+  //El titulo debe describir mejor la función
   void dias(int paso) {
     for (int i = 0; i < o.length; i++) {
       if (index >= i * paso && index < i * paso + paso) {
