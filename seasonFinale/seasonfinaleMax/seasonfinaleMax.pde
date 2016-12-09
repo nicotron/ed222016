@@ -6,6 +6,10 @@ Se crearon 3 set de variables. Si se apreta 1 se Temperatura Máxima, Temperatur
 Si se apreta 2 se muestra la relación entre humedad máxima y nubes agrupados en semestre.
 Por último, si se apreta 3 se muestra la relación entre las ráfagas de viento, la humedad máxima y el viento. */
 
+/*
+NIVEL: 3 visualizaciones (solo 2 funcionan bien) + 5 set de variables (8.0)
+*/
+
 Miami2005 [] m;
 
 //Llamar tabla
