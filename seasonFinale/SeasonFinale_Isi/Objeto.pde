@@ -38,6 +38,7 @@ class Objeto {
     if (frameCount % 200 == 0) {
       bol= !bol;
     }
+    // no está desrito en la visualización, cuando esto ocurre.
     if (bol == true) {
       t = MaxdP;
     } else {

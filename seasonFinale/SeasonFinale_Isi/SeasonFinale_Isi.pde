@@ -51,7 +51,7 @@ void setup() {
   for (int i = 0; i < table.getRowCount(); i++) {
     TableRow fila = table.getRow(i);
 
-    int index = i;
+    int index = i; // esto no es necesario, porque i e index son los mismos valores
     int MaxTemperature = fila.getInt("Max TemperatureC");
     int MinTemperature = fila.getInt("Min TemperatureC");
     int MeanTemperature = fila.getInt("Mean TemperatureC");
@@ -143,6 +143,7 @@ void draw() {
     }
 
     if (objeto == 3) {
+      // función legible solo en distribución anual
       o[i].circular(a);
     }
 
