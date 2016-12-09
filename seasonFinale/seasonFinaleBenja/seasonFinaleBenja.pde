@@ -2,7 +2,9 @@
 //Benjamin Gutierrez 
 
 //Falta descripción general
-
+/*
+NIVEL: 5 visualizaciones solo 4 legibles + 4 set de variables 3 en buen uso
+*/
 Cuerpo[] c;
 Table tabula;//una tabla para almacenar las datos
 PFont titulo, bajada, instruc;
