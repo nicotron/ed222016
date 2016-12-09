@@ -24,7 +24,7 @@ Para poder usar de una mejor manera los datos, estos tuvieron que mapear sus val
 ver en semestre ('f'), estaciones ('d'), meses ('s') y semanas ('s').
 */
 /*
-NIVEL: 
+NIVEL: 4 visualizaciones (6.0) + 4.5 set de variables (8.0)
 */
 // Creación de variables y Objeto:
 Objeto[] o;
