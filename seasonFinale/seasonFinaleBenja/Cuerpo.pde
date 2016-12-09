@@ -10,27 +10,27 @@ class Cuerpo {
 
   Cuerpo(int index, String dia, float maxt, float meant, float mint, float humx, float humean, float humn, float wind, float wndspm, float wndspx, int i) {
     // inicializar varialbles con valores desde el constructor
-    this.dia = dia;
+    this.dia = dia; // no se usa
     this.tx = maxt;
     this.ty = meant;
     this.tm = mint;
     this.maxh = humx;
     this.meanh = humean;
-    this.minh = humn;
+    this.minh = humn; // no se usa
     this.wind = wind;
     this.index = index;
     this.wndsm = wndspm;
-    this.wndsx = wndspx;
-    velx = 1;
-    vely = 1;
+    this.wndsx = wndspx; // no se usa
+    velx = 1; // no se usa
+    vely = 1; // no se usa
 
-    this.azul = color(39, 90, 252);
+    this.azul = color(39, 90, 252); // no se usa
     this.celeste = color(100, 149, 237);
     this.midnightblue = color(25, 25, 112);
     this.rojo = color(252, 68, 39);
     this.morado = color(152, 39, 252);
     this.verde = color(146, 224, 63);
-    this.blanco = color(255, 255, 255);
+    this.blanco = color(255, 255, 255); // no se usa
   }
 
   // temperatura maxima
